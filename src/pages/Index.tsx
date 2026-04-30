@@ -200,6 +200,9 @@ const Index = () => {
                 +50% de vida<br />de prateleira
               </div>
             </div>
+            <div className="absolute -top-6 -right-6 bg-background rounded-2xl p-3 shadow-deep border border-border/60 hidden md:flex items-center justify-center">
+              <img src={logoTamoios} alt="Selo Tamoios Tecnologia" width={72} height={72} className="h-16 w-auto" />
+            </div>
           </div>
         </div>
       </section>
