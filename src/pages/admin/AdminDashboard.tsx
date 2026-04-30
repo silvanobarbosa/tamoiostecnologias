@@ -57,7 +57,11 @@ const AdminDashboard = () => {
               <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Painel admin</span>
               <h1 className="font-display text-4xl font-semibold text-forest-deep mt-2">Posts do blog</h1>
             </div>
-            <Button asChild variant="forest"><Link to="/admin/posts/new"><Plus /> Novo post</Link></Button>
+            <div className="flex flex-wrap gap-2">
+              <Button asChild variant="outline"><Link to="/admin/subscribers">Newsletter</Link></Button>
+              <Button asChild variant="outline"><Link to="/admin/messages">Mensagens</Link></Button>
+              <Button asChild variant="forest"><Link to="/admin/posts/new"><Plus /> Novo post</Link></Button>
+            </div>
           </div>
           <div className="rounded-2xl border border-border bg-card overflow-hidden">
             {posts.length === 0 ? (
