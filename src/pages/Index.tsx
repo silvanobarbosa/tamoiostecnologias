@@ -143,12 +143,12 @@ const Index = () => {
               className="h-14 w-auto transition-transform group-hover:scale-[1.03]"
             />
           </a>
-          <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
             <a href="#solucoes" className="hover:text-forest transition-colors">Soluções</a>
             <a href="#agro" className="hover:text-forest transition-colors">Agro & Florestal</a>
             <a href="#impacto" className="hover:text-forest transition-colors">Impacto</a>
-            <a href="#cases" className="hover:text-forest transition-colors">Cases</a>
-            <a href="#manifesto" className="hover:text-forest transition-colors">Manifesto</a>
+            <a href="/quem-somos" className="hover:text-forest transition-colors">Quem somos</a>
+            <a href="/blog" className="hover:text-forest transition-colors">Blog</a>
             <a href="#contato" className="hover:text-forest transition-colors">Contato</a>
           </div>
           <Button asChild variant="forest" size="sm">
