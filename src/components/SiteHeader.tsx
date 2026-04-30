@@ -16,10 +16,16 @@ export function SiteHeader() {
   const { user, isAdmin, signOut } = useAuth();
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-      <nav className="container flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-3 shrink-0">
-          <img src={logoTamoios} alt="Tamoios Tecnologia" width={140} height={48} className="h-10 w-auto" />
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/90 border-b border-border/60">
+      <nav className="container flex h-20 items-center justify-between gap-4">
+        <Link to="/" className="flex items-center gap-3 shrink-0 group" aria-label="Tamoios Tecnologia — início">
+          <img
+            src={logoTamoios}
+            alt="Tamoios Tecnologia"
+            width={180}
+            height={60}
+            className="h-14 w-auto transition-transform group-hover:scale-[1.03]"
+          />
         </Link>
         <div className="hidden lg:flex items-center gap-6 text-sm text-muted-foreground">
           {navItems.map((item) => (
