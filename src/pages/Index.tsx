@@ -1,7 +1,10 @@
-import heroImg from "@/assets/hero-bandejas.jpg";
-import varejoImg from "@/assets/varejo-flv.jpg";
-import industriaImg from "@/assets/industria-calcos.jpg";
+import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
+import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
+import industriaImg from "@/assets/calcos-garrafas.jpg";
 import socialImg from "@/assets/impacto-social.jpg";
+import produtoAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
+import produtoMiniImg from "@/assets/bandeja-alface-mini.jpg";
+import produtoTomatesImg from "@/assets/bandeja-tomates.jpg";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -111,9 +114,9 @@ const Index = () => {
           </div>
           <div className="lg:col-span-5 relative animate-float-up" style={{ animationDelay: "0.15s" }}>
             <div className="relative rounded-3xl overflow-hidden shadow-deep">
-              <img
-                src={heroImg}
-                alt="Bandeja de polpa de celulose Tamoios com morangos e tomates frescos"
+                <img
+                  src={heroImg}
+                  alt="Bandeja Tamoios de polpa de celulose com tomates frescos no cacho"
                 width={1600}
                 height={1200}
                 className="w-full h-auto object-cover"
@@ -146,7 +149,7 @@ const Index = () => {
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={varejoImg}
-                  alt="Bandejas Tamoios de polpa expostas em gôndola de supermercado com hortifruti"
+                  alt="Gôndola de supermercado com bandejas Tamoios de vagens, batatas e hortifruti embaladas"
                   width={1200}
                   height={900}
                   loading="lazy"
@@ -177,7 +180,7 @@ const Index = () => {
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={industriaImg}
-                  alt="Calços técnicos Tamoios protegendo garrafa e autopeças em caixa de papelão"
+                  alt="Calços técnicos Tamoios em polpa moldada para proteção de garrafas no transporte"
                   width={1200}
                   height={900}
                   loading="lazy"
@@ -205,7 +208,48 @@ const Index = () => {
         </div>
       </section>
 
-      {/* IMPACTÔMETRO */}
+      {/* GALERIA DE PRODUTOS REAIS */}
+      <section id="galeria" className="py-24 md:py-32 bg-pulp-light/40 border-y border-border">
+        <div className="container">
+          <div className="max-w-2xl mb-14">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Produtos em uso</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
+              Da fábrica para a gôndola.
+              <em className="block text-leaf font-normal">Bandejas reais, frescor real.</em>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { img: produtoAlfaceImg, title: "Alface Americana", sub: "Bandeja funda · contém umidade da folha" },
+              { img: produtoMiniImg, title: "Mini Alface / Folhosos", sub: "Bandeja alta · proteção e respiração" },
+              { img: produtoTomatesImg, title: "Tomates no Cacho", sub: "Bandeja rasa · suporte e exposição premium" },
+            ].map((p) => (
+              <article
+                key={p.title}
+                className="group rounded-2xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500"
+              >
+                <div className="aspect-[4/5] overflow-hidden bg-pulp-light">
+                  <img
+                    src={p.img}
+                    alt={`Bandeja Tamoios de polpa de celulose com ${p.title.toLowerCase()}`}
+                    width={1200}
+                    height={1500}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-xl font-semibold text-forest-deep mb-1">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground">{p.sub}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <section id="impacto" className="py-24 md:py-32 bg-forest text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 grain opacity-20" />
         <div className="container relative">
