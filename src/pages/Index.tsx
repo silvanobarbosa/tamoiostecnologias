@@ -13,6 +13,8 @@ import hidroponiaVasoImg from "@/assets/hidroponia-vaso.jpg";
 import calcosCompressorImg from "@/assets/calcos-compressor.jpg";
 import embalagemVinhoImg from "@/assets/embalagem-vinho.jpg";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
+import { ContactForm } from "@/components/ContactForm";
 import {
   ArrowRight,
   Leaf,
