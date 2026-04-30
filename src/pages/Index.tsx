@@ -145,10 +145,16 @@ const Index = () => {
       {/* HERO */}
       <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-pulp">
         <div className="absolute inset-0 grain opacity-60" />
+        <img
+          src={logoTamoios}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute -right-24 -top-12 w-[520px] max-w-[60vw] opacity-[0.06] rotate-[8deg] hidden md:block"
+        />
         <div className="container relative grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 animate-float-up">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 border border-forest/20 text-forest text-xs font-semibold tracking-wide uppercase mb-8">
-              <Leaf className="h-3.5 w-3.5" /> Tecnologia em biomassa
+              <Leaf className="h-3.5 w-3.5" /> Tecnologia em biomassa · Tamoios
             </span>
             <h1 className="font-display font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-forest-deep text-balance mb-8">
               A Revolução sem Isopor:
