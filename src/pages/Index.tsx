@@ -149,7 +149,7 @@ const Index = () => {
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={varejoImg}
-                  alt="Bandejas Tamoios de polpa expostas em gôndola de supermercado com hortifruti"
+                  alt="Gôndola de supermercado com bandejas Tamoios de vagens, batatas e hortifruti embaladas"
                   width={1200}
                   height={900}
                   loading="lazy"
