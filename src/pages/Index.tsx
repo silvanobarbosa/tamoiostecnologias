@@ -114,9 +114,9 @@ const Index = () => {
           </div>
           <div className="lg:col-span-5 relative animate-float-up" style={{ animationDelay: "0.15s" }}>
             <div className="relative rounded-3xl overflow-hidden shadow-deep">
-              <img
-                src={heroImg}
-                alt="Bandeja de polpa de celulose Tamoios com morangos e tomates frescos"
+                <img
+                  src={heroImg}
+                  alt="Bandeja Tamoios de polpa de celulose com tomates frescos no cacho"
                 width={1600}
                 height={1200}
                 className="w-full h-auto object-cover"
