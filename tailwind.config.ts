@@ -14,18 +14,21 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        ember: {
-          DEFAULT: "hsl(var(--ember))",
-          glow: "hsl(var(--ember-glow))",
+        forest: {
+          DEFAULT: "hsl(var(--forest))",
+          deep: "hsl(var(--forest-deep))",
         },
-        jungle: {
-          DEFAULT: "hsl(var(--jungle))",
-          deep: "hsl(var(--jungle-deep))",
+        leaf: "hsl(var(--leaf))",
+        pulp: {
+          DEFAULT: "hsl(var(--pulp))",
+          light: "hsl(var(--pulp-light))",
         },
+        earth: "hsl(var(--earth))",
+        cream: "hsl(var(--cream))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
