@@ -1,3 +1,4 @@
+import logoTamoios from "@/assets/tamoios-logo.png";
 import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
 import industriaImg from "@/assets/calcos-garrafas.jpg";
@@ -5,6 +6,12 @@ import socialImg from "@/assets/impacto-social.jpg";
 import produtoAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import produtoMiniImg from "@/assets/bandeja-alface-mini.jpg";
 import produtoTomatesImg from "@/assets/bandeja-tomates.jpg";
+import tubetesMudasImg from "@/assets/tubetes-mudas.jpg";
+import tubetesBandejaImg from "@/assets/tubetes-bandeja.jpg";
+import hidroponiaMudasImg from "@/assets/hidroponia-mudas.jpg";
+import hidroponiaVasoImg from "@/assets/hidroponia-vaso.jpg";
+import calcosCompressorImg from "@/assets/calcos-compressor.jpg";
+import embalagemVinhoImg from "@/assets/embalagem-vinho.jpg";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -18,7 +25,57 @@ import {
   Instagram,
   MapPin,
   Quote,
+  Sprout,
+  TreePine,
+  Wine,
+  Shield,
+  Download,
 } from "lucide-react";
+
+const credenciais = [
+  "Reciclado pré-uso",
+  "Reciclável",
+  "Compostável",
+  "Biodegradável",
+  "Baixo carbono",
+  "Operação em região vulnerável",
+];
+
+const agroLinhas = [
+  {
+    icon: TreePine,
+    img: tubetesMudasImg,
+    tag: "Reflorestamento",
+    title: "Tubetes Bio para mudas",
+    desc: "Substituição direta dos tubetes plásticos no transporte e plantio pós-viveiro. Mercado de bilhões de unidades/ano. Objetivo: aumento de sobrevivência da muda no campo.",
+    bullets: ["Eucalipto, Pinus e regeneração florestal", "Múltiplos tamanhos sob demanda", "Decomposição direta no solo"],
+  },
+  {
+    icon: Sprout,
+    img: hidroponiaMudasImg,
+    tag: "Hidroponia & Agricultura orgânica",
+    title: "Mini Vasos para hidroponia",
+    desc: "Substituto direto do cachepô plástico para crescimento de hortaliças. Reduz custos operacionais e elimina micro-plásticos do sistema produtivo.",
+    bullets: ["Sementeiras e coroas de plantio", "Compatível com bancada NFT", "100% biodegradável após o ciclo"],
+  },
+];
+
+const industriaLinhas = [
+  {
+    icon: Wine,
+    img: embalagemVinhoImg,
+    tag: "Bebidas premium",
+    title: "Embalagem para vinho",
+    desc: "Berço moldado em polpa que substitui isopor e plástico bolha em garrafas. Alta proteção vertical, visual sofisticado e descarte 100% papel.",
+  },
+  {
+    icon: Shield,
+    img: calcosCompressorImg,
+    tag: "Equipamentos pesados",
+    title: "Calços de grande dimensão",
+    desc: "Calços técnicos para compressores, autopeças e equipamentos industriais. Engenharia de polpa de alta densidade para impacto e empilhamento.",
+  },
+];
 
 const impacto = [
   { value: "+30Mi", label: "Bandejas de isopor já substituídas no Brasil", icon: Recycle },
