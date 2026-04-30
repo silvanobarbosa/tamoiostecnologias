@@ -117,16 +117,20 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
+      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
         <nav className="container flex h-16 items-center justify-between">
-          <a href="#top" className="flex items-center gap-2.5 font-display font-bold text-lg">
-            <span className="h-9 w-9 rounded-full bg-forest grid place-items-center text-primary-foreground">
-              <Leaf className="h-4.5 w-4.5" strokeWidth={2.2} />
-            </span>
-            <span className="text-forest-deep">Tamoios</span>
+          <a href="#top" className="flex items-center gap-3">
+            <img
+              src={logoTamoios}
+              alt="Tamoios Tecnologia"
+              width={140}
+              height={48}
+              className="h-10 w-auto"
+            />
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#solucoes" className="hover:text-forest transition-colors">Soluções</a>
+            <a href="#agro" className="hover:text-forest transition-colors">Agro & Florestal</a>
             <a href="#impacto" className="hover:text-forest transition-colors">Impacto</a>
             <a href="#cases" className="hover:text-forest transition-colors">Cases</a>
             <a href="#manifesto" className="hover:text-forest transition-colors">Manifesto</a>
