@@ -1,7 +1,10 @@
-import heroImg from "@/assets/hero-bandejas.jpg";
-import varejoImg from "@/assets/varejo-flv.jpg";
-import industriaImg from "@/assets/industria-calcos.jpg";
+import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
+import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
+import industriaImg from "@/assets/calcos-garrafas.jpg";
 import socialImg from "@/assets/impacto-social.jpg";
+import produtoAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
+import produtoMiniImg from "@/assets/bandeja-alface-mini.jpg";
+import produtoTomatesImg from "@/assets/bandeja-tomates.jpg";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
