@@ -14,9 +14,73 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_messages: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          segment: string | null
+          status: Database["public"]["Enums"]["contact_status"]
+          updated_at: string
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          segment?: string | null
+          status?: Database["public"]["Enums"]["contact_status"]
+          updated_at?: string
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          segment?: string | null
+          status?: Database["public"]["Enums"]["contact_status"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      newsletter_subscribers: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          name: string | null
+          source: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          name?: string | null
+          source?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string | null
+          source?: string | null
+        }
+        Relationships: []
+      }
       posts: {
         Row: {
           author_id: string
+          category: Database["public"]["Enums"]["post_category"]
           content: string
           cover_image_url: string | null
           created_at: string
@@ -30,6 +94,7 @@ export type Database = {
         }
         Insert: {
           author_id: string
+          category?: Database["public"]["Enums"]["post_category"]
           content: string
           cover_image_url?: string | null
           created_at?: string
@@ -43,6 +108,7 @@ export type Database = {
         }
         Update: {
           author_id?: string
+          category?: Database["public"]["Enums"]["post_category"]
           content?: string
           cover_image_url?: string | null
           created_at?: string
@@ -119,6 +185,14 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "editor" | "user"
+      contact_status: "novo" | "em_andamento" | "respondido" | "arquivado"
+      post_category:
+        | "bandejas-flv"
+        | "calcos-tecnicos"
+        | "agro-florestal"
+        | "sustentabilidade"
+        | "cases"
+        | "noticias"
       post_status: "draft" | "published"
     }
     CompositeTypes: {
@@ -248,6 +322,15 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "editor", "user"],
+      contact_status: ["novo", "em_andamento", "respondido", "arquivado"],
+      post_category: [
+        "bandejas-flv",
+        "calcos-tecnicos",
+        "agro-florestal",
+        "sustentabilidade",
+        "cases",
+        "noticias",
+      ],
       post_status: ["draft", "published"],
     },
   },
