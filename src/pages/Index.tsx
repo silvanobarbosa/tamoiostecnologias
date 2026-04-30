@@ -162,7 +162,7 @@ const Index = () => {
               polímeros petroquímicos por soluções <strong className="text-forest">100% recicláveis e compostáveis</strong>.
               Sustentabilidade de ponta a ponta, dos produtos às pessoas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Button asChild variant="forest" size="xl">
                 <a href="#solucoes">
                   Conhecer soluções <ArrowRight className="ml-1" />
@@ -170,6 +170,11 @@ const Index = () => {
               </Button>
               <Button asChild variant="outline" size="xl">
                 <a href="#manifesto">Ler o manifesto</a>
+              </Button>
+              <Button asChild variant="ghost" size="xl" className="text-forest hover:text-forest-deep">
+                <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
+                  <Download /> Baixar apresentação
+                </a>
               </Button>
             </div>
           </div>
