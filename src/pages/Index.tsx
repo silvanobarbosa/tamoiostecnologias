@@ -315,6 +315,128 @@ const Index = () => {
         </div>
       </section>
 
+      {/* AGRO & FLORESTAL */}
+      <section id="agro" className="py-24 md:py-32 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mb-16">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Agro & Florestal</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
+              Da floresta para a floresta:
+              <em className="block text-leaf font-normal">polpa que vira raiz.</em>
+            </h2>
+            <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
+              Novas frentes em desenvolvimento Tamoios — substituindo plástico em mudas,
+              hidroponia, reflorestamento e silvicultura.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {agroLinhas.map((l) => (
+              <article
+                key={l.title}
+                className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-pulp-light">
+                  <img
+                    src={l.img}
+                    alt={l.title}
+                    width={1600}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-8 md:p-10">
+                  <div className="flex items-center gap-2 text-leaf font-semibold text-xs tracking-widest uppercase mb-4">
+                    <l.icon className="h-4 w-4" /> {l.tag}
+                  </div>
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold text-forest-deep mb-4 leading-snug">
+                    {l.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{l.desc}</p>
+                  <ul className="space-y-2 mb-2">
+                    {l.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-3 text-sm text-foreground">
+                        <CheckCircle2 className="h-4 w-4 text-leaf mt-0.5 shrink-0" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Mini-grid Indústria expandida */}
+          <div className="mt-20">
+            <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+              <div>
+                <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Polpa Moldada · Indústria</span>
+                <h3 className="font-display text-3xl md:text-4xl font-semibold mt-3 text-forest-deep leading-tight">
+                  Outras aplicações industriais.
+                </h3>
+              </div>
+              <Button asChild variant="outline">
+                <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
+                  <Download /> Catálogo industrial (.pptx)
+                </a>
+              </Button>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {industriaLinhas.map((l) => (
+                <article
+                  key={l.title}
+                  className="rounded-2xl overflow-hidden bg-card border border-border flex flex-col md:flex-row hover:border-forest/40 transition-colors"
+                >
+                  <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-pulp-light overflow-hidden">
+                    <img
+                      src={l.img}
+                      alt={l.title}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 md:p-7 flex-1">
+                    <div className="flex items-center gap-2 text-leaf font-semibold text-xs tracking-widest uppercase mb-3">
+                      <l.icon className="h-4 w-4" /> {l.tag}
+                    </div>
+                    <h4 className="font-display text-xl font-semibold text-forest-deep mb-3 leading-snug">
+                      {l.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{l.desc}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CREDENCIAIS / SELO */}
+      <section className="py-12 md:py-16 bg-forest-deep text-primary-foreground border-y border-forest">
+        <div className="container">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
+            <div className="lg:w-1/3">
+              <span className="text-leaf font-semibold text-xs tracking-widest uppercase">Selo Tamoios</span>
+              <h3 className="font-display text-2xl md:text-3xl font-semibold mt-2 leading-tight">
+                A embalagem mais sustentável do Brasil.
+              </h3>
+            </div>
+            <div className="flex-1 flex flex-wrap gap-2.5">
+              {credenciais.map((c) => (
+                <span
+                  key={c}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-sm text-primary-foreground/95 font-medium"
+                >
+                  <CheckCircle2 className="h-4 w-4 text-leaf" /> {c}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="impacto" className="py-24 md:py-32 bg-forest text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 grain opacity-20" />
