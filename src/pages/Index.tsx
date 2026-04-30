@@ -618,24 +618,15 @@ const Index = () => {
           <span className="inline-block text-leaf font-semibold text-sm tracking-widest uppercase mb-6">
             Vamos transformar
           </span>
-          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight text-balance mb-8">
+          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight text-balance mb-6">
             Pronto para eliminar o isopor da sua operação?
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-10 leading-relaxed">
             Receba uma proposta sob medida com simulação de ganho em vida de prateleira ou
             performance logística. Resposta em até 24 horas.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button asChild variant="leaf" size="xl">
-              <a href="mailto:rafael@tamoiostecnologia.com.br">
-                Solicitar proposta <ArrowRight />
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="xl" className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              <a href="https://wa.me/5511982712685" target="_blank" rel="noopener">
-                Falar no WhatsApp
-              </a>
-            </Button>
+          <div className="bg-background text-foreground rounded-3xl p-6 md:p-10 shadow-deep text-left max-w-3xl mx-auto">
+            <ContactForm />
           </div>
         </div>
       </section>
