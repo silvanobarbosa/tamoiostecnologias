@@ -667,6 +667,8 @@ const Index = () => {
             <div className="text-xs uppercase tracking-widest text-leaf font-semibold mb-4">Navegação</div>
             <ul className="space-y-2 text-sm">
               <li><a href="#solucoes" className="hover:text-primary-foreground transition-colors">Soluções</a></li>
+              <li><a href="#agro" className="hover:text-primary-foreground transition-colors">Agro & Florestal</a></li>
+              <li><a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download className="hover:text-primary-foreground transition-colors">Apresentação (.pptx)</a></li>
               <li><a href="#impacto" className="hover:text-primary-foreground transition-colors">Impacto</a></li>
               <li><a href="#cases" className="hover:text-primary-foreground transition-colors">Cases</a></li>
               <li><a href="#manifesto" className="hover:text-primary-foreground transition-colors">Manifesto</a></li>
