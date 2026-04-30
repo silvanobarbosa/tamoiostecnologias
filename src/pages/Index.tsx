@@ -603,7 +603,16 @@ const Index = () => {
       {/* CONTATO / CTA */}
       <section id="contato" className="py-24 md:py-32 bg-gradient-hero text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 grain opacity-20" />
+        <img
+          src={logoTamoios}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute -left-32 -bottom-24 w-[640px] max-w-[70vw] opacity-[0.07] hidden md:block"
+        />
         <div className="container relative max-w-4xl text-center">
+          <div className="inline-flex items-center justify-center bg-primary-foreground rounded-2xl p-4 shadow-deep mb-8">
+            <img src={logoTamoios} alt="Tamoios Tecnologia" width={140} height={48} className="h-14 w-auto" />
+          </div>
           <span className="inline-block text-leaf font-semibold text-sm tracking-widest uppercase mb-6">
             Vamos transformar
           </span>
