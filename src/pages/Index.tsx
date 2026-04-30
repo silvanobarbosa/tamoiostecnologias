@@ -1,3 +1,4 @@
+import logoTamoios from "@/assets/tamoios-logo.png";
 import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
 import industriaImg from "@/assets/calcos-garrafas.jpg";
@@ -5,6 +6,12 @@ import socialImg from "@/assets/impacto-social.jpg";
 import produtoAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import produtoMiniImg from "@/assets/bandeja-alface-mini.jpg";
 import produtoTomatesImg from "@/assets/bandeja-tomates.jpg";
+import tubetesMudasImg from "@/assets/tubetes-mudas.jpg";
+import tubetesBandejaImg from "@/assets/tubetes-bandeja.jpg";
+import hidroponiaMudasImg from "@/assets/hidroponia-mudas.jpg";
+import hidroponiaVasoImg from "@/assets/hidroponia-vaso.jpg";
+import calcosCompressorImg from "@/assets/calcos-compressor.jpg";
+import embalagemVinhoImg from "@/assets/embalagem-vinho.jpg";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -18,7 +25,57 @@ import {
   Instagram,
   MapPin,
   Quote,
+  Sprout,
+  TreePine,
+  Wine,
+  Shield,
+  Download,
 } from "lucide-react";
+
+const credenciais = [
+  "Reciclado pré-uso",
+  "Reciclável",
+  "Compostável",
+  "Biodegradável",
+  "Baixo carbono",
+  "Operação em região vulnerável",
+];
+
+const agroLinhas = [
+  {
+    icon: TreePine,
+    img: tubetesMudasImg,
+    tag: "Reflorestamento",
+    title: "Tubetes Bio para mudas",
+    desc: "Substituição direta dos tubetes plásticos no transporte e plantio pós-viveiro. Mercado de bilhões de unidades/ano. Objetivo: aumento de sobrevivência da muda no campo.",
+    bullets: ["Eucalipto, Pinus e regeneração florestal", "Múltiplos tamanhos sob demanda", "Decomposição direta no solo"],
+  },
+  {
+    icon: Sprout,
+    img: hidroponiaMudasImg,
+    tag: "Hidroponia & Agricultura orgânica",
+    title: "Mini Vasos para hidroponia",
+    desc: "Substituto direto do cachepô plástico para crescimento de hortaliças. Reduz custos operacionais e elimina micro-plásticos do sistema produtivo.",
+    bullets: ["Sementeiras e coroas de plantio", "Compatível com bancada NFT", "100% biodegradável após o ciclo"],
+  },
+];
+
+const industriaLinhas = [
+  {
+    icon: Wine,
+    img: embalagemVinhoImg,
+    tag: "Bebidas premium",
+    title: "Embalagem para vinho",
+    desc: "Berço moldado em polpa que substitui isopor e plástico bolha em garrafas. Alta proteção vertical, visual sofisticado e descarte 100% papel.",
+  },
+  {
+    icon: Shield,
+    img: calcosCompressorImg,
+    tag: "Equipamentos pesados",
+    title: "Calços de grande dimensão",
+    desc: "Calços técnicos para compressores, autopeças e equipamentos industriais. Engenharia de polpa de alta densidade para impacto e empilhamento.",
+  },
+];
 
 const impacto = [
   { value: "+30Mi", label: "Bandejas de isopor já substituídas no Brasil", icon: Recycle },
@@ -60,16 +117,20 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
+      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
         <nav className="container flex h-16 items-center justify-between">
-          <a href="#top" className="flex items-center gap-2.5 font-display font-bold text-lg">
-            <span className="h-9 w-9 rounded-full bg-forest grid place-items-center text-primary-foreground">
-              <Leaf className="h-4.5 w-4.5" strokeWidth={2.2} />
-            </span>
-            <span className="text-forest-deep">Tamoios</span>
+          <a href="#top" className="flex items-center gap-3">
+            <img
+              src={logoTamoios}
+              alt="Tamoios Tecnologia"
+              width={140}
+              height={48}
+              className="h-10 w-auto"
+            />
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#solucoes" className="hover:text-forest transition-colors">Soluções</a>
+            <a href="#agro" className="hover:text-forest transition-colors">Agro & Florestal</a>
             <a href="#impacto" className="hover:text-forest transition-colors">Impacto</a>
             <a href="#cases" className="hover:text-forest transition-colors">Cases</a>
             <a href="#manifesto" className="hover:text-forest transition-colors">Manifesto</a>
@@ -101,7 +162,7 @@ const Index = () => {
               polímeros petroquímicos por soluções <strong className="text-forest">100% recicláveis e compostáveis</strong>.
               Sustentabilidade de ponta a ponta, dos produtos às pessoas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Button asChild variant="forest" size="xl">
                 <a href="#solucoes">
                   Conhecer soluções <ArrowRight className="ml-1" />
@@ -109,6 +170,11 @@ const Index = () => {
               </Button>
               <Button asChild variant="outline" size="xl">
                 <a href="#manifesto">Ler o manifesto</a>
+              </Button>
+              <Button asChild variant="ghost" size="xl" className="text-forest hover:text-forest-deep">
+                <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
+                  <Download /> Baixar apresentação
+                </a>
               </Button>
             </div>
           </div>
@@ -249,6 +315,128 @@ const Index = () => {
         </div>
       </section>
 
+      {/* AGRO & FLORESTAL */}
+      <section id="agro" className="py-24 md:py-32 bg-background">
+        <div className="container">
+          <div className="max-w-3xl mb-16">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Agro & Florestal</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
+              Da floresta para a floresta:
+              <em className="block text-leaf font-normal">polpa que vira raiz.</em>
+            </h2>
+            <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
+              Novas frentes em desenvolvimento Tamoios — substituindo plástico em mudas,
+              hidroponia, reflorestamento e silvicultura.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {agroLinhas.map((l) => (
+              <article
+                key={l.title}
+                className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-pulp-light">
+                  <img
+                    src={l.img}
+                    alt={l.title}
+                    width={1600}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-8 md:p-10">
+                  <div className="flex items-center gap-2 text-leaf font-semibold text-xs tracking-widest uppercase mb-4">
+                    <l.icon className="h-4 w-4" /> {l.tag}
+                  </div>
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold text-forest-deep mb-4 leading-snug">
+                    {l.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{l.desc}</p>
+                  <ul className="space-y-2 mb-2">
+                    {l.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-3 text-sm text-foreground">
+                        <CheckCircle2 className="h-4 w-4 text-leaf mt-0.5 shrink-0" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Mini-grid Indústria expandida */}
+          <div className="mt-20">
+            <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+              <div>
+                <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Polpa Moldada · Indústria</span>
+                <h3 className="font-display text-3xl md:text-4xl font-semibold mt-3 text-forest-deep leading-tight">
+                  Outras aplicações industriais.
+                </h3>
+              </div>
+              <Button asChild variant="outline">
+                <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
+                  <Download /> Catálogo industrial (.pptx)
+                </a>
+              </Button>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {industriaLinhas.map((l) => (
+                <article
+                  key={l.title}
+                  className="rounded-2xl overflow-hidden bg-card border border-border flex flex-col md:flex-row hover:border-forest/40 transition-colors"
+                >
+                  <div className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-pulp-light overflow-hidden">
+                    <img
+                      src={l.img}
+                      alt={l.title}
+                      width={800}
+                      height={600}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 md:p-7 flex-1">
+                    <div className="flex items-center gap-2 text-leaf font-semibold text-xs tracking-widest uppercase mb-3">
+                      <l.icon className="h-4 w-4" /> {l.tag}
+                    </div>
+                    <h4 className="font-display text-xl font-semibold text-forest-deep mb-3 leading-snug">
+                      {l.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{l.desc}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CREDENCIAIS / SELO */}
+      <section className="py-12 md:py-16 bg-forest-deep text-primary-foreground border-y border-forest">
+        <div className="container">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
+            <div className="lg:w-1/3">
+              <span className="text-leaf font-semibold text-xs tracking-widest uppercase">Selo Tamoios</span>
+              <h3 className="font-display text-2xl md:text-3xl font-semibold mt-2 leading-tight">
+                A embalagem mais sustentável do Brasil.
+              </h3>
+            </div>
+            <div className="flex-1 flex flex-wrap gap-2.5">
+              {credenciais.map((c) => (
+                <span
+                  key={c}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-sm text-primary-foreground/95 font-medium"
+                >
+                  <CheckCircle2 className="h-4 w-4 text-leaf" /> {c}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="impacto" className="py-24 md:py-32 bg-forest text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 grain opacity-20" />
@@ -436,12 +624,13 @@ const Index = () => {
       <footer className="bg-forest-deep text-primary-foreground/80 py-16">
         <div className="container grid md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2.5 font-display font-bold text-lg text-primary-foreground mb-3">
-              <span className="h-9 w-9 rounded-full bg-leaf grid place-items-center">
-                <Leaf className="h-4.5 w-4.5" strokeWidth={2.2} />
-              </span>
-              Tamoios
-            </div>
+            <img
+              src={logoTamoios}
+              alt="Tamoios Tecnologia"
+              width={140}
+              height={48}
+              className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
+            />
             <p className="text-sm leading-relaxed">
               Tamoios Tecnologia — Inovação em Biomassa.
               <br />Substituindo o isopor por polpa, do varejo à logística.
@@ -478,6 +667,8 @@ const Index = () => {
             <div className="text-xs uppercase tracking-widest text-leaf font-semibold mb-4">Navegação</div>
             <ul className="space-y-2 text-sm">
               <li><a href="#solucoes" className="hover:text-primary-foreground transition-colors">Soluções</a></li>
+              <li><a href="#agro" className="hover:text-primary-foreground transition-colors">Agro & Florestal</a></li>
+              <li><a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download className="hover:text-primary-foreground transition-colors">Apresentação (.pptx)</a></li>
               <li><a href="#impacto" className="hover:text-primary-foreground transition-colors">Impacto</a></li>
               <li><a href="#cases" className="hover:text-primary-foreground transition-colors">Cases</a></li>
               <li><a href="#manifesto" className="hover:text-primary-foreground transition-colors">Manifesto</a></li>
