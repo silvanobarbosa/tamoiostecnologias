@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 
 type Post = {
@@ -13,6 +14,7 @@ type Post = {
   cover_image_url: string | null;
   published_at: string | null;
   author_id: string;
+  category: string;
 };
 
 const BlogPost = () => {
@@ -25,12 +27,12 @@ const BlogPost = () => {
     if (!slug) return;
     supabase
       .from("posts")
-      .select("id,title,excerpt,content,cover_image_url,published_at,author_id")
+      .select("id,title,excerpt,content,cover_image_url,published_at,author_id,category")
       .eq("slug", slug)
       .eq("status", "published")
       .maybeSingle()
       .then(async ({ data }) => {
-        setPost(data);
+        setPost(data as Post | null);
         if (data?.author_id) {
           const { data: prof } = await supabase
             .from("profiles")
@@ -45,6 +47,28 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {post && (
+        <SEO
+          title={post.title}
+          description={post.excerpt ?? post.content.slice(0, 160)}
+          image={post.cover_image_url ?? undefined}
+          type="article"
+          jsonLd={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt ?? undefined,
+            image: post.cover_image_url ?? undefined,
+            datePublished: post.published_at ?? undefined,
+            author: { "@type": "Person", name: authorName || "Equipe Tamoios" },
+            publisher: {
+              "@type": "Organization",
+              name: "Tamoios Tecnologia",
+            },
+            articleSection: post.category,
+          }}
+        />
+      )}
       <SiteHeader />
       <article className="pt-32 pb-20 md:pt-40">
         <div className="container max-w-3xl">
