@@ -624,12 +624,13 @@ const Index = () => {
       <footer className="bg-forest-deep text-primary-foreground/80 py-16">
         <div className="container grid md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2.5 font-display font-bold text-lg text-primary-foreground mb-3">
-              <span className="h-9 w-9 rounded-full bg-leaf grid place-items-center">
-                <Leaf className="h-4.5 w-4.5" strokeWidth={2.2} />
-              </span>
-              Tamoios
-            </div>
+            <img
+              src={logoTamoios}
+              alt="Tamoios Tecnologia"
+              width={140}
+              height={48}
+              className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
+            />
             <p className="text-sm leading-relaxed">
               Tamoios Tecnologia — Inovação em Biomassa.
               <br />Substituindo o isopor por polpa, do varejo à logística.
