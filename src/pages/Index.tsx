@@ -118,6 +118,19 @@ const ecossistema = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Tamoios Tecnologia — Inovação em biomassa para varejo, indústria e agro"
+        description="Substituímos o isopor por polpa de celulose: bandejas FLV com efeito escarola, calços técnicos para indústria e tubetes biodegradáveis para reflorestamento."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Tamoios Tecnologia",
+          email: "rafael@tamoiostecnologia.com.br",
+          telephone: "+55 11 98271 2685",
+          address: { "@type": "PostalAddress", addressLocality: "Itariri", addressRegion: "SP", addressCountry: "BR" },
+          sameAs: ["https://instagram.com/tamoios_tecnologia"],
+        }}
+      />
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/90 border-b border-border/60">
         <nav className="container flex h-20 items-center justify-between">
