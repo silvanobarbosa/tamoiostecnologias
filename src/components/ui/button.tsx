@@ -15,8 +15,8 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        ember: "bg-gradient-ember text-background font-semibold hover:opacity-90 shadow-ember",
-        jungle: "bg-gradient-jungle text-background font-semibold hover:opacity-90 shadow-jungle",
+        forest: "bg-forest text-primary-foreground font-semibold hover:bg-forest-deep shadow-soft",
+        leaf: "bg-leaf text-primary-foreground font-semibold hover:bg-leaf/90 shadow-leaf",
       },
       size: {
         default: "h-10 px-4 py-2",

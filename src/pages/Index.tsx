@@ -1,190 +1,230 @@
-import heroImg from "@/assets/hero-tamoios.jpg";
+import heroImg from "@/assets/hero-bandejas.jpg";
+import varejoImg from "@/assets/varejo-flv.jpg";
+import industriaImg from "@/assets/industria-calcos.jpg";
+import socialImg from "@/assets/impacto-social.jpg";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code2, Cloud, Compass, ShieldCheck, Sparkles, Zap, Quote, Mail, MapPin, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Leaf,
+  Recycle,
+  Factory,
+  Sparkles,
+  CheckCircle2,
+  Mail,
+  Phone,
+  Instagram,
+  MapPin,
+  Quote,
+} from "lucide-react";
 
-const services = [
-  {
-    icon: Code2,
-    title: "Software Sob Medida",
-    desc: "Sistemas web, aplicativos e plataformas construídos para o seu negócio — do MVP ao produto em escala.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & Infraestrutura",
-    desc: "Arquiteturas resilientes em AWS, GCP e Azure. Migração, observabilidade e otimização de custos.",
-  },
-  {
-    icon: Compass,
-    title: "Consultoria Digital",
-    desc: "Diagnóstico, roadmap e modernização. Levamos a sua operação para o próximo patamar tecnológico.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Segurança & Compliance",
-    desc: "LGPD, ISO 27001 e proteção contínua. Sua operação blindada do código à infraestrutura.",
-  },
-  {
-    icon: Sparkles,
-    title: "IA & Automação",
-    desc: "Agentes inteligentes, integrações e fluxos automatizados que liberam o time para o que importa.",
-  },
-  {
-    icon: Zap,
-    title: "Squads Sob Demanda",
-    desc: "Times multidisciplinares plugados ao seu produto, entregando com ritmo e qualidade.",
-  },
+const impacto = [
+  { value: "+30Mi", label: "Bandejas de isopor já substituídas no Brasil", icon: Recycle },
+  { value: "+30 a 50%", label: "Aumento médio no tempo de prateleira em relação ao isopor", icon: Leaf },
+  { value: "80%", label: "Da equipe de fábrica é formada por mulheres da região de Itariri-SP", icon: Sparkles },
 ];
 
 const cases = [
-  { tag: "Fintech", title: "Plataforma de crédito digital", metric: "+312%", label: "originação em 8 meses" },
-  { tag: "Logística", title: "Roteirização inteligente", metric: "−28%", label: "custo operacional" },
-  { tag: "Varejo", title: "Omnichannel headless", metric: "4.9★", label: "NPS após relançamento" },
+  {
+    name: "Morangos Vó Lucia",
+    metric: "~40%",
+    label: "de ganho no tempo de prateleira",
+    tag: "Frutas premium",
+  },
+  {
+    name: "Cogumelos Hayashi",
+    metric: "~50%",
+    label: "no tempo de prateleira e transporte",
+    tag: "Hortifruti especial",
+  },
+  {
+    name: "Carrefour × Hortmix",
+    metric: "EVP",
+    label: "Rodadas de Ensaio de Vida de Prateleira em parceria",
+    tag: "Validação de mercado",
+  },
 ];
 
-const testimonials = [
-  {
-    quote: "A Tamoios entregou em 90 dias o que outras prometeram em um ano. Time sênior e parceiro de verdade.",
-    name: "Camila Furtado",
-    role: "CTO, Vela Capital",
-  },
-  {
-    quote: "Reduzimos 40% do custo de cloud sem perder performance. Resultado claro, comunicação impecável.",
-    name: "Rodrigo Mendes",
-    role: "Head de Engenharia, Norte Logística",
-  },
+const ecossistema = [
+  "USP — Incubadora",
+  "Braskem Labs",
+  "BNDES Garagem",
+  "Cietec",
+  "Irani Labs",
+  "Prêmio Grandes Cases de Embalagem",
 ];
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/50">
+      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <nav className="container flex h-16 items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 font-display font-bold text-lg">
-            <span className="h-8 w-8 rounded-lg bg-gradient-ember grid place-items-center text-background">T</span>
-            <span>Tamoios<span className="text-ember">.</span></span>
+          <a href="#top" className="flex items-center gap-2.5 font-display font-bold text-lg">
+            <span className="h-9 w-9 rounded-full bg-forest grid place-items-center text-primary-foreground">
+              <Leaf className="h-4.5 w-4.5" strokeWidth={2.2} />
+            </span>
+            <span className="text-forest-deep">Tamoios</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a>
-            <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
-            <a href="#cases" className="hover:text-foreground transition-colors">Cases</a>
-            <a href="#contato" className="hover:text-foreground transition-colors">Contato</a>
+            <a href="#solucoes" className="hover:text-forest transition-colors">Soluções</a>
+            <a href="#impacto" className="hover:text-forest transition-colors">Impacto</a>
+            <a href="#cases" className="hover:text-forest transition-colors">Cases</a>
+            <a href="#manifesto" className="hover:text-forest transition-colors">Manifesto</a>
+            <a href="#contato" className="hover:text-forest transition-colors">Contato</a>
           </div>
-          <Button asChild variant="ember" size="sm">
-            <a href="#contato">Fale conosco</a>
+          <Button asChild variant="forest" size="sm">
+            <a href="#contato">Fale com a Tamoios</a>
           </Button>
         </nav>
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Floresta brasileira com circuitos luminosos representando tecnologia"
-          width={1920}
-          height={1280}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 pattern-tupi opacity-40" />
-
-        <div className="container relative z-10 pt-24">
-          <div className="max-w-3xl animate-float-up">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ember/30 bg-ember/10 text-ember text-xs font-medium mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-ember animate-pulse-glow" />
-              Tecnologia com raiz brasileira
+      <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-pulp">
+        <div className="absolute inset-0 grain opacity-60" />
+        <div className="container relative grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 animate-float-up">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 border border-forest/20 text-forest text-xs font-semibold tracking-wide uppercase mb-8">
+              <Leaf className="h-3.5 w-3.5" /> Tecnologia em biomassa
             </span>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6">
-              Construímos o <span className="text-gradient-ember">digital</span> que move o seu negócio.
+            <h1 className="font-display font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-forest-deep text-balance mb-8">
+              A Revolução sem Isopor:
+              <span className="block italic text-leaf font-normal mt-2">
+                Máximo Frescor no Varejo
+              </span>
+              <span className="block">e Proteção Absoluta na Logística.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-              Software sob medida, infraestrutura em nuvem e consultoria estratégica.
-              Da floresta de código ao topo da operação — com a força e a precisão dos Tamoios.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
+              Desenvolvimento tecnológico de biomassa de alta densidade. Substituímos
+              polímeros petroquímicos por soluções <strong className="text-forest">100% recicláveis e compostáveis</strong>.
+              Sustentabilidade de ponta a ponta, dos produtos às pessoas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild variant="ember" size="xl">
-                <a href="#contato">Iniciar um projeto <ArrowRight className="ml-1" /></a>
+              <Button asChild variant="forest" size="xl">
+                <a href="#solucoes">
+                  Conhecer soluções <ArrowRight className="ml-1" />
+                </a>
               </Button>
               <Button asChild variant="outline" size="xl">
-                <a href="#servicos">Conhecer serviços</a>
+                <a href="#manifesto">Ler o manifesto</a>
               </Button>
             </div>
-
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-xl">
-              {[
-                { n: "120+", l: "Projetos entregues" },
-                { n: "98%", l: "Retenção de clientes" },
-                { n: "12anos", l: "De jornada" },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div className="font-display text-3xl md:text-4xl font-bold text-gradient-hero">{s.n}</div>
-                  <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.l}</div>
-                </div>
-              ))}
+          </div>
+          <div className="lg:col-span-5 relative animate-float-up" style={{ animationDelay: "0.15s" }}>
+            <div className="relative rounded-3xl overflow-hidden shadow-deep">
+              <img
+                src={heroImg}
+                alt="Bandeja de polpa de celulose Tamoios com morangos e tomates frescos"
+                width={1600}
+                height={1200}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 bg-forest text-primary-foreground rounded-2xl p-5 shadow-deep max-w-[230px] hidden md:block">
+              <div className="text-xs uppercase tracking-widest opacity-80 mb-1">Efeito Escarola</div>
+              <div className="font-display text-2xl leading-tight">
+                +50% de vida<br />de prateleira
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SOBRE */}
-      <section id="sobre" className="py-24 md:py-32 relative">
-        <div className="container grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="text-ember font-medium text-sm tracking-widest uppercase">Quem somos</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-              Uma confederação de especialistas em tecnologia.
+      {/* SOLUÇÕES — Vitrine dupla */}
+      <section id="solucoes" className="py-24 md:py-32">
+        <div className="container">
+          <div className="max-w-2xl mb-16">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Soluções Tamoios</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
+              Duas frentes, uma mesma matéria-prima:
+              <em className="text-leaf font-normal"> a polpa de celulose.</em>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              O nome <strong className="text-foreground">Tamoios</strong> vem do tupi <em>tamuya</em> — "os mais velhos, os ancestrais".
-              Trazemos essa sabedoria para o digital: experiência sólida, decisões pensadas
-              e entregas que duram.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Somos engenheiros, designers e estrategistas que acreditam que tecnologia bem-feita
-              é aquela que conversa com o negócio, com as pessoas e com o tempo.
-            </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { t: "Senioridade", d: "Time com média de 8+ anos em produto digital." },
-              { t: "Transparência", d: "Você acompanha cada decisão e métrica." },
-              { t: "Velocidade", d: "Sprints curtos, valor entregue cedo." },
-              { t: "Compromisso", d: "Parceria de longo prazo, não vendor de fôlego curto." },
-            ].map((v) => (
-              <div key={v.t} className="rounded-xl border border-border bg-card/50 p-6 hover:border-ember/40 transition-colors">
-                <div className="text-ember font-display font-bold text-xl mb-2">{v.t}</div>
-                <div className="text-sm text-muted-foreground">{v.d}</div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Varejo */}
+            <article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500">
+              <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
+                <img
+                  src={varejoImg}
+                  alt="Bandejas Tamoios de polpa expostas em gôndola de supermercado com hortifruti"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
-            ))}
+              <div className="p-8 md:p-10">
+                <div className="flex items-center gap-2 text-leaf font-semibold text-xs tracking-widest uppercase mb-4">
+                  <Leaf className="h-4 w-4" /> Varejo & Agro
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-forest-deep mb-4 leading-snug">
+                  Bandejas para FLV: Mais Tempo de Prateleira, Menos Perdas no Seu Caixa.
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  O setor de Frutas, Legumes e Verduras lidera as perdas no varejo
+                  (<strong className="text-foreground">65% das quebras</strong>). Nossas Embalagens
+                  Ativas Compostáveis absorvem a umidade e geram o <em>"Efeito Escarola"</em>,
+                  estendendo a vida de prateleira em <strong className="text-forest">até 50%</strong>.
+                </p>
+                <Button asChild variant="forest" size="lg">
+                  <a href="#contato">Conhecer Linha de Bandejas <ArrowRight /></a>
+                </Button>
+              </div>
+            </article>
+
+            {/* Indústria */}
+            <article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500">
+              <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
+                <img
+                  src={industriaImg}
+                  alt="Calços técnicos Tamoios protegendo garrafa e autopeças em caixa de papelão"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-8 md:p-10">
+                <div className="flex items-center gap-2 text-leaf font-semibold text-xs tracking-widest uppercase mb-4">
+                  <Factory className="h-4 w-4" /> Indústria & Logística
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-forest-deep mb-4 leading-snug">
+                  Calços Técnicos: Proteção Absoluta Sob Medida.
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Graças ao nosso processo de <strong className="text-foreground">alto vácuo</strong>,
+                  a polpa Tamoios entrega o maior índice de proteção contra impactos para transporte.
+                  Projetos perfeitos para autopeças, móveis, bebidas e e-commerce.
+                </p>
+                <Button asChild variant="forest" size="lg">
+                  <a href="#contato">Conhecer Soluções Industriais <ArrowRight /></a>
+                </Button>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* SERVIÇOS */}
-      <section id="servicos" className="py-24 md:py-32 bg-secondary/30 relative overflow-hidden">
-        <div className="absolute inset-0 pattern-tupi opacity-30" />
+      {/* IMPACTÔMETRO */}
+      <section id="impacto" className="py-24 md:py-32 bg-forest text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 grain opacity-20" />
         <div className="container relative">
           <div className="max-w-2xl mb-16">
-            <span className="text-ember font-medium text-sm tracking-widest uppercase">O que fazemos</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-              Soluções completas, do código ao crescimento.
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Impactômetro</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-balance">
+              Cada bandeja é um número que muda o Brasil.
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Cada serviço é desenhado para se conectar com o anterior — a sua stack inteira em harmonia.
-            </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="group rounded-2xl border border-border bg-card p-8 hover:border-ember/50 hover:shadow-ember transition-all duration-500"
-              >
-                <div className="h-12 w-12 rounded-xl bg-gradient-ember grid place-items-center text-background mb-6 group-hover:scale-110 transition-transform">
-                  <s.icon className="h-6 w-6" />
+          <div className="grid md:grid-cols-3 gap-px bg-primary-foreground/10 rounded-3xl overflow-hidden border border-primary-foreground/10">
+            {impacto.map((d) => (
+              <div key={d.label} className="bg-forest p-10 md:p-12 flex flex-col">
+                <d.icon className="h-8 w-8 text-leaf mb-8" strokeWidth={1.6} />
+                <div className="font-display text-6xl md:text-7xl font-semibold leading-none mb-4 text-cream">
+                  {d.value}
                 </div>
-                <h3 className="font-display text-xl font-bold mb-3">{s.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
+                <div className="text-primary-foreground/80 leading-relaxed text-base">
+                  {d.label}
+                </div>
               </div>
             ))}
           </div>
@@ -192,94 +232,156 @@ const Index = () => {
       </section>
 
       {/* CASES */}
-      <section id="cases" className="py-24 md:py-32">
+      <section id="cases" className="py-24 md:py-32 bg-pulp-light">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div className="max-w-2xl">
-              <span className="text-ember font-medium text-sm tracking-widest uppercase">Resultados</span>
-              <h2 className="text-4xl md:text-5xl font-bold mt-4 leading-tight">
-                Histórias que se transformaram em números.
-              </h2>
-            </div>
+          <div className="max-w-2xl mb-16">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Cases & Validação</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
+              Soluções validadas pelo mercado.
+            </h2>
+            <p className="text-lg text-muted-foreground mt-6">
+              Resultados reais de quem escolheu eliminar o isopor e o plástico.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {cases.map((c, i) => (
+            {cases.map((c) => (
               <article
-                key={c.title}
-                className="relative rounded-2xl overflow-hidden border border-border bg-card p-8 min-h-[320px] flex flex-col justify-between hover:border-ember/50 transition-colors"
+                key={c.name}
+                className="rounded-2xl bg-card border border-border p-8 flex flex-col justify-between min-h-[280px] hover:border-forest/40 transition-colors"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-ember opacity-10 blur-3xl" />
-                <div className="relative">
-                  <span className="text-xs font-medium uppercase tracking-widest text-jungle">{c.tag}</span>
-                  <h3 className="font-display text-2xl font-bold mt-3">{c.title}</h3>
+                <div>
+                  <span className="inline-block text-xs font-semibold tracking-widest uppercase text-earth mb-4">
+                    {c.tag}
+                  </span>
+                  <h3 className="font-display text-2xl font-semibold text-forest-deep leading-tight">
+                    {c.name}
+                  </h3>
                 </div>
-                <div className="relative">
-                  <div className="font-display text-5xl font-bold text-gradient-ember">{c.metric}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{c.label}</div>
+                <div className="mt-8 pt-6 border-t border-border">
+                  <div className="font-display text-5xl font-semibold text-leaf leading-none mb-2">
+                    {c.metric}
+                  </div>
+                  <div className="text-sm text-muted-foreground">{c.label}</div>
                 </div>
-                <span className="absolute bottom-6 right-6 text-6xl font-display font-bold text-muted-foreground/10">
-                  0{i + 1}
-                </span>
               </article>
             ))}
           </div>
+
+          <figure className="mt-12 rounded-2xl bg-forest/5 border border-forest/15 p-8 md:p-10 flex flex-col md:flex-row items-start gap-6">
+            <Quote className="h-10 w-10 text-leaf shrink-0" />
+            <div>
+              <div className="text-xs font-semibold tracking-widest uppercase text-leaf mb-2">
+                Destaque de inovação
+              </div>
+              <blockquote className="font-display text-xl md:text-2xl text-forest-deep leading-snug">
+                Rodadas de Ensaio de Vida de Prateleira (EVP) operadas em parceria com a
+                rede <strong>Carrefour</strong> e a <strong>Hortmix</strong>.
+              </blockquote>
+            </div>
+          </figure>
         </div>
       </section>
 
-      {/* DEPOIMENTOS */}
-      <section className="py-24 md:py-32 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-2xl mb-16">
-            <span className="text-ember font-medium text-sm tracking-widest uppercase">Confiança</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 leading-tight">
-              Quem caminha com a Tamoios fala por nós.
-            </h2>
+      {/* MANIFESTO */}
+      <section id="manifesto" className="py-24 md:py-32 relative overflow-hidden">
+        <div className="container grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 order-2 lg:order-1 relative">
+            <div className="rounded-3xl overflow-hidden shadow-deep">
+              <img
+                src={socialImg}
+                alt="Mulheres trabalhando na linha de produção da Tamoios em Itariri-SP"
+                width={1600}
+                height={1100}
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="absolute -top-6 -right-6 bg-leaf text-primary-foreground rounded-2xl p-5 shadow-leaf max-w-[220px] hidden md:block">
+              <div className="font-display text-3xl leading-none mb-1">80%</div>
+              <div className="text-xs leading-snug opacity-95">
+                de mulheres da região na linha de produção
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {testimonials.map((t) => (
-              <figure key={t.name} className="rounded-2xl border border-border bg-card p-8 md:p-10 relative">
-                <Quote className="absolute top-6 right-6 h-8 w-8 text-ember/30" />
-                <blockquote className="text-lg md:text-xl leading-relaxed mb-6">"{t.quote}"</blockquote>
-                <figcaption>
-                  <div className="font-display font-bold">{t.name}</div>
-                  <div className="text-sm text-muted-foreground">{t.role}</div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CONTATO */}
-      <section id="contato" className="py-24 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-jungle opacity-10" />
-        <div className="container relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-ember font-medium text-sm tracking-widest uppercase">Vamos construir</span>
-            <h2 className="text-4xl md:text-6xl font-bold mt-4 mb-6 leading-tight">
-              Pronto para o próximo <span className="text-gradient-ember">salto</span>?
+          <div className="lg:col-span-6 order-1 lg:order-2">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Manifesto Tamoios</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 mb-8 leading-tight text-forest-deep text-balance">
+              A embalagem mais sustentável do Brasil
+              <em className="block text-leaf font-normal"> começa nas pessoas.</em>
             </h2>
-            <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-              Conte sobre o seu desafio. Em até 24h um especialista da Tamoios entra em contato.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Instalada no Distrito de Ana Dias (Itariri/SP), uma região de alta vulnerabilidade,
+              a Tamoios orgulha-se de ser a <strong className="text-forest">maior empregadora feminina local</strong>.
+              Nossa tecnologia utiliza aparas de papelão pré-uso 100% limpas. Sem uso de "resíduo sujo".
+              Produtos recicláveis, compostáveis, biodegradáveis e operando com tecnologia de
+              secagem elétrica para descarbonização.
             </p>
-
-            <div className="grid md:grid-cols-3 gap-4 mb-12">
+            <ul className="space-y-3">
               {[
-                { icon: Mail, label: "contato@tamoiostech.com.br" },
-                { icon: Phone, label: "+55 (11) 4002-8922" },
-                { icon: MapPin, label: "São Paulo · Brasil" },
-              ].map((c) => (
-                <div key={c.label} className="rounded-xl border border-border bg-card p-5 flex items-center gap-3 justify-center">
-                  <c.icon className="h-5 w-5 text-ember" />
-                  <span className="text-sm">{c.label}</span>
+                "100% reciclável, compostável e biodegradável",
+                "Aparas de papelão pré-uso — sem resíduo sujo",
+                "Secagem elétrica para descarbonização",
+                "Maior empregadora feminina de Ana Dias (Itariri/SP)",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-leaf mt-0.5 shrink-0" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ECOSSISTEMA */}
+      <section className="py-20 md:py-24 bg-secondary border-y border-border">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Ecossistema de confiança</span>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mt-4 text-forest-deep">
+              Nosso Ecossistema de Inovação.
+            </h2>
+          </div>
+          <div className="overflow-hidden">
+            <div className="flex gap-4 marquee w-max">
+              {[...ecossistema, ...ecossistema].map((logo, i) => (
+                <div
+                  key={i}
+                  className="shrink-0 px-8 py-6 rounded-xl bg-card border border-border min-w-[260px] flex items-center justify-center text-center"
+                >
+                  <span className="font-display text-lg text-forest-deep">{logo}</span>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
 
-            <Button asChild variant="ember" size="xl" className="glow-ember">
-              <a href="mailto:contato@tamoiostech.com.br">
-                Iniciar conversa <ArrowRight className="ml-1" />
+      {/* CONTATO / CTA */}
+      <section id="contato" className="py-24 md:py-32 bg-gradient-hero text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 grain opacity-20" />
+        <div className="container relative max-w-4xl text-center">
+          <span className="inline-block text-leaf font-semibold text-sm tracking-widest uppercase mb-6">
+            Vamos transformar
+          </span>
+          <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight text-balance mb-8">
+            Pronto para eliminar o isopor da sua operação?
+          </h2>
+          <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Receba uma proposta sob medida com simulação de ganho em vida de prateleira ou
+            performance logística. Resposta em até 24 horas.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button asChild variant="leaf" size="xl">
+              <a href="mailto:rafael@tamoiostecnologia.com.br">
+                Solicitar proposta <ArrowRight />
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="xl" className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+              <a href="https://wa.me/5511982712685" target="_blank" rel="noopener">
+                Falar no WhatsApp
               </a>
             </Button>
           </div>
@@ -287,13 +389,61 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border py-10">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2 font-display font-bold text-foreground">
-            <span className="h-6 w-6 rounded-md bg-gradient-ember grid place-items-center text-background text-xs">T</span>
-            Tamoios Tecnologia
+      <footer className="bg-forest-deep text-primary-foreground/80 py-16">
+        <div className="container grid md:grid-cols-3 gap-10">
+          <div>
+            <div className="flex items-center gap-2.5 font-display font-bold text-lg text-primary-foreground mb-3">
+              <span className="h-9 w-9 rounded-full bg-leaf grid place-items-center">
+                <Leaf className="h-4.5 w-4.5" strokeWidth={2.2} />
+              </span>
+              Tamoios
+            </div>
+            <p className="text-sm leading-relaxed">
+              Tamoios Tecnologia — Inovação em Biomassa.
+              <br />Substituindo o isopor por polpa, do varejo à logística.
+            </p>
           </div>
-          <div>© {new Date().getFullYear()} Tamoios Tecnologia. Todos os direitos reservados.</div>
+          <div>
+            <div className="text-xs uppercase tracking-widest text-leaf font-semibold mb-4">Contato</div>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-leaf" />
+                <a href="mailto:rafael@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors">
+                  rafael@tamoiostecnologia.com.br
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-leaf" />
+                <a href="tel:+5511982712685" className="hover:text-primary-foreground transition-colors">
+                  +55 11 98271 2685
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Instagram className="h-4 w-4 text-leaf" />
+                <a href="https://instagram.com/tamoios_tecnologia" target="_blank" rel="noopener" className="hover:text-primary-foreground transition-colors">
+                  @tamoios_tecnologia
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <MapPin className="h-4 w-4 text-leaf" />
+                <span>Ana Dias · Itariri/SP · Brasil</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-xs uppercase tracking-widest text-leaf font-semibold mb-4">Navegação</div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#solucoes" className="hover:text-primary-foreground transition-colors">Soluções</a></li>
+              <li><a href="#impacto" className="hover:text-primary-foreground transition-colors">Impacto</a></li>
+              <li><a href="#cases" className="hover:text-primary-foreground transition-colors">Cases</a></li>
+              <li><a href="#manifesto" className="hover:text-primary-foreground transition-colors">Manifesto</a></li>
+              <li><a href="#contato" className="hover:text-primary-foreground transition-colors">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="container mt-12 pt-8 border-t border-primary-foreground/10 text-xs flex flex-col md:flex-row justify-between gap-2">
+          <span>© {new Date().getFullYear()} Tamoios Tecnologia. Todos os direitos reservados.</span>
+          <span>Embalagem com propósito · Itariri-SP</span>
         </div>
       </footer>
     </div>
