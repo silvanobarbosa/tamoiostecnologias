@@ -117,15 +117,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-        <nav className="container flex h-16 items-center justify-between">
-          <a href="#top" className="flex items-center gap-3">
+      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/90 border-b border-border/60">
+        <nav className="container flex h-20 items-center justify-between">
+          <a href="#top" className="flex items-center gap-3 group" aria-label="Tamoios Tecnologia — início">
             <img
               src={logoTamoios}
               alt="Tamoios Tecnologia"
-              width={140}
-              height={48}
-              className="h-10 w-auto"
+              width={180}
+              height={60}
+              className="h-14 w-auto transition-transform group-hover:scale-[1.03]"
             />
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
