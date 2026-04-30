@@ -180,7 +180,7 @@ const Index = () => {
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={industriaImg}
-                  alt="Calços técnicos Tamoios protegendo garrafa e autopeças em caixa de papelão"
+                  alt="Calços técnicos Tamoios em polpa moldada para proteção de garrafas no transporte"
                   width={1200}
                   height={900}
                   loading="lazy"
