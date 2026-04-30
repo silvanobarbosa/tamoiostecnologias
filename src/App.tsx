@@ -12,8 +12,11 @@ import AgroFlorestal from "./pages/produtos/AgroFlorestal.tsx";
 import Auth from "./pages/Auth.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import QuemSomos from "./pages/QuemSomos.tsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
 import NewPost from "./pages/admin/NewPost.tsx";
+import AdminSubscribers from "./pages/admin/AdminSubscribers.tsx";
+import AdminMessages from "./pages/admin/AdminMessages.tsx";
 
 const queryClient = new QueryClient();
 
@@ -29,11 +32,14 @@ const App = () => (
             <Route path="/produtos/bandejas-flv" element={<BandejasFLV />} />
             <Route path="/produtos/calcos-tecnicos" element={<CalcosTecnicos />} />
             <Route path="/produtos/agro-florestal" element={<AgroFlorestal />} />
+            <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/posts/new" element={<NewPost />} />
+            <Route path="/admin/subscribers" element={<AdminSubscribers />} />
+            <Route path="/admin/messages" element={<AdminMessages />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
