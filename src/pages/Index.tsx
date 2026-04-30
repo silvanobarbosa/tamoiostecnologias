@@ -117,15 +117,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/60">
-        <nav className="container flex h-16 items-center justify-between">
-          <a href="#top" className="flex items-center gap-3">
+      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/90 border-b border-border/60">
+        <nav className="container flex h-20 items-center justify-between">
+          <a href="#top" className="flex items-center gap-3 group" aria-label="Tamoios Tecnologia — início">
             <img
               src={logoTamoios}
               alt="Tamoios Tecnologia"
-              width={140}
-              height={48}
-              className="h-10 w-auto"
+              width={180}
+              height={60}
+              className="h-14 w-auto transition-transform group-hover:scale-[1.03]"
             />
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -145,10 +145,16 @@ const Index = () => {
       {/* HERO */}
       <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-pulp">
         <div className="absolute inset-0 grain opacity-60" />
+        <img
+          src={logoTamoios}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute -right-24 -top-12 w-[520px] max-w-[60vw] opacity-[0.06] rotate-[8deg] hidden md:block"
+        />
         <div className="container relative grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 animate-float-up">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 border border-forest/20 text-forest text-xs font-semibold tracking-wide uppercase mb-8">
-              <Leaf className="h-3.5 w-3.5" /> Tecnologia em biomassa
+              <Leaf className="h-3.5 w-3.5" /> Tecnologia em biomassa · Tamoios
             </span>
             <h1 className="font-display font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-forest-deep text-balance mb-8">
               A Revolução sem Isopor:
@@ -193,6 +199,9 @@ const Index = () => {
               <div className="font-display text-2xl leading-tight">
                 +50% de vida<br />de prateleira
               </div>
+            </div>
+            <div className="absolute -top-6 -right-6 bg-background rounded-2xl p-3 shadow-deep border border-border/60 hidden md:flex items-center justify-center">
+              <img src={logoTamoios} alt="Selo Tamoios Tecnologia" width={72} height={72} className="h-16 w-auto" />
             </div>
           </div>
         </div>
@@ -594,7 +603,16 @@ const Index = () => {
       {/* CONTATO / CTA */}
       <section id="contato" className="py-24 md:py-32 bg-gradient-hero text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 grain opacity-20" />
+        <img
+          src={logoTamoios}
+          alt=""
+          aria-hidden
+          className="pointer-events-none select-none absolute -left-32 -bottom-24 w-[640px] max-w-[70vw] opacity-[0.07] hidden md:block"
+        />
         <div className="container relative max-w-4xl text-center">
+          <div className="inline-flex items-center justify-center bg-primary-foreground rounded-2xl p-4 shadow-deep mb-8">
+            <img src={logoTamoios} alt="Tamoios Tecnologia" width={140} height={48} className="h-14 w-auto" />
+          </div>
           <span className="inline-block text-leaf font-semibold text-sm tracking-widest uppercase mb-6">
             Vamos transformar
           </span>
@@ -624,13 +642,15 @@ const Index = () => {
       <footer className="bg-forest-deep text-primary-foreground/80 py-16">
         <div className="container grid md:grid-cols-3 gap-10">
           <div>
-            <img
-              src={logoTamoios}
-              alt="Tamoios Tecnologia"
-              width={140}
-              height={48}
-              className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
-            />
+            <div className="inline-flex items-center justify-center bg-primary-foreground rounded-2xl p-4 shadow-deep mb-5">
+              <img
+                src={logoTamoios}
+                alt="Tamoios Tecnologia"
+                width={160}
+                height={56}
+                className="h-14 w-auto"
+              />
+            </div>
             <p className="text-sm leading-relaxed">
               Tamoios Tecnologia — Inovação em Biomassa.
               <br />Substituindo o isopor por polpa, do varejo à logística.
