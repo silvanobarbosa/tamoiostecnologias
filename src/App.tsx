@@ -13,10 +13,15 @@ import Auth from "./pages/Auth.tsx";
 import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import QuemSomos from "./pages/QuemSomos.tsx";
-import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
-import NewPost from "./pages/admin/NewPost.tsx";
+
+import AdminLayout from "./pages/admin/AdminLayout.tsx";
+import Overview from "./pages/admin/Overview.tsx";
+import PostsAdmin from "./pages/admin/PostsAdmin.tsx";
+import PostEditor from "./pages/admin/PostEditor.tsx";
 import AdminSubscribers from "./pages/admin/AdminSubscribers.tsx";
 import AdminMessages from "./pages/admin/AdminMessages.tsx";
+import TeamAdmin from "./pages/admin/TeamAdmin.tsx";
+import Account from "./pages/admin/Account.tsx";
 
 const queryClient = new QueryClient();
 
@@ -36,10 +41,18 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/admin/posts/new" element={<NewPost />} />
-            <Route path="/admin/subscribers" element={<AdminSubscribers />} />
-            <Route path="/admin/messages" element={<AdminMessages />} />
+
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<Overview />} />
+              <Route path="posts" element={<PostsAdmin />} />
+              <Route path="posts/new" element={<PostEditor />} />
+              <Route path="posts/:id/edit" element={<PostEditor />} />
+              <Route path="messages" element={<AdminMessages />} />
+              <Route path="subscribers" element={<AdminSubscribers />} />
+              <Route path="team" element={<TeamAdmin />} />
+              <Route path="account" element={<Account />} />
+            </Route>
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
