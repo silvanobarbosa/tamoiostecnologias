@@ -13,7 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        ember: {
+          DEFAULT: "hsl(var(--ember))",
+          glow: "hsl(var(--ember-glow))",
+        },
+        jungle: {
+          DEFAULT: "hsl(var(--jungle))",
+          deep: "hsl(var(--jungle-deep))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
