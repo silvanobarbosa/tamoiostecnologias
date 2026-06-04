@@ -95,8 +95,10 @@ const QuemSomos = () => {
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{body}</p>
             </div>
           ))}
+          </div>
         </div>
       </section>
+
 
       <section className="py-20 md:py-28 bg-pulp-light/40">
         <div className="container max-w-4xl">
