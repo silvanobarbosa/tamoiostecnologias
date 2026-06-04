@@ -9,6 +9,9 @@ import industriaImg from "@/assets/industria-calcos.jpg";
 const CalcosTecnicos = () => {
   return (
     <ProductPageLayout
+      seoTitle="Calços Técnicos em polpa moldada · Tamoios"
+      seoDescription="Calços, berços e cantoneiras de polpa moldada sob projeto. Substituem EVA, polipropileno e isopor (EPS). ISO 14000 e Decreto nº 12.688/2025."
+      productName="Calços Técnicos em polpa moldada Tamoios"
       eyebrow="Indústria & Logística"
       title="Calços técnicos em polpa moldada:"
       highlight="proteção sob medida, descarte 100% papel."
@@ -16,6 +19,7 @@ const CalcosTecnicos = () => {
       heroImage={heroImg}
       heroAlt="Calços técnicos de polpa moldada Tamoios para garrafas"
       Icon={Factory}
+      benefitsHeading="Performance de proteção com descarte 100% papel"
       badges={[
         "Ferramentaria interna",
         "Mesa moldadora 1200 × 400 mm",
