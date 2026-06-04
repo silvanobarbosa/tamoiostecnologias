@@ -35,11 +35,11 @@ import {
 } from "lucide-react";
 
 const credenciais = [
-  "Reciclado pré-uso",
+  "Reciclado",
   "Reciclável",
-  "Compostável",
   "Biodegradável",
-  "Baixo carbono",
+  "Compostável",
+  "Descarbonizado",
   "Operação em região vulnerável",
 ];
 
