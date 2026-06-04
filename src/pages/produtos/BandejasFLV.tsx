@@ -12,15 +12,16 @@ const BandejasFLV = () => {
       eyebrow="Varejo & Agro"
       title="Bandejas FLV em polpa de celulose:"
       highlight="o fim da era do isopor."
-      intro="A linha Tamoios para Frutas, Legumes e Verduras combina absorção ativa de umidade, respiração natural e descarte 100% papel — estendendo a vida de prateleira em até 50% e reduzindo o setor que mais perde no varejo brasileiro."
+      intro="A linha Tamoios para Frutas, Legumes e Verduras combina absorção ativa de umidade, respiração natural e descarte 100% papel — estendendo a vida de prateleira em até 50% e reduzindo o setor que mais perde no varejo brasileiro. Já substituímos mais de 30 milhões de bandejas de isopor no Brasil — temos o maior catálogo de bandejas bio do mercado brasileiro."
       heroImage={heroImg}
-      heroAlt="Bandeja Tamoios de polpa com tomates frescos"
+      heroAlt="Mosaico de bandejas Tamoios em polpa de celulose com hortifruti, frutas e folhosos no varejo"
       Icon={Leaf}
       badges={[
-        "100% reciclável",
-        "Compostável",
+        "Reciclado",
+        "Reciclável",
         "Biodegradável",
-        "Dimensões sob demanda",
+        "Compostável",
+        "Descarbonizado",
       ]}
       benefits={[
         {
@@ -30,7 +31,7 @@ const BandejasFLV = () => {
         },
         {
           icon: Snowflake,
-          title: "+30 a 50% de prateleira",
+          title: "Até 50% a mais de tempo de prateleira",
           desc: "Ganho médio comprovado em rodadas de Ensaio de Vida de Prateleira (EVP) com Carrefour e Hortmix em comparação com isopor convencional.",
         },
         {
