@@ -81,7 +81,7 @@ const industriaLinhas = [
 
 const impacto = [
   { value: "+30Mi", label: "Bandejas de isopor já substituídas no Brasil", icon: Recycle },
-  { value: "+30 a 50%", label: "Aumento médio no tempo de prateleira em relação ao isopor", icon: Leaf },
+  { value: "até 50%", label: "a mais de tempo de prateleira em relação ao isopor", icon: Leaf },
   { value: "80%", label: "Da equipe de fábrica é formada por mulheres da região de Itariri-SP", icon: Sparkles },
 ];
 
