@@ -8,6 +8,7 @@ import { Leaf, Factory, Sprout, Recycle, Award, MapPin, Quote, TrendingUp } from
 import jornadaMorango from "@/assets/jornada-morango.jpg";
 import jornadaMaos from "@/assets/jornada-maos.jpg";
 import distribuicaoBrasil from "@/assets/distribuicao-brasil.jpg";
+import donaAngela from "@/assets/dona-angela.jpg";
 
 const milestones = [
   { year: "2014", title: "Fundação em Itariri-SP", body: "Tamoios nasce com foco em embalagens de polpa para o varejo, em uma planta integrada à mata atlântica." },
@@ -133,6 +134,72 @@ const QuemSomos = () => {
             <div>
               <div className="text-leaf text-4xl font-display">3</div>
               <p className="text-sm mt-1">linhas: varejo · indústria · agroflorestal</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ONDE TUDO COMEÇOU — Dona Angela */}
+      <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+        <div className="container max-w-6xl grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 order-2 lg:order-1">
+            <div className="rounded-3xl overflow-hidden shadow-deep ring-1 ring-forest/10">
+              <img
+                src={donaAngela}
+                alt="Dona Angela na cozinha lavando folhas frescas sobre papel absorvente — a origem da Tamoios"
+                loading="lazy"
+                width={1200}
+                height={1200}
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mt-4 text-center">
+              Dona Angela · onde tudo começou
+            </p>
+          </div>
+
+          <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Onde tudo começou</span>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-forest-deep leading-tight text-balance">
+              Antes de ser tecnologia, foi um <span className="italic text-leaf">gesto de cuidado</span> na cozinha.
+            </h2>
+
+            <div className="space-y-5 text-foreground/85 leading-relaxed text-lg">
+              <p>
+                Quem projetou o nosso produto, lá no início, foi a <strong>Dona Angela</strong>.
+                Professora, mãe, dona de casa — vida corrida, como tantas brasileiras.
+                Ela voltava da feira, lavava a verdura, deixava escorrer, deixava secar.
+                E então fazia algo simples: <strong>punha duas folhas de papel
+                absorvente</strong> embaixo das folhas, dentro da tigela.
+              </p>
+              <p>
+                Não era truque de cozinha. Era engenharia intuitiva. O papel absorvia a
+                <strong> umidade livre</strong> do produto — e a verdura durava mais.
+                Muito mais. Foi <em>esse</em> raciocínio, observado por anos dentro de
+                casa, que se tornou o coração técnico da Tamoios:
+                <strong> uma embalagem que absorve umidade, estende o tempo de prateleira
+                e devolve, em margem, o pequeno custo a mais em relação ao isopor.</strong>
+              </p>
+              <blockquote className="border-l-4 border-leaf pl-5 italic text-forest-deep text-xl font-display">
+                <Quote className="h-5 w-5 text-leaf mb-2" />
+                E tudo começou com a Dona Angela, lá atrás, que já entendia — e ensinava —
+                o valor de cuidar e de valorizar.
+              </blockquote>
+              <p className="text-base text-muted-foreground">
+                Hoje somos uma <strong className="text-forest-deep">startup de biomateriais</strong>.
+                Nosso eixo existencial é usar biomassa — papel, resíduo agrícola, amido —
+                para substituir o plástico petroquímico, ancorados na
+                <strong> Política Nacional de Resíduos Sólidos</strong>, na nova
+                <strong> Estratégia Nacional de Economia Circular</strong> e no
+                <strong> Acordo de Paris</strong>. A missão é uma só:
+                <em> buscar a fronteira do desenvolvimento sustentável</em> —
+                combatendo, ao mesmo tempo, as mudanças climáticas e a geração de
+                microplástico.
+              </p>
+              <p className="text-base text-forest font-medium">
+                Tudo isso começou com duas folhas de papel absorvente, numa tigela, na
+                cozinha da Dona Angela.
+              </p>
             </div>
           </div>
         </div>
