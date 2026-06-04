@@ -12,51 +12,52 @@ const CalcosTecnicos = () => {
       eyebrow="Indústria & Logística"
       title="Calços técnicos em polpa moldada:"
       highlight="proteção sob medida, descarte 100% papel."
-      intro="Engenharia de polpa de alta densidade com processo de alto vácuo. Substituímos isopor (EPS) e plástico bolha por calços, berços e cantoneiras moldados sob projeto — para autopeças, bebidas, móveis, eletrodomésticos e equipamentos pesados."
+      intro="Engenharia de polpa de alta densidade desenvolvida com ferramentaria interna e uma das maiores mesas moldadoras do Brasil (1200 × 400 mm). Substituímos EVA, polipropileno e isopor (EPS) por calços, berços e cantoneiras moldados sob projeto — em conformidade com a ISO 14000 e alinhados ao Decreto nº 12.688/2025, dentro de projetos de economia circular."
       heroImage={heroImg}
       heroAlt="Calços técnicos de polpa moldada Tamoios para garrafas"
       Icon={Factory}
       badges={[
-        "Alto vácuo",
-        "Projeto + ferramenta",
-        "Hot Press",
-        "Dimensões sobre demanda",
+        "Ferramentaria interna",
+        "Mesa moldadora 1200 × 400 mm",
+        "Substitui EVA, PP e isopor",
+        "ISO 14000 · Economia circular",
+        "Decreto nº 12.688/2025",
       ]}
       benefits={[
         {
           icon: Shield,
           title: "Absorção de impacto superior",
-          desc: "Estrutura de polpa de alta densidade dissipa choques mecânicos e vibração no transporte. Comprovado contra EPS em ensaios de queda.",
+          desc: "Estrutura de polpa de alta densidade dissipa choques mecânicos e vibração no transporte. Substitui EVA, polipropileno e isopor (EPS) com performance comprovada em ensaios de queda.",
         },
         {
           icon: Settings2,
-          title: "Engenharia sob projeto",
-          desc: "Equipe própria de projeto, ferramentaria e prototipagem em Hot Press. Do desenho 3D ao molde produtivo, tudo internalizado.",
+          title: "Engenharia + ferramentaria interna",
+          desc: "Equipe própria de projeto, ferramentaria e prototipagem em Hot Press, operando uma das maiores mesas moldadoras do Brasil (1200 × 400 mm). Do desenho 3D ao molde produtivo, tudo internalizado.",
         },
         {
           icon: Layers,
-          title: "Logística reversa simples",
-          desc: "Descarte direto na coleta seletiva de papel. Reduz contrato com gestora de resíduos e melhora score ESG da sua operação.",
+          title: "Conformidade ISO 14000 + Decreto 12.688/2025",
+          desc: "Projetos desenhados para economia circular: descarte direto na coleta seletiva de papel, em linha com o novo marco regulatório de resíduos sólidos. Reduz contrato com gestora de resíduos e melhora o score ESG.",
         },
       ]}
       lines={[
         {
           title: "Embalagem para vinhos e bebidas premium",
-          description: "Berços moldados que substituem isopor e plástico bolha para garrafas individuais ou kits. Apresentação sofisticada com proteção vertical comprovada.",
+          description: "Berços moldados que substituem EVA, polipropileno e isopor para garrafas individuais ou kits. Apresentação sofisticada com proteção vertical comprovada.",
           image: vinhoImg,
           imageAlt: "Berço de polpa para garrafa de vinho dentro de caixa",
           bullets: ["Garrafas 750ml padrão e magnum", "Kits 2 e 3 garrafas", "Acabamento branco ou natural"],
         },
         {
           title: "Calços para compressores e equipamentos pesados",
-          description: "Calços de grande dimensão para máquinas industriais, compressores, autopeças volumosas e linha branca. Suporta cargas elevadas com mínima deformação.",
+          description: "Calços de grande dimensão para máquinas industriais, compressores, autopeças volumosas e linha branca, produzidos em uma das maiores mesas moldadoras do Brasil (1200 × 400 mm).",
           image: compressorImg,
           imageAlt: "Calço técnico de polpa de grande dimensão sobre bancada de fábrica",
           bullets: ["Cargas industriais pesadas", "Geometrias complexas multi-cavidade", "Identificação de marca em alto-relevo"],
         },
         {
           title: "Cantoneiras de proteção multi-função",
-          description: "Cantoneiras moldadas para proteção de quinas em móveis, vidros, cerâmicas e linha branca. Substituem isopor laminado e cantoneiras de papelão dobrado.",
+          description: "Cantoneiras moldadas para proteção de quinas em móveis, vidros, cerâmicas e linha branca. Substituem EVA, isopor laminado e cantoneiras de papelão dobrado.",
           image: industriaImg,
           imageAlt: "Cantoneiras de proteção em polpa moldada",
           bullets: ["Móveis, vidros, eletrodomésticos", "Encaixe perfeito em qualquer ângulo", "Empilhável para estoque compacto"],
@@ -71,10 +72,10 @@ const CalcosTecnicos = () => {
       ]}
       specs={[
         { label: "Processo", value: "Alto vácuo + Hot Press" },
-        { label: "Densidade", value: "Alta — para impacto" },
-        { label: "Material", value: "Polpa de celulose pré-uso" },
-        { label: "Personalização", value: "Logo e códigos em relevo" },
-        { label: "Engenharia", value: "Projeto e ferramenta inclusos" },
+        { label: "Ferramentaria", value: "100% interna" },
+        { label: "Mesa moldadora", value: "1200 × 400 mm" },
+        { label: "Substitui", value: "EVA · Polipropileno · Isopor (EPS)" },
+        { label: "Conformidade", value: "ISO 14000 · Decreto 12.688/2025" },
         { label: "Aplicações", value: "Bebidas, autopeças, móveis, eletro" },
       ]}
       ctaTitle="Tem um projeto específico de embalagem industrial?"
