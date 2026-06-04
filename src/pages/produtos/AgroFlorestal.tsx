@@ -8,6 +8,9 @@ import hidroponiaVasoImg from "@/assets/hidroponia-vaso.jpg";
 const AgroFlorestal = () => {
   return (
     <ProductPageLayout
+      seoTitle="Tubetes Bio e Mini Vasos · Tamoios Tecnologia"
+      seoDescription="Tubetes biodegradáveis para silvicultura, reflorestamento e mini vasos de hidroponia. A muda vai ao campo no próprio recipiente, que se decompõe no solo."
+      productName="Tubetes Bio e Mini Vasos Tamoios"
       eyebrow="Agro & Florestal"
       title="Tubetes Bio e Mini Vasos:"
       highlight="polpa que vira raiz."
@@ -15,6 +18,7 @@ const AgroFlorestal = () => {
       heroImage={heroImg}
       heroAlt="Tubetes bio Tamoios com mudas de eucalipto"
       Icon={TreePine}
+      benefitsHeading="Polpa que vira raiz: vantagens no campo"
       badges={[
         "Decomposição direta no solo",
         "Eucalipto, Pinus e nativas",
