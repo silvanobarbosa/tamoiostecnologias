@@ -44,14 +44,14 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-leaf" />
-                <a href="mailto:rafael@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors">
-                  rafael@tamoiostecnologia.com.br
+                <a href="mailto:fernanda@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors">
+                  fernanda@tamoiostecnologia.com.br
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-leaf" />
-                <a href="tel:+5511982712685" className="hover:text-primary-foreground transition-colors">
-                  +55 11 98271 2685
+                <a href="tel:+5511940066986" className="hover:text-primary-foreground transition-colors">
+                  +55 11 94006 6986
                 </a>
               </li>
               <li className="flex items-center gap-3">

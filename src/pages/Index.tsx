@@ -1,5 +1,5 @@
 import logoTamoios from "@/assets/tamoios-logo.png";
-import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
+import heroImg from "@/assets/bandejas-mosaico.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
 import industriaImg from "@/assets/calcos-garrafas.jpg";
 import socialImg from "@/assets/impacto-social.jpg";
@@ -35,11 +35,12 @@ import {
 } from "lucide-react";
 
 const credenciais = [
-  "Reciclado pré-uso",
+  "Reciclado",
   "Reciclável",
-  "Compostável",
   "Biodegradável",
-  "Baixo carbono",
+  "Compostável",
+  "Descarbonizado",
+  "ISO 14000 · Decreto 12.688/2025",
   "Operação em região vulnerável",
 ];
 
@@ -81,7 +82,7 @@ const industriaLinhas = [
 
 const impacto = [
   { value: "+30Mi", label: "Bandejas de isopor já substituídas no Brasil", icon: Recycle },
-  { value: "+30 a 50%", label: "Aumento médio no tempo de prateleira em relação ao isopor", icon: Leaf },
+  { value: "até 50%", label: "a mais de tempo de prateleira em relação ao isopor", icon: Leaf },
   { value: "80%", label: "Da equipe de fábrica é formada por mulheres da região de Itariri-SP", icon: Sparkles },
 ];
 
@@ -346,7 +347,7 @@ const Index = () => {
             <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Agro & Florestal</span>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
               Da floresta para a floresta:
-              <em className="block text-leaf font-normal">polpa que vira raiz.</em>
+              <em className="block text-leaf font-normal">de polpa que vira raiz para polpa que vira adubo.</em>
             </h2>
             <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
               Novas frentes em desenvolvimento Tamoios — substituindo plástico em mudas,
@@ -667,14 +668,14 @@ const Index = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-leaf" />
-                <a href="mailto:rafael@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors">
-                  rafael@tamoiostecnologia.com.br
+                <a href="mailto:fernanda@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors">
+                  fernanda@tamoiostecnologia.com.br
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-leaf" />
-                <a href="tel:+5511982712685" className="hover:text-primary-foreground transition-colors">
-                  +55 11 98271 2685
+                <a href="tel:+5511940066986" className="hover:text-primary-foreground transition-colors">
+                  +55 11 94006 6986
                 </a>
               </li>
               <li className="flex items-center gap-3">
