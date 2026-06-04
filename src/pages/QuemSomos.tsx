@@ -4,7 +4,10 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ContactForm";
-import { Leaf, Factory, Sprout, Recycle, Award, MapPin } from "lucide-react";
+import { Leaf, Factory, Sprout, Recycle, Award, MapPin, Quote, TrendingUp } from "lucide-react";
+import jornadaMorango from "@/assets/jornada-morango.jpg";
+import jornadaMaos from "@/assets/jornada-maos.jpg";
+import distribuicaoBrasil from "@/assets/distribuicao-brasil.jpg";
 
 const milestones = [
   { year: "2014", title: "Fundação em Itariri-SP", body: "Tamoios nasce com foco em embalagens de polpa para o varejo, em uma planta integrada à mata atlântica." },
@@ -131,6 +134,148 @@ const QuemSomos = () => {
               <div className="text-leaf text-4xl font-display">3</div>
               <p className="text-sm mt-1">linhas: varejo · indústria · agroflorestal</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* JORNADA — A descoberta dos 30% */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container max-w-6xl">
+          <div className="max-w-3xl mb-14">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">A jornada</span>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-forest-deep mt-3 leading-tight text-balance">
+              Cinco anos de tentativas. Um número que mudou tudo: <span className="italic text-leaf">+30%</span> de prateleira.
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-7 space-y-6 text-foreground/85 leading-relaxed">
+              <p>
+                Em <strong>2014</strong>, a Tamoios nasceu com uma missão que parecia
+                impossível: substituir o isopor — um plástico que o planeta não consegue
+                reciclar — por uma espuma de celulose viva, devolvida à terra em poucos
+                meses. Cinco anos seguidos a equipe punha o produto na geladeira, ele
+                falhava, e voltava-se ao laboratório.
+              </p>
+              <p>
+                Em <strong>2019</strong>, desencantou. A primeira bandeja entregou o que
+                prometia — e mais: começou a chegar, repetidamente, no número mágico de
+                <strong> 30% a mais de tempo de prateleira</strong>. Não num teste isolado,
+                mas em cases reais. <strong>Morango e cogumelo no Rio Grande do Sul.
+                Milho no Nordeste.</strong> Operações que, antes, conviviam com perdas
+                rotineiras de FLV passaram a vender mais, descartar menos e repor com
+                menos frequência.
+              </p>
+              <p>
+                A conta econômica se montou sozinha. Cada unidade ganha tempo para ser
+                vendida. Cada unidade que não se perde é margem preservada. Soma-se a
+                isso o custo evitado de reposição, de adequação, de descarte e de
+                logística reversa do produto vencido. <strong>São efeitos simultâneos —
+                e eles se acumulam.</strong>
+              </p>
+              <p>
+                Hoje, a validação técnica avança com o <strong>SENAI</strong> para
+                consolidar o ganho médio observado internamente. A bandejinha — produto
+                de entrada da Tamoios — é, ao mesmo tempo, três coisas:
+              </p>
+              <ul className="space-y-3 pl-1">
+                {[
+                  "Substituição de um plástico que não recicla por um biocompósito que se decompõe.",
+                  "Uso de matéria-prima reciclada, renovável e produzida de forma descarbonizada.",
+                  "Aumento do tempo de prateleira — menos lixo, menos aterro, mais venda.",
+                ].map((t, i) => (
+                  <li key={t} className="flex gap-3">
+                    <span className="font-display text-leaf text-lg shrink-0">0{i + 1}</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+              <blockquote className="border-l-4 border-leaf pl-5 italic text-forest-deep">
+                <Quote className="h-5 w-5 text-leaf mb-2" />
+                Não é uma promessa de marketing — é o que clientes do Sul ao Nordeste
+                relatam, semana após semana, na operação real do varejo.
+              </blockquote>
+            </div>
+
+            <div className="lg:col-span-5 grid gap-5">
+              <div className="rounded-3xl overflow-hidden shadow-deep">
+                <img
+                  src={jornadaMorango}
+                  alt="Morangos em bandeja de polpa Tamoios na gôndola"
+                  loading="lazy"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="rounded-3xl overflow-hidden shadow-soft">
+                <img
+                  src={jornadaMaos}
+                  alt="Mãos segurando bandeja de polpa recém-moldada na fábrica"
+                  loading="lazy"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="rounded-2xl bg-forest-deep text-primary-foreground p-6 grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="font-display text-3xl text-leaf">+30%</div>
+                  <p className="text-xs mt-1 text-primary-foreground/75">shelf life médio observado</p>
+                </div>
+                <div>
+                  <div className="font-display text-3xl text-leaf">2019</div>
+                  <p className="text-xs mt-1 text-primary-foreground/75">primeira entrega comercial</p>
+                </div>
+                <div>
+                  <div className="font-display text-3xl text-leaf">3</div>
+                  <p className="text-xs mt-1 text-primary-foreground/75">cases validados em campo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DISTRIBUIÇÃO NACIONAL */}
+      <section className="py-20 md:py-28 bg-pulp-light/40">
+        <div className="container max-w-6xl grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Distribuição nacional</span>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-forest-deep mt-3 leading-tight text-balance">
+              Do Rio Grande do Sul ao Ceará e Pernambuco.
+            </h2>
+            <p className="text-muted-foreground mt-5 leading-relaxed text-lg">
+              A operação da Tamoios entrega de forma consistente em todas as regiões do
+              país, com fábrica verticalizada em Itariri-SP e malha logística que cobre
+              do varejo gaúcho aos centros distribuidores do Nordeste.
+            </p>
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {[
+                { uf: "RS · SC · PR", t: "Sul" },
+                { uf: "SP · MG · RJ · ES", t: "Sudeste" },
+                { uf: "GO · DF · MT", t: "Centro-Oeste" },
+                { uf: "BA · SE · AL", t: "Nordeste" },
+                { uf: "PE · CE", t: "Nordeste" },
+                { uf: "PA · MA", t: "Norte" },
+              ].map((r) => (
+                <div key={r.uf} className="rounded-xl border border-border bg-card p-4">
+                  <TrendingUp className="h-4 w-4 text-leaf" />
+                  <p className="font-display text-forest-deep mt-2">{r.uf}</p>
+                  <p className="text-xs text-muted-foreground">{r.t}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <img
+              src={distribuicaoBrasil}
+              alt="Mapa do Brasil com rotas de distribuição da Tamoios"
+              loading="lazy"
+              width={1200}
+              height={900}
+              className="w-full h-auto rounded-3xl"
+            />
           </div>
         </div>
       </section>
