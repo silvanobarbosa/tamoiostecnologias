@@ -78,7 +78,14 @@ const QuemSomos = () => {
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="container grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Nossos pilares</span>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mt-3 text-forest-deep leading-tight text-balance">
+              Quatro compromissos que sustentam cada produto Tamoios.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map(({ icon: Icon, title, body }) => (
             <div key={title} className="rounded-2xl bg-card border border-border p-6">
               <div className="h-11 w-11 rounded-xl bg-forest/10 text-forest flex items-center justify-center">
