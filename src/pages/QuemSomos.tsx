@@ -8,6 +8,7 @@ import { Leaf, Factory, Sprout, Recycle, Award, MapPin, Quote, TrendingUp } from
 import jornadaMorango from "@/assets/jornada-morango.jpg";
 import jornadaMaos from "@/assets/jornada-maos.jpg";
 import distribuicaoBrasil from "@/assets/distribuicao-brasil.jpg";
+import donaAngela from "@/assets/dona-angela.jpg";
 
 const milestones = [
   { year: "2014", title: "Fundação em Itariri-SP", body: "Tamoios nasce com foco em embalagens de polpa para o varejo, em uma planta integrada à mata atlântica." },
