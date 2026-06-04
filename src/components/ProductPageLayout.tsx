@@ -36,6 +36,10 @@ type Props = {
   ctaHref?: string;
   downloadLabel?: string;
   downloadHref?: string;
+  seoTitle: string;
+  seoDescription: string;
+  productName: string;
+  benefitsHeading?: string;
   children?: ReactNode;
 };
 
