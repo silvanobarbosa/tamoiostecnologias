@@ -1,5 +1,5 @@
 import logoTamoios from "@/assets/tamoios-logo.png";
-import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
+import heroImg from "@/assets/bandejas-mosaico.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
 import industriaImg from "@/assets/calcos-garrafas.jpg";
 import socialImg from "@/assets/impacto-social.jpg";
