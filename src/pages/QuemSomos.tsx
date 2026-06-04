@@ -50,9 +50,14 @@ const QuemSomos = () => {
               <span className="block italic text-leaf font-normal">embalagem com propósito.</span>
             </h1>
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl leading-relaxed">
-              Somos uma indústria brasileira de tecnologia em biomassa. Há mais de uma década desenvolvemos
-              substitutos para o isopor e plásticos virgens — do varejo de hortifruti à logística pesada — sem
-              abrir mão de performance técnica.
+              Somos uma indústria brasileira de tecnologia em biomassa. Já substituímos
+              mais de <strong className="text-forest">30 milhões de peças de plástico</strong> por produtos
+              <strong className="text-forest"> Reciclados, Recicláveis, Biodegradáveis, Compostáveis e Descarbonizados</strong>.
+              Nosso processo usa energia 100% renovável e reuso de água em circuito fechado.
+            </p>
+            <p className="text-base text-muted-foreground mt-4 max-w-2xl leading-relaxed">
+              Há mais de uma década desenvolvemos substitutos para o isopor e plásticos virgens —
+              do varejo de hortifruti à logística pesada — sem abrir mão de performance técnica.
             </p>
           </div>
           <div className="lg:col-span-4">
