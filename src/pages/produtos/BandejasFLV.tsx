@@ -9,6 +9,9 @@ import gondolaImg from "@/assets/varejo-bandejas-gondola.jpg";
 const BandejasFLV = () => {
   return (
     <ProductPageLayout
+      seoTitle="Bandejas FLV de polpa · Tamoios Tecnologia"
+      seoDescription="Bandejas compostáveis para Frutas, Legumes e Verduras: Efeito Escarola, até 50% a mais de prateleira e descarte 100% papel. O maior catálogo bio do Brasil."
+      productName="Bandejas FLV em polpa de celulose Tamoios"
       eyebrow="Varejo & Agro"
       title="Bandejas FLV em polpa de celulose:"
       highlight="o fim da era do isopor."
@@ -16,6 +19,7 @@ const BandejasFLV = () => {
       heroImage={heroImg}
       heroAlt="Mosaico de bandejas Tamoios em polpa de celulose com hortifruti, frutas e folhosos no varejo"
       Icon={Leaf}
+      benefitsHeading="Por que a bandeja Tamoios rende mais no varejo"
       badges={[
         "Reciclado",
         "Reciclável",

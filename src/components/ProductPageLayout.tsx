@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SEO } from "@/components/SEO";
 
 export type ProductLine = {
   title: string;
@@ -35,6 +36,10 @@ type Props = {
   ctaHref?: string;
   downloadLabel?: string;
   downloadHref?: string;
+  seoTitle: string;
+  seoDescription: string;
+  productName: string;
+  benefitsHeading?: string;
   children?: ReactNode;
 };
 
@@ -55,10 +60,26 @@ export function ProductPageLayout({
   ctaHref = "/#contato",
   downloadLabel,
   downloadHref,
+  seoTitle,
+  seoDescription,
+  productName,
+  benefitsHeading = "Por que escolher a Tamoios",
   children,
 }: Props) {
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: productName,
+    description: seoDescription,
+    image: typeof window !== "undefined" ? new URL(heroImage, window.location.origin).href : heroImage,
+    brand: { "@type": "Brand", name: "Tamoios Tecnologia" },
+    manufacturer: { "@type": "Organization", name: "Tamoios Tecnologia", url: "https://tamoiostecnologias.lovable.app" },
+    category: eyebrow,
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO title={seoTitle} description={seoDescription} image={heroImage} jsonLd={productJsonLd} />
       <SiteHeader />
 
       {/* HERO */}
@@ -75,7 +96,7 @@ export function ProductPageLayout({
                 <span className="block italic text-leaf font-normal mt-2">{highlight}</span>
               )}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-8 max-w-2xl">
               {intro}
             </p>
             {badges.length > 0 && (
@@ -83,7 +104,7 @@ export function ProductPageLayout({
                 {badges.map((b) => (
                   <span
                     key={b}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-card border border-border text-xs font-medium text-foreground/80"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-card border border-border text-xs font-medium text-foreground/85"
                   >
                     <CheckCircle2 className="h-3.5 w-3.5 text-leaf" /> {b}
                   </span>
@@ -110,6 +131,8 @@ export function ProductPageLayout({
                 alt={heroAlt}
                 width={1200}
                 height={1500}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -120,6 +143,12 @@ export function ProductPageLayout({
       {/* BENEFITS */}
       <section className="py-20 md:py-24">
         <div className="container">
+          <div className="max-w-2xl mb-12">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Benefícios</span>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mt-3 text-forest-deep leading-tight text-balance">
+              {benefitsHeading}
+            </h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {benefits.map((b) => (
               <div
@@ -130,12 +159,13 @@ export function ProductPageLayout({
                   <b.icon className="h-5 w-5 text-leaf" />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-forest-deep mb-2">{b.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                <p className="text-sm text-foreground/75 leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* LINES */}
       <section className="py-20 md:py-28 bg-pulp-light/40 border-y border-border">

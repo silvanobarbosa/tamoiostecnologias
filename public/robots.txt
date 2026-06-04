@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /auth
 
-Sitemap: https://tamoiostecnologia.com.br/sitemap.xml
+Sitemap: https://tamoiostecnologias.lovable.app/sitemap.xml
