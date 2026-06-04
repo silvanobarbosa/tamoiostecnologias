@@ -40,6 +40,7 @@ const credenciais = [
   "Biodegradável",
   "Compostável",
   "Descarbonizado",
+  "ISO 14000 · Decreto 12.688/2025",
   "Operação em região vulnerável",
 ];
 
