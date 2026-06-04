@@ -346,7 +346,7 @@ const Index = () => {
             <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Agro & Florestal</span>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
               Da floresta para a floresta:
-              <em className="block text-leaf font-normal">polpa que vira raiz.</em>
+              <em className="block text-leaf font-normal">de polpa que vira raiz para polpa que vira adubo.</em>
             </h2>
             <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
               Novas frentes em desenvolvimento Tamoios — substituindo plástico em mudas,
