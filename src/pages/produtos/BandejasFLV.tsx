@@ -1,6 +1,6 @@
 import { Leaf, Droplets, Recycle, Snowflake, ShoppingBasket, Apple } from "lucide-react";
 import { ProductPageLayout } from "@/components/ProductPageLayout";
-import heroImg from "@/assets/bandeja-tomate-cacho.jpg";
+import heroImg from "@/assets/bandejas-mosaico.jpg";
 import alfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import miniImg from "@/assets/bandeja-alface-mini.jpg";
 import tomatesImg from "@/assets/bandeja-tomates.jpg";
