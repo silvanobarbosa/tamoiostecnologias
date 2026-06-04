@@ -15,6 +15,7 @@ export function SiteHeader() {
     { to: "/produtos/calcos-tecnicos", label: t("nav.calcos") },
     { to: "/produtos/agro-florestal", label: t("nav.agro") },
     { to: "/quem-somos", label: t("nav.about") },
+    { to: "/politicas-nacionais", label: "Políticas ESG" },
     { to: "/blog", label: t("nav.blog") },
   ];
 
