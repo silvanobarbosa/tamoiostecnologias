@@ -1,81 +1,68 @@
-# Plano de execução — sequência aprovada
+# CMS de páginas + login admin
 
-Vamos entregar **um item por vez**, na ordem que você definiu. A cada conclusão, eu aviso e sigo para o próximo.
+## Decisões importantes (escopo real)
 
----
+Suas páginas (Home, Quem Somos, Materiais, Produtos, etc.) são layouts ricos, com várias seções únicas. Transformar tudo em "blocos arrastáveis genéricos" exigiria reescrever o site inteiro como dados, demoraria muito e degradaria o design atual.
 
-## 1️⃣ Calculadora de Impacto (item #2)
+**Abordagem proposta — CMS de conteúdo, não de layout:**
+- O layout/design das páginas continua igual.
+- Para cada página, identificamos os textos, listas, imagens e CTAs que fazem sentido editar.
+- Esses pedaços viram "campos" salvos no banco, agrupados por página → seção → chave.
+- O painel mostra um formulário por página, com cada campo editável (texto curto, texto longo, imagem, lista de itens, link).
+- As páginas leem do banco; se não houver valor salvo, usam o conteúdo atual como padrão (nada quebra durante a transição).
+- Isso é prático, escalável, e mantém a estética.
 
-**Onde:** componente reutilizável na home (seção nova entre "Produtos" e "Cases") + versão compacta nas páginas de produto (Bandejas FLV, Calços, Agro).
+Se depois quiser blocos reordenáveis de verdade (CMS visual estilo Webflow), pode ser uma evolução futura.
 
-**O que faz:**
-- Input: tipo de produto + volume mensal (slider + número).
-- Output animado: kg de plástico/isopor evitado, CO₂e economizado, equivalência (árvores plantadas / km de carro / casas/mês).
-- CTA: "Quero esse impacto no meu negócio" → abre formulário de contato pré-preenchido com o cálculo no campo mensagem.
+## Páginas cobertas no escopo
 
-**Técnico:** componente `<ImpactCalculator />`, fatores de conversão em `src/lib/impact.ts` (baseados em LCA pública: EPS ~3.0 kg CO₂e/kg, polpa moldada ~0.8 kg CO₂e/kg). Sem backend — puro frontend. i18n PT/EN.
+Home, Quem Somos, Materiais & Portfólio, Bandejas FLV, Calços Técnicos, Agro & Florestal, Cases, Imprensa, Políticas Nacionais. O Blog continua com o editor existente.
 
----
+## Estrutura técnica
 
-## 2️⃣ Série de 5 posts de blog (item #4)
+**Tabela `site_content`** (nova):
+- `page` (slug da página: `home`, `quem-somos`, etc.)
+- `section` (ex: `hero`, `manifesto`, `cta`)
+- `key` (ex: `title`, `subtitle`, `bullets`)
+- `value_text` (texto/markdown)
+- `value_json` (para listas e estruturas)
+- `value_image_url` (para imagens)
+- `updated_at`, `updated_by`
+- RLS: leitura pública; escrita só para admin.
 
-Crio 5 posts completos diretamente na tabela `posts` do admin, com:
-1. **"A história da Dona Angela"** — origem da Tamoios.
-2. **"Por que polpa moldada vence o isopor"** — comparativo técnico + ambiental.
-3. **"Como o Carrefour reduziu plástico com a Tamoios"** — case longo.
-4. **"ENEC explicada em 5 minutos"** — política nacional.
-5. **"O ciclo da biomassa: do papelão à bandeja"** — economia circular.
+**Hook `useSiteContent(page)`**: carrega todos os campos da página de uma vez e retorna função `t(section, key, fallback)` para os componentes usarem no lugar dos textos hardcoded.
 
-Cada post: 800-1200 palavras, capa gerada por IA, slug otimizado, meta description, tags. Status `published`.
+**Painel `/admin/pages`**: lista todas as páginas; ao escolher uma, mostra formulário gerado a partir de um schema (definimos um schema por página listando os campos editáveis e seus tipos). Botões: Salvar, Restaurar padrão, Pré-visualizar.
 
----
+**Upload de imagens**: reutiliza o bucket `post-images` já existente.
 
-## 3️⃣ Press Kit `/imprensa` (item #6)
+## Login & usuário admin
 
-Nova página com:
-- Bio curta + bio expandida (copy & paste).
-- Fatos rápidos (fundação, sede, capacidade, clientes-âncora).
-- Logos para download (SVG, PNG horizontal, PNG vertical, monocromático).
-- Fotos hi-res (placeholders — você manda depois ou eu gero IA).
-- Contato dedicado de imprensa (email + WhatsApp).
-- Botão "Baixar press kit completo (.zip)".
+- Criar novo usuário admin com email/senha que você fornecer pelo formulário seguro (não digite aqui no chat).
+- Atribuir o role `admin` (tabela `user_roles` já existe).
+- Página de login já existe em `/auth` — adicionar redirect para `/admin` quando o usuário for admin.
+- **Link "Entrar"** discreto no rodapé do site, apontando para `/auth`.
 
-Adiciona link no footer e no header (sob "Materiais").
+## Entregas desta tarefa
 
----
+1. Migração: tabela `site_content` + RLS + GRANTs + trigger updated_at.
+2. Hook `useSiteContent` e função utilitária `t()`.
+3. Schema de campos editáveis para cada uma das 9 páginas (definido em código, fácil de expandir).
+4. Refatoração das páginas para usar `t(...)` com os textos atuais como fallback (sem mudar visual).
+5. Painel `/admin/pages` com lista de páginas e formulário dinâmico por página, incluindo upload de imagem.
+6. Atualização do `AdminSidebar` para incluir "Páginas".
+7. Link "Entrar" no rodapé.
+8. Criação do usuário admin (pedirei email + senha pelo formulário seguro).
+9. Redirect pós-login: admin → `/admin`, demais → home.
 
-## 4️⃣ Página de Cases `/cases` (item #7)
+## O que NÃO está no escopo desta tarefa
 
-Página dedicada com storytelling longo:
-- Hero com métricas agregadas (X clientes, Y toneladas evitadas).
-- Cards de cases: Carrefour, Belterra, Agroadubo, BNDES, Quintessa.
-- Cada card → página de detalhe `/cases/:slug` com: desafio, solução, resultado, depoimento, foto.
-- Link "Ver case completo" nos PDFs já em `/materiais`.
+- Reordenar seções via drag-and-drop.
+- Adicionar/remover seções inteiras.
+- Editor visual WYSIWYG dentro da própria página.
+- Versionamento/histórico de edições (pode ser feito depois).
+- Tradução multi-idioma do conteúdo CMS (i18n atual cobre só labels).
 
-Tabela `cases` no backend? **Não.** Conteúdo estático em arquivo `.ts` (mais rápido, sem CRUD necessário agora).
+## Estimativa de complexidade
 
----
-
-## 5️⃣ Animações framer-motion (item #12)
-
-Polimento final em toda a UI:
-- **Hero da home:** fade+rise em sequência (badge → título → subtítulo → CTAs).
-- **Seções:** `whileInView` com stagger nos cards de produto, cases, números.
-- **Calculadora:** números animados (count-up) ao recalcular.
-- **Páginas internas:** transição suave entre rotas.
-- **Botões:** hover-lift sutil nos primários.
-
-Sem exagero — Apple-like, não circo.
-
----
-
-## Como vamos rodar
-
-Respondo cada etapa com:
-- Arquivos criados/editados
-- Print/preview rápido do resultado
-- "Pronto para seguir para o próximo?"
-
-Se quiser ajustar algo no meio, é só falar — não preciso terminar tudo pra iterar.
-
-**Posso começar pelo #1 (Calculadora de Impacto)?**
+Trabalho extenso — várias páginas para mapear, refatorar e expor no admin. Vou começar pela Home como referência completa e replicar o padrão nas demais.

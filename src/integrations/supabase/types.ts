@@ -149,6 +149,45 @@ export type Database = {
         }
         Relationships: []
       }
+      site_content: {
+        Row: {
+          created_at: string
+          id: string
+          key: string
+          page: string
+          section: string
+          updated_at: string
+          updated_by: string | null
+          value_image_url: string | null
+          value_json: Json | null
+          value_text: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          key: string
+          page: string
+          section: string
+          updated_at?: string
+          updated_by?: string | null
+          value_image_url?: string | null
+          value_json?: Json | null
+          value_text?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          key?: string
+          page?: string
+          section?: string
+          updated_at?: string
+          updated_by?: string | null
+          value_image_url?: string | null
+          value_json?: Json | null
+          value_text?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
