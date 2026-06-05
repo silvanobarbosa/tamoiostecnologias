@@ -595,6 +595,13 @@ const Index = () => {
             ))}
           </div>
 
+          <div className="mt-10 flex justify-center">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/cases">Ver todos os cases <ArrowRight className="h-4 w-4 ml-1" /></Link>
+            </Button>
+          </div>
+
+
           <figure className="mt-12 rounded-2xl bg-forest/5 border border-forest/15 p-8 md:p-10 flex flex-col md:flex-row items-start gap-6">
             <Quote className="h-10 w-10 text-leaf shrink-0" />
             <div>
