@@ -51,7 +51,7 @@ export function SiteFooter() {
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-leaf" />
                 <a href="tel:+5511940066986" className="hover:text-primary-foreground transition-colors">
-                  +55 11 94006 6986
+                  +55 11 94006 6986 <span className="text-leaf text-xs">(também WhatsApp)</span>
                 </a>
               </li>
               <li className="flex items-center gap-3">

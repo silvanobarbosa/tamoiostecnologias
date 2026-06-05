@@ -146,7 +146,7 @@ export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" 
           </div>
 
           <Button asChild variant="forest" size="lg" className="w-full">
-            <a href={`#contato`} onClick={() => {
+            <a href={`/#contato`} onClick={() => {
               // pre-fill via hash, contact form will pick it up if integrated
               sessionStorage.setItem("impact-prefill", decodeURIComponent(contactMessage));
             }}>

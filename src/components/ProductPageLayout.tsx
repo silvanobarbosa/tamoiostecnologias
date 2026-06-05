@@ -248,12 +248,7 @@ export function ProductPageLayout({
           <p className="text-lg text-primary-foreground/85 mb-10">{ctaDesc}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild variant="leaf" size="xl">
-              <a href="mailto:rafael@tamoiostecnologia.com.br">Solicitar proposta <ArrowRight /></a>
-            </Button>
-            <Button asChild variant="outline" size="xl" className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              <a href="https://wa.me/5511982712685" target="_blank" rel="noopener">
-                Falar no WhatsApp
-              </a>
+              <a href="/#contato">Solicitar proposta <ArrowRight /></a>
             </Button>
           </div>
           <div className="mt-10">

@@ -17,7 +17,7 @@ const schema = z.object({
   message: z.string().trim().min(10).max(4000),
 });
 
-const WHATSAPP_NUMBER = "5511982712685";
+
 
 export function ContactForm() {
   const { t } = useTranslation();
@@ -68,10 +68,6 @@ export function ContactForm() {
     toast({ title: t("contact.success") });
   };
 
-  const waText = encodeURIComponent(
-    `Olá! Sou ${form.name || ""} (${form.company || "—"}) e tenho interesse em ${form.segment || "soluções Tamoios"}. ${form.message || ""}`
-  );
-
   return (
     <form onSubmit={submit} className="grid gap-5 text-left">
       <div className="grid md:grid-cols-2 gap-5">
@@ -116,11 +112,6 @@ export function ContactForm() {
       <div className="flex flex-col sm:flex-row gap-3">
         <Button type="submit" variant="forest" size="lg" disabled={loading || done}>
           {loading ? t("contact.sending") : done ? t("contact.success") : t("contact.submit")}
-        </Button>
-        <Button asChild variant="outline" size="lg">
-          <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`} target="_blank" rel="noopener">
-            {t("contact.whatsapp")}
-          </a>
         </Button>
       </div>
     </form>
