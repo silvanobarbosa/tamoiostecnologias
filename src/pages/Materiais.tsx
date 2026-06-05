@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Download, FileText, Sparkles, Megaphone } from "lucide-react";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 
 type Material = {
