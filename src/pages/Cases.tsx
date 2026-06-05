@@ -71,6 +71,7 @@ const CASES: CaseStudy[] = [
 ];
 
 const Cases = () => {
+  const { t, has } = useSiteContent("cases");
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -82,15 +83,20 @@ const Cases = () => {
       {/* Hero */}
       <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-gradient-pulp">
         <div className="container">
-          <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Cases</span>
-          <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance max-w-3xl">
-            Resultados reais de quem
-            <br />
-            <em className="text-leaf font-normal">já trocou o isopor.</em>
-          </h1>
+          <span className="text-leaf font-semibold text-sm tracking-widest uppercase">{t("hero", "eyebrow", "Cases")}</span>
+          {has("hero", "title") ? (
+            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance max-w-3xl">
+              {t("hero", "title", "")}
+            </h1>
+          ) : (
+            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance max-w-3xl">
+              Resultados reais de quem
+              <br />
+              <em className="text-leaf font-normal">já trocou o isopor.</em>
+            </h1>
+          )}
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Morangos da Vó Lucia e Cogumelos Hayashi: histórias curtas, números honestos
-            e ganhos de prateleira medidos em operação real.
+            {t("hero", "subtitle", "Morangos da Vó Lucia e Cogumelos Hayashi: histórias curtas, números honestos e ganhos de prateleira medidos em operação real.")}
           </p>
 
           <div className="mt-10 flex flex-wrap gap-2">
