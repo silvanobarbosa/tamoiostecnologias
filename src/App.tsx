@@ -14,6 +14,7 @@ import Blog from "./pages/Blog.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import QuemSomos from "./pages/QuemSomos.tsx";
 import PoliticasNacionais from "./pages/PoliticasNacionais.tsx";
+import Materiais from "./pages/Materiais.tsx";
 
 import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import Overview from "./pages/admin/Overview.tsx";
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/produtos/agro-florestal" element={<AgroFlorestal />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/politicas-nacionais" element={<PoliticasNacionais />} />
+            <Route path="/materiais" element={<Materiais />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/auth" element={<Auth />} />
