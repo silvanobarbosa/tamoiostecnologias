@@ -350,7 +350,7 @@ const Index = () => {
                   Projetos perfeitos para autopeças, móveis, bebidas e e-commerce.
                 </p>
                 <Button asChild variant="forest" size="lg">
-                  <a href="#contato">Conhecer Soluções Industriais <ArrowRight /></a>
+                  <Link to="/produtos/calcos-tecnicos">Conhecer Soluções Industriais <ArrowRight /></Link>
                 </Button>
               </div>
             </article></RevealItem>
