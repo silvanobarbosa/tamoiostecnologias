@@ -1,5 +1,6 @@
 import { Factory, Shield, Wine, Boxes, Layers, Settings2 } from "lucide-react";
 import { ProductPageLayout } from "@/components/ProductPageLayout";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImg from "@/assets/calcos-garrafas.jpg";
 import compressorImg from "@/assets/calcos-compressor.jpg";
 import vinhoImg from "@/assets/embalagem-vinho.jpg";
@@ -8,15 +9,16 @@ import industriaImg from "@/assets/industria-calcos.jpg";
 import cantoneirasImg from "@/assets/cantoneiras-protecao.png.asset.json";
 
 const CalcosTecnicos = () => {
+  const { t } = useSiteContent("produto-calcos-tecnicos");
   return (
     <ProductPageLayout
       seoTitle="Calços Técnicos em polpa moldada · Tamoios"
       seoDescription="Calços, berços e cantoneiras de polpa moldada sob projeto. Substituem EVA, polipropileno e isopor (EPS). ISO 14000 e Decreto nº 12.688/2025."
       productName="Calços Técnicos em polpa moldada Tamoios"
-      eyebrow="Indústria & Logística"
-      title="Calços técnicos em polpa moldada:"
-      highlight="proteção sob medida, descarte 100% papel."
-      intro="Engenharia de polpa de alta densidade desenvolvida com ferramentaria interna e uma das maiores mesas moldadoras do Brasil (1200 × 400 mm). Substituímos EVA, polipropileno e isopor (EPS) por calços, berços e cantoneiras moldados sob projeto — em conformidade com a ISO 14000 e alinhados ao Decreto nº 12.688/2025, dentro de projetos de economia circular."
+      eyebrow={t("hero", "eyebrow", "Indústria & Logística")}
+      title={t("hero", "title", "Calços técnicos em polpa moldada:")}
+      highlight={t("hero", "highlight", "proteção sob medida, descarte 100% papel.")}
+      intro={t("hero", "intro", "Engenharia de polpa de alta densidade desenvolvida com ferramentaria interna e uma das maiores mesas moldadoras do Brasil (1200 × 400 mm). Substituímos EVA, polipropileno e isopor (EPS) por calços, berços e cantoneiras moldados sob projeto — em conformidade com a ISO 14000 e alinhados ao Decreto nº 12.688/2025, dentro de projetos de economia circular.")}
       heroImage={heroImg}
       heroAlt="Calços técnicos de polpa moldada Tamoios para garrafas"
       Icon={Factory}
