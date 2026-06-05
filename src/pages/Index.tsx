@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
+import { SiteHeader } from "@/components/SiteHeader";
+
 
 
 import logoTamoios from "@/assets/tamoios-logo.png";
