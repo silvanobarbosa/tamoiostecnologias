@@ -71,7 +71,24 @@ const QuemSomos = () => {
                 <span className="text-xs uppercase tracking-widest font-semibold">Sede & fábrica</span>
               </div>
               <p className="font-display text-2xl text-forest-deep mt-2">Itariri / SP — Brasil</p>
-              <p className="text-sm text-muted-foreground mt-1">Bairro Ana Dias · próximo à Serra do Mar</p>
+              <p className="text-sm text-muted-foreground mt-1">Bairro Ana Dias · entre a Serra do Mar e a Mata Atlântica</p>
+
+              <div className="mt-5 grid grid-cols-2 gap-3 pt-5 border-t border-border">
+                <div>
+                  <div className="font-display text-2xl text-forest-deep leading-none">~17 mil</div>
+                  <p className="text-[11px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">habitantes em Itariri-SP</p>
+                </div>
+                <div>
+                  <div className="font-display text-2xl text-leaf leading-none">80%</div>
+                  <p className="text-[11px] uppercase tracking-wider text-muted-foreground mt-1 leading-tight">da nossa fábrica é formada por mulheres da região</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
+                Somos uma das poucas indústrias gerando emprego formal no Vale do Ribeira —
+                região historicamente carente de oportunidades — e a maior contratante
+                de mulheres do município. Cada bandeja que sai daqui é também renda,
+                autonomia e desenvolvimento local.
+              </p>
             </div>
           </div>
         </div>
