@@ -245,13 +245,8 @@ const Imprensa = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild variant="forest" size="lg">
-                <a href="mailto:imprensa@tamoiostecnologia.com.br">
-                  <Mail /> imprensa@tamoiostecnologia.com.br
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="https://wa.me/5511940066986?text=Ol%C3%A1%2C+sou+jornalista+e+gostaria+de+falar+com+a+Tamoios." target="_blank" rel="noopener">
-                  <MessageCircle /> WhatsApp da assessoria
+                <a href="/#contato">
+                  <Mail /> Falar com a assessoria
                 </a>
               </Button>
             </div>
