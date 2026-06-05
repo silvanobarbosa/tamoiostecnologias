@@ -609,17 +609,7 @@ const Index = () => {
         </div>
       </section>
 
-              <div className="text-xs font-semibold tracking-widest uppercase text-leaf mb-2">
-                Destaque de inovação
-              </div>
-              <blockquote className="font-display text-xl md:text-2xl text-forest-deep leading-snug">
-                Rodadas de Ensaio de Vida de Prateleira (EVP) operadas em parceria com a
-                rede <strong>Carrefour</strong> e a <strong>Hortmix</strong>.
-              </blockquote>
-            </div>
-          </figure>
-        </div>
-      </section>
+
 
 
       {/* MANIFESTO */}
