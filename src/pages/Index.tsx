@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
+
+const institucionalVideoUrl = "/__l5e/assets-v1/644d7218-d67d-4463-a4b0-ae9af9ae52e5/tamoios-institucional.mp4";
 import logoTamoios from "@/assets/tamoios-logo.png";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
@@ -621,8 +623,38 @@ const Index = () => {
         </div>
       </section>
 
+      {/* VÍDEO INSTITUCIONAL */}
+      <section id="filme" className="py-24 md:py-32 bg-forest-deep text-primary-foreground relative overflow-hidden">
+        <div className="container max-w-5xl">
+          <Reveal className="text-center mb-10 md:mb-14">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Quem somos em 30 segundos</span>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mt-3 mb-4 leading-tight">
+              Da floresta à gôndola, <span className="text-leaf">um ciclo só</span>.
+            </h2>
+            <p className="text-pulp-light/85 text-lg md:text-xl max-w-2xl mx-auto">
+              Um vídeo curto sobre o que move a Tamoios — biomassa, técnica e o orgulho de uma fábrica brasileira.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <div className="rounded-3xl overflow-hidden shadow-deep border border-leaf/20 bg-black aspect-video">
+              <video
+                src={institucionalVideoUrl}
+                controls
+                playsInline
+                preload="metadata"
+                poster={heroImg}
+                className="w-full h-full object-cover"
+              >
+                Seu navegador não suporta vídeo HTML5.
+              </video>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* MANIFESTO */}
       <section id="manifesto" className="py-24 md:py-32 relative overflow-hidden">
+
         <div className="container grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1 relative">
             <div className="rounded-3xl overflow-hidden shadow-deep">
