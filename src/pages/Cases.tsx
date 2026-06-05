@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Quote, TrendingDown, Leaf, Package, Sprout, Wrench } from "lucide-react";
+import { ArrowRight, Quote, TrendingDown, Leaf, Package, Sprout, FlaskConical } from "lucide-react";
 
 type CaseStudy = {
   id: string;
@@ -21,76 +21,76 @@ type CaseStudy = {
 
 const CASES: CaseStudy[] = [
   {
-    id: "carrefour-flv",
-    sector: "Varejo · FLV",
-    client: "Rede de varejo nacional",
-    title: "Bandejas de polpa para hortifrúti: -38% de plástico em 12 meses",
-    cover: "/cases/cover-carrefour.jpg",
-    icon: Leaf,
+    id: "morangos-vo-lucia",
+    sector: "Frutas premium",
+    client: "Morangos Vó Lucia",
+    title: "Morangos da Vó Lucia: ~40% a mais de prateleira na bandeja de polpa",
+    cover: "/cases/cover-morangos.jpg",
+    icon: Sprout,
     challenge:
-      "A rede precisava eliminar bandejas de EPS (isopor) de sua operação de FLV sem perder desempenho de prateleira nem comprometer a comunicação visual de produtos frescos.",
+      "Morango é uma das frutas mais delicadas do varejo. A Vó Lucia precisava reduzir perdas no transporte e na gôndola sem trocar a apresentação premium da marca — e queria sair do plástico.",
     solution:
-      "Substituímos o portfólio de bandejas FLV por polpa moldada Tamoios em 4 SKUs principais (tomate, morango, cogumelo e mix). Conduzimos Ensaios de Vida de Prateleira (EVP) com universidade parceira validando equivalência ou ganho de shelf-life.",
+      "Migramos a embalagem para bandeja de polpa moldada Tamoios com geometria desenhada para o cacho de morango, permitindo respiração e absorção de umidade. Acompanhamos a operação por safras consecutivas.",
     metrics: [
-      { label: "Redução de plástico", value: "−38%" },
-      { label: "Ganho médio de shelf-life", value: "+11%" },
-      { label: "Lojas atendidas", value: "120+" },
+      { label: "Ganho de tempo de prateleira", value: "~40%" },
+      { label: "Redução de plástico no SKU", value: "100%" },
+      { label: "Apresentação premium", value: "Mantida" },
     ],
     quote: {
       text:
-        "A polpa entregou o que o isopor entregava — e ainda nos colocou em conformidade antes da ENEC entrar em vigor.",
-      author: "Gerência de Sustentabilidade",
-      role: "Operação FLV",
+        "A bandeja de polpa segurou a fruta no ponto por mais tempo e ainda valorizou a marca na gôndola.",
+      author: "Equipe Vó Lucia",
+      role: "Produção de morangos",
     },
     related: { label: "Ver Bandejas FLV", to: "/produtos/bandejas-flv" },
   },
   {
-    id: "reflorestadora",
-    sector: "Agro · Florestal",
-    client: "Reflorestadora de eucalipto",
-    title: "Tubetes biodegradáveis: muda vai pro campo dentro da embalagem",
-    cover: "/cases/cover-reflorestadora.jpg",
-    icon: Sprout,
+    id: "cogumelos-hayashi",
+    sector: "Hortifruti especial",
+    client: "Cogumelos Hayashi",
+    title: "Cogumelos Hayashi: ~50% a mais entre o produtor e o consumidor",
+    cover: "/cases/cover-cogumelos.jpg",
+    icon: Leaf,
     challenge:
-      "O tubete plástico tradicional precisava ser recolhido, lavado e devolvido ao viveiro — gerando logística reversa cara e perdas operacionais no plantio em encostas.",
+      "Cogumelos frescos perdem qualidade rapidamente por excesso de umidade na embalagem plástica e impacto mecânico no transporte refrigerado.",
     solution:
-      "Desenvolvemos tubetes de polpa moldada com geometria de drenagem e parede que se degrada no solo. A muda é plantada com o tubete, eliminando o passo de extração e a logística reversa.",
+      "A polpa moldada respira: regula a umidade dentro da embalagem e absorve micro-choques. Desenhamos uma bandeja específica para shiitake, shimeji e eryngui mantendo a pegada premium da Hayashi.",
     metrics: [
-      { label: "Logística reversa", value: "0" },
-      { label: "Tempo médio de plantio/muda", value: "−22%" },
-      { label: "Mudas plantadas/safra", value: "2,3M" },
+      { label: "Ganho prateleira + transporte", value: "~50%" },
+      { label: "Perdas em transporte", value: "−" },
+      { label: "Material 100% biomassa", value: "Sim" },
     ],
     quote: {
       text:
-        "Sai a muda e o tubete junto. O time de campo gosta, o silvicultor gosta, e o solo agradece.",
-      author: "Coordenação de Viveiro",
-      role: "Operação florestal",
+        "O cogumelo é frágil. A polpa lida com a umidade de um jeito que o plástico nunca conseguiu.",
+      author: "Equipe Hayashi",
+      role: "Produção de cogumelos",
     },
-    related: { label: "Ver Agro & Florestal", to: "/produtos/agro-florestal" },
+    related: { label: "Ver Bandejas FLV", to: "/produtos/bandejas-flv" },
   },
   {
-    id: "automotivo",
-    sector: "Indústria · Auto-peças",
-    client: "Tier 1 do setor automotivo",
-    title: "Calços técnicos sob medida: substituindo EPS em peças críticas",
-    cover: "/cases/cover-automotivo.jpg",
-    icon: Wrench,
+    id: "carrefour-hortmix-evp",
+    sector: "Validação de mercado",
+    client: "Carrefour × Hortmix",
+    title: "Carrefour × Hortmix: Ensaios de Vida de Prateleira na rede",
+    cover: "/cases/cover-evp.jpg",
+    icon: FlaskConical,
     challenge:
-      "Componentes eletromecânicos exigiam proteção contra impacto e abrasão durante transporte intercontinental, e o EPS gerava resíduo não reciclável na planta do cliente final.",
+      "Antes de escalar para a rede inteira, era preciso comprovar — com protocolo, não com promessa — que a polpa moldada entrega prateleira equivalente ou superior ao isopor no FLV.",
     solution:
-      "Engenheirizamos calços de polpa com densidade e nervuras dimensionadas via simulação de queda (ISTA 3A). Resultado: proteção equivalente ao EPS, descartável junto com o papelão.",
+      "Conduzimos rodadas de Ensaio de Vida de Prateleira (EVP) em parceria com a rede Carrefour e a Hortmix, comparando SKUs reais em condições reais de loja. Dados, fotos e laudos compõem o dossiê técnico.",
     metrics: [
-      { label: "Resíduo não reciclável", value: "−100%" },
-      { label: "Aprovação em teste ISTA 3A", value: "1ª rodada" },
-      { label: "Custo logístico total", value: "−9%" },
+      { label: "Rodadas de EVP", value: "Múltiplas" },
+      { label: "Parceiros envolvidos", value: "3" },
+      { label: "Dossiê técnico", value: "Disponível" },
     ],
     quote: {
       text:
-        "Conseguimos uma embalagem mono-material: tudo vira papelão na ponta. Auditoria ESG passou no primeiro ciclo.",
-      author: "Engenharia de Embalagem",
-      role: "Supply Chain",
+        "O EVP é o que separa marketing de embalagem real. A polpa Tamoios passou no teste — e segue passando.",
+      author: "Time técnico",
+      role: "Validação em rede",
     },
-    related: { label: "Ver Calços Técnicos", to: "/produtos/calcos-tecnicos" },
+    related: { label: "Baixar materiais técnicos", to: "/materiais" },
   },
 ];
 
@@ -98,8 +98,8 @@ const Cases = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Cases Tamoios — varejo, agro e indústria substituindo o isopor"
-        description="Histórias reais de empresas que trocaram EPS por polpa moldada Tamoios: bandejas FLV, tubetes florestais e calços industriais com métricas verificáveis."
+        title="Cases Tamoios — morangos, cogumelos e EVP no Carrefour"
+        description="Resultados reais de quem trocou o isopor pela polpa moldada Tamoios: Morangos Vó Lucia, Cogumelos Hayashi e Ensaios de Vida de Prateleira com Carrefour e Hortmix."
       />
       <SiteHeader />
 
@@ -108,15 +108,15 @@ const Cases = () => {
         <div className="container">
           <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Cases</span>
           <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance max-w-3xl">
-            Quem já trocou o isopor —
+            Resultados reais de quem
             <br />
-            <em className="text-leaf font-normal">e o que mudou.</em>
+            <em className="text-leaf font-normal">já trocou o isopor.</em>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Três operações reais — varejo, florestal e indústria — com números auditados e protocolos validados em campo.
+            Morangos da Vó Lucia, Cogumelos Hayashi e Ensaios de Vida de Prateleira na rede Carrefour com a Hortmix.
+            Histórias curtas, números honestos.
           </p>
 
-          {/* Sector chips */}
           <div className="mt-10 flex flex-wrap gap-2">
             {CASES.map((c) => (
               <a
@@ -124,7 +124,7 @@ const Cases = () => {
                 href={`#${c.id}`}
                 className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase border border-border bg-background/80 text-muted-foreground hover:border-forest/40 hover:text-forest transition-colors"
               >
-                {c.sector}
+                {c.client}
               </a>
             ))}
           </div>
@@ -132,7 +132,7 @@ const Cases = () => {
       </section>
 
       {/* Cases */}
-      <section className="py-16 md:py-24 space-y-20 md:space-y-32">
+      <section className="py-16 md:py-24">
         <div className="container space-y-20 md:space-y-32">
           {CASES.map((c, idx) => {
             const Icon = c.icon;
@@ -181,7 +181,6 @@ const Cases = () => {
                     </div>
                   </div>
 
-                  {/* Metrics */}
                   <div className="grid grid-cols-3 gap-3 pt-2">
                     {c.metrics.map((m) => (
                       <div key={m.label} className="rounded-2xl border border-border bg-card p-4">
