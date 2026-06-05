@@ -5,6 +5,7 @@ import compressorImg from "@/assets/calcos-compressor.jpg";
 import vinhoImg from "@/assets/embalagem-vinho.jpg";
 import vinhoImg2 from "@/assets/embalagem-vinho-2.jpg";
 import industriaImg from "@/assets/industria-calcos.jpg";
+import cantoneirasImg from "@/assets/cantoneiras-protecao.png.asset.json";
 
 const CalcosTecnicos = () => {
   return (
