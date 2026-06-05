@@ -90,6 +90,7 @@ const comoAderir = [
 ];
 
 const PoliticasNacionais = () => {
+  const { t, has } = useSiteContent("politicas-nacionais");
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -110,19 +111,31 @@ const PoliticasNacionais = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/70 via-forest-deep/60 to-forest-deep" />
         <div className="container relative text-primary-foreground max-w-4xl">
           <span className="inline-flex items-center gap-2 text-leaf font-semibold text-sm tracking-widest uppercase">
-            <Landmark className="h-4 w-4" /> Marco regulatório brasileiro
+            <Landmark className="h-4 w-4" /> {t("hero", "eyebrow", "Marco regulatório brasileiro")}
           </span>
-          <h1 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-tight text-balance">
-            O Brasil está virando a página do plástico.
-            <span className="block italic text-leaf font-normal mt-2">
-              Sua empresa está preparada?
-            </span>
-          </h1>
+          {has("hero", "title") ? (
+            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-tight text-balance">
+              {t("hero", "title", "")}
+            </h1>
+          ) : (
+            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-4 leading-tight text-balance">
+              O Brasil está virando a página do plástico.
+              <span className="block italic text-leaf font-normal mt-2">
+                Sua empresa está preparada?
+              </span>
+            </h1>
+          )}
           <p className="text-lg md:text-xl text-primary-foreground/85 mt-6 max-w-3xl leading-relaxed">
-            A <strong>Estratégia Nacional de Economia Circular (ENEC)</strong> e o
-            <strong> Decreto 12.688/2025</strong> reorganizam, juntos, as regras do jogo
-            para embalagens, varejo e indústria no país. Aderir cedo deixou de ser
-            diferencial — virou condição de competir.
+            {has("hero", "subtitle") ? (
+              t("hero", "subtitle", "")
+            ) : (
+              <>
+                A <strong>Estratégia Nacional de Economia Circular (ENEC)</strong> e o
+                <strong> Decreto 12.688/2025</strong> reorganizam, juntos, as regras do jogo
+                para embalagens, varejo e indústria no país. Aderir cedo deixou de ser
+                diferencial — virou condição de competir.
+              </>
+            )}
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <Button asChild variant="leaf" size="lg">
