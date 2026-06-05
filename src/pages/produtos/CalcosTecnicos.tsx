@@ -5,6 +5,7 @@ import compressorImg from "@/assets/calcos-compressor.jpg";
 import vinhoImg from "@/assets/embalagem-vinho.jpg";
 import vinhoImg2 from "@/assets/embalagem-vinho-2.jpg";
 import industriaImg from "@/assets/industria-calcos.jpg";
+import cantoneirasImg from "@/assets/cantoneiras-protecao.png.asset.json";
 
 const CalcosTecnicos = () => {
   return (
@@ -62,7 +63,7 @@ const CalcosTecnicos = () => {
         {
           title: "Cantoneiras de proteção multi-função",
           description: "Cantoneiras moldadas para proteção de quinas em móveis, vidros, cerâmicas e linha branca. Substituem EVA, isopor laminado e cantoneiras de papelão dobrado.",
-          image: industriaImg,
+          image: cantoneirasImg.url,
           imageAlt: "Cantoneiras de proteção em polpa moldada",
           bullets: ["Móveis, vidros, eletrodomésticos", "Encaixe perfeito em qualquer ângulo", "Empilhável para estoque compacto"],
         },
