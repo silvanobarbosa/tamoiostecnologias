@@ -19,6 +19,7 @@ export function SiteHeader() {
     { to: "/produtos/agro-florestal", label: t("nav.agro") },
     { to: "/quem-somos", label: t("nav.about") },
     { to: "/politicas-nacionais", label: "Políticas ESG" },
+    { to: "/materiais", label: "Materiais" },
     { to: "/blog", label: t("nav.blog") },
   ];
 
