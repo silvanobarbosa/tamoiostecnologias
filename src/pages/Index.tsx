@@ -451,6 +451,12 @@ const Index = () => {
             ))}
           </div>
 
+          <div className="mt-10">
+            <Button asChild variant="forest" size="lg">
+              <Link to="/produtos/agro-florestal">Conhecer Linha Agro & Florestal <ArrowRight /></Link>
+            </Button>
+          </div>
+
           {/* Mini-grid Indústria expandida */}
           <div className="mt-20">
             <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
