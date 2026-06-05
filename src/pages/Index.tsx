@@ -320,7 +320,7 @@ const Index = () => {
                   estendendo a vida de prateleira em <strong className="text-forest">até 50%</strong>.
                 </p>
                 <Button asChild variant="forest" size="lg">
-                  <a href="#contato">Conhecer Linha de Bandejas <ArrowRight /></a>
+                  <Link to="/produtos/bandejas-flv">Conhecer Linha de Bandejas <ArrowRight /></Link>
                 </Button>
               </div>
             </article></RevealItem>
