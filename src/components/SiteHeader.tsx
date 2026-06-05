@@ -70,9 +70,6 @@ export function SiteHeader() {
                 <Link to="/auth">{t("nav.login")}</Link>
               </Button>
             )}
-            <Button asChild variant="forest" size="sm">
-              <Link to="/#contato">{t("nav.contact")}</Link>
-            </Button>
           </div>
 
           {/* Mobile menu trigger */}
@@ -134,9 +131,6 @@ export function SiteHeader() {
                       <Link to="/auth" onClick={() => setOpen(false)}>{t("nav.login")}</Link>
                     </Button>
                   )}
-                  <Button asChild variant="forest" className="w-full mt-2">
-                    <Link to="/#contato" onClick={() => setOpen(false)}>{t("nav.contact")}</Link>
-                  </Button>
                 </div>
               </div>
             </SheetContent>
