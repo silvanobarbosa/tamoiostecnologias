@@ -58,11 +58,8 @@ function MaterialCard({ m }: { m: Material }) {
   );
 }
 
-const PORTFOLIO_CATEGORIES = ["Todos", "Institucional", "Bandejas FLV", "Calços Técnicos", "Agro & Florestal", "Cases", "ESG"] as const;
-
 const Materiais = () => {
-  const [filter, setFilter] = useState<string>("Todos");
-  const filteredPortfolio = filter === "Todos" ? portfolio : portfolio.filter((p) => p.category === filter);
+
 
   return (
     <div className="min-h-screen bg-background">
