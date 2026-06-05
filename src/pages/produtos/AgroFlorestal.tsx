@@ -1,20 +1,22 @@
 import { Sprout, TreePine, Leaf, Recycle, FlaskConical, Trees } from "lucide-react";
 import { ProductPageLayout } from "@/components/ProductPageLayout";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImg from "@/assets/tubetes-mudas.jpg";
 import tubetesBandejaImg from "@/assets/tubetes-bandeja.jpg";
 import hidroponiaImg from "@/assets/hidroponia-mudas.jpg";
 import hidroponiaVasoImg from "@/assets/hidroponia-vaso.jpg";
 
 const AgroFlorestal = () => {
+  const { t } = useSiteContent("produto-agro-florestal");
   return (
     <ProductPageLayout
       seoTitle="Tubetes Bio e Mini Vasos · Tamoios Tecnologia"
       seoDescription="Tubetes biodegradáveis para silvicultura, reflorestamento e mini vasos de hidroponia. A muda vai ao campo no próprio recipiente, que se decompõe no solo."
       productName="Tubetes Bio e Mini Vasos Tamoios"
-      eyebrow="Agro & Florestal"
-      title="Tubetes Bio e Mini Vasos:"
-      highlight="polpa que vira raiz."
-      intro="Substituição direta do plástico no agro: tubetes para silvicultura e reflorestamento e mini vasos para hidroponia. A muda vai para o campo dentro do próprio recipiente — que se decompõe no solo, eliminando o passo de remoção e o descarte plástico."
+      eyebrow={t("hero", "eyebrow", "Agro & Florestal")}
+      title={t("hero", "title", "Tubetes Bio e Mini Vasos:")}
+      highlight={t("hero", "highlight", "polpa que vira raiz.")}
+      intro={t("hero", "intro", "Substituição direta do plástico no agro: tubetes para silvicultura e reflorestamento e mini vasos para hidroponia. A muda vai para o campo dentro do próprio recipiente — que se decompõe no solo, eliminando o passo de remoção e o descarte plástico.")}
       heroImage={heroImg}
       heroAlt="Tubetes bio Tamoios com mudas de eucalipto"
       Icon={TreePine}
@@ -80,8 +82,8 @@ const AgroFlorestal = () => {
         { label: "Aplicações Hidroponia", value: "NFT · DFT · Bancada" },
         { label: "Status", value: "Linhas Tubete · Vaso em escala" },
       ]}
-      ctaTitle="Viveirista, silvicultor ou produtor hidropônico?"
-      ctaDesc="Receba amostras para teste de campo. Trabalhamos com lotes de validação antes de qualquer pedido em escala."
+      ctaTitle={t("cta", "title", "Viveirista, silvicultor ou produtor hidropônico?")}
+      ctaDesc={t("cta", "desc", "Receba amostras para teste de campo. Trabalhamos com lotes de validação antes de qualquer pedido em escala.")}
       downloadLabel="Catálogo Agro (.pptx)"
       downloadHref="/docs/Tamoios-Apresentacao-Institucional.pptx"
     >

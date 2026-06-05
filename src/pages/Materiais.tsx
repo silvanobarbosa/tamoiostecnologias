@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Download, FileText, Sparkles, Megaphone } from "lucide-react";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 
 type Material = {
@@ -59,7 +60,7 @@ function MaterialCard({ m }: { m: Material }) {
 }
 
 const Materiais = () => {
-
+  const { t, has } = useSiteContent("materiais");
 
   return (
     <div className="min-h-screen bg-background">
@@ -72,15 +73,20 @@ const Materiais = () => {
       <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-gradient-pulp">
         <div className="container max-w-4xl">
           <span className="text-leaf font-semibold text-sm tracking-widest uppercase">
-            Biblioteca Tamoios
+            {t("hero", "eyebrow", "Biblioteca Tamoios")}
           </span>
-          <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance">
-            Materiais para conhecer,<br />
-            <em className="text-leaf font-normal">apresentar e compartilhar.</em>
-          </h1>
+          {has("hero", "title") ? (
+            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance">
+              {t("hero", "title", "")}
+            </h1>
+          ) : (
+            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance">
+              Materiais para conhecer,<br />
+              <em className="text-leaf font-normal">apresentar e compartilhar.</em>
+            </h1>
+          )}
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Apresentações institucionais, fichas técnicas de produto, cases e peças de marketing — produzidos
-            com a narrativa e o design da Tamoios. Use à vontade para clientes, parceiros e investidores.
+            {t("hero", "subtitle", "Apresentações institucionais, fichas técnicas de produto, cases e peças de marketing — produzidos com a narrativa e o design da Tamoios. Use à vontade para clientes, parceiros e investidores.")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3 text-sm">
             <a href="#portfolio" className="px-4 py-2 rounded-full bg-forest text-primary-foreground font-medium hover:bg-forest-deep transition-colors">

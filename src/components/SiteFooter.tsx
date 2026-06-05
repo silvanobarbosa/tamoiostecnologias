@@ -81,9 +81,14 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="container mt-12 pt-8 border-t border-primary-foreground/10 text-xs flex flex-col md:flex-row justify-between gap-2">
+        <div className="container mt-12 pt-8 border-t border-primary-foreground/10 text-xs flex flex-col md:flex-row justify-between gap-2 items-start md:items-center">
           <span>© {new Date().getFullYear()} Tamoios Tecnologia. Todos os direitos reservados.</span>
-          <span>Embalagem com propósito · Itariri-SP</span>
+          <div className="flex items-center gap-4">
+            <Link to="/auth" className="hover:text-primary-foreground transition-colors opacity-70 hover:opacity-100">
+              Entrar
+            </Link>
+            <span>Embalagem com propósito · Itariri-SP</span>
+          </div>
         </div>
       </div>
     </footer>

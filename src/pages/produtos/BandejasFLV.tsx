@@ -1,5 +1,6 @@
 import { Leaf, Droplets, Recycle, Snowflake, ShoppingBasket, Apple } from "lucide-react";
 import { ProductPageLayout } from "@/components/ProductPageLayout";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import alfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import miniImg from "@/assets/bandeja-alface-mini.jpg";
@@ -7,15 +8,16 @@ import tomatesImg from "@/assets/bandeja-tomates.jpg";
 import gondolaImg from "@/assets/varejo-bandejas-gondola.jpg";
 
 const BandejasFLV = () => {
+  const { t } = useSiteContent("produto-bandejas-flv");
   return (
     <ProductPageLayout
       seoTitle="Bandejas FLV de polpa · Tamoios Tecnologia"
       seoDescription="Bandejas compostáveis para Frutas, Legumes e Verduras: Efeito Escarola, até 50% a mais de prateleira e descarte 100% papel. O maior catálogo bio do Brasil."
       productName="Bandejas FLV em polpa de celulose Tamoios"
-      eyebrow="Varejo & Agro"
-      title="Bandejas FLV em polpa de celulose:"
-      highlight="o fim da era do isopor."
-      intro="A linha Tamoios para Frutas, Legumes e Verduras combina absorção ativa de umidade, respiração natural e descarte 100% papel — estendendo a vida de prateleira em até 50% e reduzindo o setor que mais perde no varejo brasileiro. Já substituímos mais de 30 milhões de bandejas de isopor no Brasil — temos o maior catálogo de bandejas bio do mercado brasileiro."
+      eyebrow={t("hero", "eyebrow", "Varejo & Agro")}
+      title={t("hero", "title", "Bandejas FLV em polpa de celulose:")}
+      highlight={t("hero", "highlight", "o fim da era do isopor.")}
+      intro={t("hero", "intro", "A linha Tamoios para Frutas, Legumes e Verduras combina absorção ativa de umidade, respiração natural e descarte 100% papel — estendendo a vida de prateleira em até 50% e reduzindo o setor que mais perde no varejo brasileiro. Já substituímos mais de 30 milhões de bandejas de isopor no Brasil — temos o maior catálogo de bandejas bio do mercado brasileiro.")}
       heroImage={heroImg}
       heroAlt="Mosaico de bandejas Tamoios em polpa de celulose com hortifruti, frutas e folhosos no varejo"
       Icon={Leaf}
@@ -82,8 +84,8 @@ const BandejasFLV = () => {
         { label: "Personalização", value: "Logo em alto-relevo" },
         { label: "Pedido mínimo", value: "Sob consulta" },
       ]}
-      ctaTitle="Quer testar a bandeja Tamoios na sua operação?"
-      ctaDesc="Enviamos amostras para EVP (Ensaio de Vida de Prateleira) na sua categoria. Resposta em 24h."
+      ctaTitle={t("cta", "title", "Quer testar a bandeja Tamoios na sua operação?")}
+      ctaDesc={t("cta", "desc", "Enviamos amostras para EVP (Ensaio de Vida de Prateleira) na sua categoria. Resposta em 24h.")}
       downloadLabel="Catálogo FLV (.pptx)"
       downloadHref="/docs/Tamoios-Apresentacao-Institucional.pptx"
     />
