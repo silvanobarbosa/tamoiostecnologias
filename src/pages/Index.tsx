@@ -155,28 +155,40 @@ const Index = () => {
         <div className="container relative grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 animate-float-up">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 border border-forest/20 text-forest text-xs font-semibold tracking-wide uppercase mb-8">
-              <Leaf className="h-3.5 w-3.5" /> Tecnologia em biomassa · Tamoios
+              <Leaf className="h-3.5 w-3.5" /> {t("hero", "eyebrow", "Tecnologia em biomassa · Tamoios")}
             </span>
-            <h1 className="font-display font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-forest-deep text-balance mb-8">
-              A Revolução sem Isopor:
-              <span className="block italic text-leaf font-normal mt-2">
-                Máximo Frescor no Varejo
-              </span>
-              <span className="block">e Proteção Absoluta na Logística.</span>
-            </h1>
+            {has("hero", "title") ? (
+              <h1 className="font-display font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-forest-deep text-balance mb-8">
+                {t("hero", "title", "")}
+              </h1>
+            ) : (
+              <h1 className="font-display font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-tight text-forest-deep text-balance mb-8">
+                A Revolução sem Isopor:
+                <span className="block italic text-leaf font-normal mt-2">
+                  Máximo Frescor no Varejo
+                </span>
+                <span className="block">e Proteção Absoluta na Logística.</span>
+              </h1>
+            )}
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
-              Desenvolvimento tecnológico de biomassa de alta densidade. Substituímos
-              polímeros petroquímicos por soluções <strong className="text-forest">100% recicláveis e compostáveis</strong>.
-              Sustentabilidade de ponta a ponta, dos produtos às pessoas.
+              {has("hero", "subtitle") ? (
+                t("hero", "subtitle", "")
+              ) : (
+                <>
+                  Desenvolvimento tecnológico de biomassa de alta densidade. Substituímos
+                  polímeros petroquímicos por soluções <strong className="text-forest">100% recicláveis e compostáveis</strong>.
+                  Sustentabilidade de ponta a ponta, dos produtos às pessoas.
+                </>
+              )}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Button asChild variant="forest" size="xl">
                 <a href="#solucoes">
-                  Conhecer soluções <ArrowRight className="ml-1" />
+                  {t("hero", "cta_primary", "Conhecer soluções")} <ArrowRight className="ml-1" />
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl">
-                <a href="#manifesto">Ler o manifesto</a>
+                <a href="#manifesto">{t("hero", "cta_secondary", "Ler o manifesto")}</a>
               </Button>
               <Button asChild variant="ghost" size="xl" className="text-forest hover:text-forest-deep">
                 <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
