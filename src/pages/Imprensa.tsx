@@ -39,6 +39,7 @@ function copyText(text: string) {
 }
 
 const Imprensa = () => {
+  const { t, has } = useSiteContent("imprensa");
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -58,14 +59,20 @@ const Imprensa = () => {
             className="max-w-3xl"
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 border border-forest/20 text-forest text-xs font-semibold tracking-wide uppercase mb-6">
-              <FileText className="h-3.5 w-3.5" /> Press Kit
+              <FileText className="h-3.5 w-3.5" /> {t("hero", "eyebrow", "Press Kit")}
             </span>
-            <h1 className="font-display font-semibold text-4xl md:text-6xl leading-[1.05] text-forest-deep text-balance mb-6">
-              Sala de imprensa<br />
-              <em className="text-leaf font-normal">da Tamoios Tecnologia.</em>
-            </h1>
+            {has("hero", "title") ? (
+              <h1 className="font-display font-semibold text-4xl md:text-6xl leading-[1.05] text-forest-deep text-balance mb-6">
+                {t("hero", "title", "")}
+              </h1>
+            ) : (
+              <h1 className="font-display font-semibold text-4xl md:text-6xl leading-[1.05] text-forest-deep text-balance mb-6">
+                Sala de imprensa<br />
+                <em className="text-leaf font-normal">da Tamoios Tecnologia.</em>
+              </h1>
+            )}
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-8">
-              Tudo o que jornalistas, criadores de conteúdo e parceiros precisam para falar sobre a Tamoios — bio oficial, fatos rápidos, logomarca, fotos hi-res e contato direto.
+              {t("hero", "subtitle", "Tudo o que jornalistas, criadores de conteúdo e parceiros precisam para falar sobre a Tamoios — bio oficial, fatos rápidos, logomarca, fotos hi-res e contato direto.")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild variant="forest" size="xl">
