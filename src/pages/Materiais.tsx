@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
-import { Download, FileText, Sparkles, Megaphone, Filter } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Download, FileText, Sparkles, Megaphone } from "lucide-react";
+
 
 type Material = {
   title: string;
