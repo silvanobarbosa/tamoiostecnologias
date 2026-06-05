@@ -82,8 +82,8 @@ const AgroFlorestal = () => {
         { label: "Aplicações Hidroponia", value: "NFT · DFT · Bancada" },
         { label: "Status", value: "Linhas Tubete · Vaso em escala" },
       ]}
-      ctaTitle="Viveirista, silvicultor ou produtor hidropônico?"
-      ctaDesc="Receba amostras para teste de campo. Trabalhamos com lotes de validação antes de qualquer pedido em escala."
+      ctaTitle={t("cta", "title", "Viveirista, silvicultor ou produtor hidropônico?")}
+      ctaDesc={t("cta", "desc", "Receba amostras para teste de campo. Trabalhamos com lotes de validação antes de qualquer pedido em escala.")}
       downloadLabel="Catálogo Agro (.pptx)"
       downloadHref="/docs/Tamoios-Apresentacao-Institucional.pptx"
     >
