@@ -139,67 +139,8 @@ const Index = () => {
         }}
       />
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/90 border-b border-border/60">
-        <nav className="container flex h-20 items-center justify-between gap-4">
-          <a href="#top" className="flex shrink-0 items-center gap-3 group" aria-label="Tamoios Tecnologia — início">
-            <img
-              src={logoTamoios}
-              alt="Tamoios Tecnologia"
-              width={180}
-              height={60}
-              className="h-12 w-auto transition-transform group-hover:scale-[1.03] md:h-14"
-            />
-          </a>
-          <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-            {homeNavItems.map((item) => (
-              <a key={item.href} href={item.href} className="hover:text-forest transition-colors">
-                {item.label}
-              </a>
-            ))}
-          </div>
-          <div className="ml-auto hidden md:flex">
-            <Button asChild variant="forest" size="sm">
-              <a href="#contato">Fale com a Tamoios</a>
-            </Button>
-          </div>
-          <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="ml-auto shrink-0 md:hidden" aria-label="Abrir menu">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[360px] flex flex-col">
-              <SheetHeader className="border-b pb-4">
-                <div className="flex items-center justify-between">
-                  <SheetTitle className="text-left font-display text-xl text-forest-deep">Menu</SheetTitle>
-                  <SheetClose asChild>
-                    <Button variant="ghost" size="icon" aria-label="Fechar menu">
-                      <X className="h-5 w-5" />
-                    </Button>
-                  </SheetClose>
-                </div>
-              </SheetHeader>
-              <div className="flex flex-1 flex-col gap-1 overflow-y-auto py-6">
-                {homeNavItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted hover:text-forest"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-                <div className="mt-6 border-t pt-6">
-                  <Button asChild variant="forest" className="w-full">
-                    <a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a Tamoios</a>
-                  </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </nav>
-      </header>
+      <SiteHeader />
+
 
       {/* HERO */}
       <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-pulp">
