@@ -18,6 +18,7 @@ import {
   Users,
 } from "lucide-react";
 import heroImg from "@/assets/politicas-hero.jpg";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const politicas = [
   {
