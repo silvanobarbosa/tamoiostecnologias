@@ -55,20 +55,20 @@ export function SiteHeader() {
             <LanguageSwitcher />
           </div>
           {isAdmin && (
-            <Button asChild variant="ghost" size="sm" className="hidden md:inline-flex text-leaf">
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex text-leaf">
               <Link to="/admin"><ShieldCheck className="h-4 w-4" /> {t("nav.admin")}</Link>
             </Button>
           )}
           {user ? (
-            <Button variant="outline" size="sm" onClick={signOut} className="hidden md:inline-flex">
+            <Button variant="outline" size="sm" onClick={signOut} className="hidden lg:inline-flex">
               <LogOut className="h-4 w-4" /> {t("nav.logout")}
             </Button>
           ) : (
-            <Button asChild variant="ghost" size="sm" className="hidden md:inline-flex">
+            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
               <Link to="/auth">{t("nav.login")}</Link>
             </Button>
           )}
-          <Button asChild variant="forest" size="sm" className="hidden md:inline-flex">
+          <Button asChild variant="forest" size="sm" className="hidden lg:inline-flex">
             <Link to="/quem-somos#contato">{t("nav.contact")}</Link>
           </Button>
 
