@@ -123,14 +123,14 @@ const Materiais = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-2xl mb-10">
-            Carrosséis para Instagram e LinkedIn, posts, one-pagers e arquivos editáveis — produzidos
-            com a narrativa Tamoios. Atualizados continuamente.
+            Carrosséis, posts e arquivos editáveis em produção. Voltam em breve, revisados.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {marketing.map((m) => (
-              <MaterialCard key={m.file} m={m} />
-            ))}
+          <div className="rounded-2xl border border-dashed border-border bg-background p-10 text-center">
+            <p className="text-muted-foreground">
+              Nenhum material disponível no momento.
+            </p>
           </div>
+
         </div>
       </section>
 
