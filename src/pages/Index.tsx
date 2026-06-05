@@ -108,12 +108,6 @@ const cases = [
     label: "no tempo de prateleira e transporte",
     tag: "Hortifruti especial",
   },
-  {
-    name: "Carrefour × Hortmix",
-    metric: "EVP",
-    label: "Rodadas de Ensaio de Vida de Prateleira em parceria",
-    tag: "Validação de mercado",
-  },
 ];
 
 const ecossistema = [
@@ -612,11 +606,9 @@ const Index = () => {
               <Link to="/cases">Ver todos os cases <ArrowRight className="h-4 w-4 ml-1" /></Link>
             </Button>
           </div>
+        </div>
+      </section>
 
-
-          <figure className="mt-12 rounded-2xl bg-forest/5 border border-forest/15 p-8 md:p-10 flex flex-col md:flex-row items-start gap-6">
-            <Quote className="h-10 w-10 text-leaf shrink-0" />
-            <div>
               <div className="text-xs font-semibold tracking-widest uppercase text-leaf mb-2">
                 Destaque de inovação
               </div>
