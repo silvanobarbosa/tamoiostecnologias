@@ -57,6 +57,8 @@ const App = () => (
 
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Overview />} />
+              <Route path="pages" element={<PagesAdmin />} />
+              <Route path="pages/:slug" element={<PageEditor />} />
               <Route path="posts" element={<PostsAdmin />} />
               <Route path="posts/new" element={<PostEditor />} />
               <Route path="posts/:id/edit" element={<PostEditor />} />
