@@ -28,6 +28,7 @@ const pillars = [
 
 const QuemSomos = () => {
   const navigate = useNavigate();
+  const { t, has } = useSiteContent("quem-somos");
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -49,16 +50,28 @@ const QuemSomos = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-pulp relative overflow-hidden">
         <div className="container relative grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-8">
-            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Quem Somos</span>
-            <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance">
-              Da mata atlântica para a sua operação,
-              <span className="block italic text-leaf font-normal">embalagem com propósito.</span>
-            </h1>
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">{t("hero", "eyebrow", "Quem Somos")}</span>
+            {has("hero", "title") ? (
+              <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance">
+                {t("hero", "title", "")}
+              </h1>
+            ) : (
+              <h1 className="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight text-forest-deep text-balance">
+                Da mata atlântica para a sua operação,
+                <span className="block italic text-leaf font-normal">embalagem com propósito.</span>
+              </h1>
+            )}
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl leading-relaxed">
-              Somos uma indústria brasileira de tecnologia em biomassa. Já substituímos
-              mais de <strong className="text-forest">30 milhões de peças de plástico</strong> por produtos
-              <strong className="text-forest"> Reciclados, Recicláveis, Biodegradáveis, Compostáveis e Descarbonizados</strong>.
-              Nosso processo usa energia 100% renovável e reuso de água em circuito fechado.
+              {has("hero", "subtitle") ? (
+                t("hero", "subtitle", "")
+              ) : (
+                <>
+                  Somos uma indústria brasileira de tecnologia em biomassa. Já substituímos
+                  mais de <strong className="text-forest">30 milhões de peças de plástico</strong> por produtos
+                  <strong className="text-forest"> Reciclados, Recicláveis, Biodegradáveis, Compostáveis e Descarbonizados</strong>.
+                  Nosso processo usa energia 100% renovável e reuso de água em circuito fechado.
+                </>
+              )}
             </p>
             <p className="text-base text-muted-foreground mt-4 max-w-2xl leading-relaxed">
               Há mais de uma década desenvolvemos substitutos para o isopor e plásticos virgens —
