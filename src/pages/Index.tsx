@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import logoTamoios from "@/assets/tamoios-logo.png";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
@@ -128,11 +129,13 @@ const Index = () => {
     { href: "#solucoes", label: "Soluções" },
     { href: "#agro", label: "Agro & Florestal" },
     { href: "#impacto", label: "Impacto" },
+    { href: "/cases", label: "Cases" },
     { href: "/quem-somos", label: "Quem somos" },
     { href: "/politicas-nacionais", label: "Políticas ESG" },
     { href: "/blog", label: "Blog" },
     { href: "#contato", label: "Contato" },
   ];
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -288,9 +291,9 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <RevealGroup className="grid lg:grid-cols-2 gap-8">
             {/* Varejo */}
-            <article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500">
+            <RevealItem><article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep hover:-translate-y-1 transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={varejoImg}
@@ -318,10 +321,10 @@ const Index = () => {
                   <a href="#contato">Conhecer Linha de Bandejas <ArrowRight /></a>
                 </Button>
               </div>
-            </article>
+            </article></RevealItem>
 
             {/* Indústria */}
-            <article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep transition-all duration-500">
+            <RevealItem><article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep hover:-translate-y-1 transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={industriaImg}
@@ -348,8 +351,8 @@ const Index = () => {
                   <a href="#contato">Conhecer Soluções Industriais <ArrowRight /></a>
                 </Button>
               </div>
-            </article>
-          </div>
+            </article></RevealItem>
+          </RevealGroup>
         </div>
       </section>
 
@@ -526,9 +529,9 @@ const Index = () => {
               Cada bandeja é um número que muda o Brasil.
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-px bg-primary-foreground/10 rounded-3xl overflow-hidden border border-primary-foreground/10">
+          <RevealGroup stagger={0.18} className="grid md:grid-cols-3 gap-px bg-primary-foreground/10 rounded-3xl overflow-hidden border border-primary-foreground/10">
             {impacto.map((d) => (
-              <div key={d.label} className="bg-forest p-10 md:p-12 flex flex-col">
+              <RevealItem key={d.label} className="bg-forest p-10 md:p-12 flex flex-col">
                 <d.icon className="h-8 w-8 text-leaf mb-8" strokeWidth={1.6} />
                 <div className="font-display text-6xl md:text-7xl font-semibold leading-none mb-4 text-cream">
                   {d.value}
@@ -536,9 +539,9 @@ const Index = () => {
                 <div className="text-primary-foreground/80 leading-relaxed text-base">
                   {d.label}
                 </div>
-              </div>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </section>
 
@@ -572,11 +575,11 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <RevealGroup className="grid md:grid-cols-3 gap-6">
             {cases.map((c) => (
-              <article
+              <RevealItem
                 key={c.name}
-                className="rounded-2xl bg-card border border-border p-8 flex flex-col justify-between min-h-[280px] hover:border-forest/40 transition-colors"
+                className="rounded-2xl bg-card border border-border p-8 flex flex-col justify-between min-h-[280px] hover:border-forest/40 hover:-translate-y-1 transition-all duration-300"
               >
                 <div>
                   <span className="inline-block text-xs font-semibold tracking-widest uppercase text-earth mb-4">
@@ -592,9 +595,9 @@ const Index = () => {
                   </div>
                   <div className="text-sm text-muted-foreground">{c.label}</div>
                 </div>
-              </article>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
 
           <div className="mt-10 flex justify-center">
             <Button asChild variant="outline" size="lg">
