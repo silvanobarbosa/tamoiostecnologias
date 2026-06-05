@@ -16,7 +16,7 @@ const schema = z.object({
 });
 
 const Auth = () => {
-  const { user, loading } = useAuth();
+  const { user, isAdmin, loading } = useAuth();
   const navigate = useNavigate();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
@@ -25,8 +25,8 @@ const Auth = () => {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    if (!loading && user) navigate("/blog", { replace: true });
-  }, [user, loading, navigate]);
+    if (!loading && user) navigate(isAdmin ? "/admin" : "/", { replace: true });
+  }, [user, isAdmin, loading, navigate]);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
