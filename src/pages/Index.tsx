@@ -23,6 +23,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose 
 import { SEO } from "@/components/SEO";
 import { ContactForm } from "@/components/ContactForm";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import {
   ArrowRight,
   Leaf,
