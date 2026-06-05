@@ -85,8 +85,8 @@ const CalcosTecnicos = () => {
         { label: "Conformidade", value: "ISO 14000 · Decreto 12.688/2025" },
         { label: "Aplicações", value: "Bebidas, autopeças, móveis, eletro" },
       ]}
-      ctaTitle="Tem um projeto específico de embalagem industrial?"
-      ctaDesc="Envie suas dimensões e nossa engenharia desenvolve o projeto de polpa moldada ideal para sua peça."
+      ctaTitle={t("cta", "title", "Tem um projeto específico de embalagem industrial?")}
+      ctaDesc={t("cta", "desc", "Envie suas dimensões e nossa engenharia desenvolve o projeto de polpa moldada ideal para sua peça.")}
       downloadLabel="Catálogo industrial (.pptx)"
       downloadHref="/docs/Tamoios-Apresentacao-Institucional.pptx"
     />
