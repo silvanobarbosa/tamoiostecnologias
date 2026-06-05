@@ -71,7 +71,7 @@ export function SiteHeader() {
               </Button>
             )}
             <Button asChild variant="forest" size="sm">
-              <Link to="/quem-somos#contato">{t("nav.contact")}</Link>
+              <Link to="/#contato">{t("nav.contact")}</Link>
             </Button>
           </div>
 
