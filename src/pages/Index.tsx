@@ -122,8 +122,7 @@ const ecossistema = [
 ];
 
 const Index = () => {
-
-
+  const { t, has } = useSiteContent("home");
 
   return (
     <div className="min-h-screen bg-background">
