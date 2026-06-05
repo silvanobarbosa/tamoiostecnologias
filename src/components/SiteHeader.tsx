@@ -135,7 +135,7 @@ export function SiteHeader() {
                     </Button>
                   )}
                   <Button asChild variant="forest" className="w-full mt-2">
-                    <Link to="/quem-somos#contato" onClick={() => setOpen(false)}>{t("nav.contact")}</Link>
+                    <Link to="/#contato" onClick={() => setOpen(false)}>{t("nav.contact")}</Link>
                   </Button>
                 </div>
               </div>
