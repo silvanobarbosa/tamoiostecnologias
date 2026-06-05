@@ -9,6 +9,7 @@ import {
   Settings,
   ExternalLink,
   ShieldCheck,
+  Layout,
 } from "lucide-react";
 import {
   Sidebar,
