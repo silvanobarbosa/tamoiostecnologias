@@ -36,6 +36,22 @@ const portfolio: Material[] = [
 
 const marketing: Material[] = [
   {
+    title: "Deck Comercial 2026 · PDF",
+    description: "Apresentação comercial completa em 18 slides (16:9) — narrativa, diferenciais, cases (Carrefour, Belterra), impacto ESG e como começar. Pronto para enviar a cliente, investidor ou parceiro.",
+    file: "/docs/marketing/tamoios-deck-comercial-2026.pdf",
+    size: "152 KB",
+    category: "Comercial",
+    format: "PDF",
+  },
+  {
+    title: "Deck Comercial 2026 · PPTX editável",
+    description: "Mesmo deck em PowerPoint editável — adapte para cada cliente, adicione cases específicos ou troque a capa.",
+    file: "/docs/marketing/tamoios-deck-comercial-2026.pptx",
+    size: "337 KB",
+    category: "Editáveis",
+    format: "PPTX",
+  },
+  {
     title: "Carrossel · Do isopor à polpa",
     description: "8 cartões 1080×1080 prontos para postar no Instagram e LinkedIn — versão PDF de pré-visualização.",
     file: "/docs/marketing/carrossel-isopor-polpa.pdf",
