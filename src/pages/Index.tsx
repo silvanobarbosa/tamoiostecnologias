@@ -320,7 +320,7 @@ const Index = () => {
                   estendendo a vida de prateleira em <strong className="text-forest">até 50%</strong>.
                 </p>
                 <Button asChild variant="forest" size="lg">
-                  <a href="#contato">Conhecer Linha de Bandejas <ArrowRight /></a>
+                  <Link to="/produtos/bandejas-flv">Conhecer Linha de Bandejas <ArrowRight /></Link>
                 </Button>
               </div>
             </article></RevealItem>
@@ -350,7 +350,7 @@ const Index = () => {
                   Projetos perfeitos para autopeças, móveis, bebidas e e-commerce.
                 </p>
                 <Button asChild variant="forest" size="lg">
-                  <a href="#contato">Conhecer Soluções Industriais <ArrowRight /></a>
+                  <Link to="/produtos/calcos-tecnicos">Conhecer Soluções Industriais <ArrowRight /></Link>
                 </Button>
               </div>
             </article></RevealItem>
@@ -449,6 +449,12 @@ const Index = () => {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <Button asChild variant="forest" size="lg">
+              <Link to="/produtos/agro-florestal">Conhecer Linha Agro & Florestal <ArrowRight /></Link>
+            </Button>
           </div>
 
           {/* Mini-grid Indústria expandida */}
