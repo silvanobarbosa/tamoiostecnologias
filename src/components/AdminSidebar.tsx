@@ -36,6 +36,7 @@ const groups = [
   {
     label: "Conteúdo",
     items: [
+      { title: "Páginas", url: "/admin/pages", icon: Layout, end: false },
       { title: "Posts", url: "/admin/posts", icon: FileText, end: false },
       { title: "Novo post", url: "/admin/posts/new", icon: PlusCircle, end: false },
     ],
