@@ -50,32 +50,32 @@ export function SiteHeader() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
-          <div className="hidden lg:block">
+        <div className="ml-auto flex items-center gap-2">
+          <div className="hidden items-center gap-2 lg:flex">
             <LanguageSwitcher />
+            {isAdmin && (
+              <Button asChild variant="ghost" size="sm" className="text-leaf">
+                <Link to="/admin"><ShieldCheck className="h-4 w-4" /> {t("nav.admin")}</Link>
+              </Button>
+            )}
+            {user ? (
+              <Button variant="outline" size="sm" onClick={signOut}>
+                <LogOut className="h-4 w-4" /> {t("nav.logout")}
+              </Button>
+            ) : (
+              <Button asChild variant="ghost" size="sm">
+                <Link to="/auth">{t("nav.login")}</Link>
+              </Button>
+            )}
+            <Button asChild variant="forest" size="sm">
+              <Link to="/quem-somos#contato">{t("nav.contact")}</Link>
+            </Button>
           </div>
-          {isAdmin && (
-            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex text-leaf">
-              <Link to="/admin"><ShieldCheck className="h-4 w-4" /> {t("nav.admin")}</Link>
-            </Button>
-          )}
-          {user ? (
-            <Button variant="outline" size="sm" onClick={signOut} className="hidden lg:inline-flex">
-              <LogOut className="h-4 w-4" /> {t("nav.logout")}
-            </Button>
-          ) : (
-            <Button asChild variant="ghost" size="sm" className="hidden lg:inline-flex">
-              <Link to="/auth">{t("nav.login")}</Link>
-            </Button>
-          )}
-          <Button asChild variant="forest" size="sm" className="hidden lg:inline-flex">
-            <Link to="/quem-somos#contato">{t("nav.contact")}</Link>
-          </Button>
 
           {/* Mobile menu trigger */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Abrir menu">
+              <Button variant="ghost" size="icon" className="shrink-0 lg:hidden" aria-label="Abrir menu">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
