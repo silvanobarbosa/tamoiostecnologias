@@ -18,6 +18,7 @@ import Materiais from "./pages/Materiais.tsx";
 import Imprensa from "./pages/Imprensa.tsx";
 import Cases from "./pages/Cases.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import { FloatingContact } from "./components/FloatingContact.tsx";
 
 import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import Overview from "./pages/admin/Overview.tsx";
@@ -65,6 +66,7 @@ const App = () => (
 
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <FloatingContact />
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
