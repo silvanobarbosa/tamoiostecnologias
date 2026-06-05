@@ -17,7 +17,7 @@ const schema = z.object({
   message: z.string().trim().min(10).max(4000),
 });
 
-const WHATSAPP_NUMBER = "5511982712685";
+
 
 export function ContactForm() {
   const { t } = useTranslation();
