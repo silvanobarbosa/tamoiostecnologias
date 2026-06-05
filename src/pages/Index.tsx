@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { SEO } from "@/components/SEO";
 import { ContactForm } from "@/components/ContactForm";
+import { ImpactCalculator } from "@/components/ImpactCalculator";
 import {
   ArrowRight,
   Leaf,
@@ -537,6 +538,23 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CALCULADORA DE IMPACTO */}
+      <section id="calculadora" className="py-24 md:py-32 bg-background">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Simulador</span>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mt-4 leading-tight text-forest-deep text-balance">
+              Veja o tamanho do impacto<br />
+              <em className="text-leaf font-normal">antes mesmo de pedir um orçamento.</em>
+            </h2>
+            <p className="text-lg text-muted-foreground mt-6">
+              Diga seu volume mensal e descubra quanto plástico e CO₂e sua operação pode evitar por ano com a Tamoios.
+            </p>
+          </div>
+          <ImpactCalculator />
         </div>
       </section>
 

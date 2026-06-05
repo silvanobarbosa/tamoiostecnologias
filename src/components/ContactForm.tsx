@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
@@ -31,6 +31,14 @@ export function ContactForm() {
   });
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    const prefill = sessionStorage.getItem("impact-prefill");
+    if (prefill) {
+      setForm((f) => ({ ...f, message: prefill }));
+      sessionStorage.removeItem("impact-prefill");
+    }
+  }, []);
 
   const update = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
