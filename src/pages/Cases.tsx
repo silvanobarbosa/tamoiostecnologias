@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Quote, TrendingDown, Leaf, Package, Sprout } from "lucide-react";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 type CaseStudy = {
   id: string;
