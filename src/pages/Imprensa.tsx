@@ -68,7 +68,7 @@ const Imprensa = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild variant="forest" size="xl">
-                <a href="mailto:imprensa@tamoiostecnologia.com.br">
+                <a href="/#contato">
                   <Mail /> Falar com a assessoria
                 </a>
               </Button>
