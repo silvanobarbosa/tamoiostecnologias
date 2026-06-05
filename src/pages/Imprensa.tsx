@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import logoTamoios from "@/assets/tamoios-logo.png";
 
 const fastFacts = [
-  { label: "Fundação", value: "2020" },
+  { label: "Inauguração", value: "2014" },
   { label: "Sede", value: "Itariri-SP" },
   { label: "Equipe fábrica", value: "80% mulheres" },
   { label: "Matéria-prima", value: "100% reciclada" },
@@ -68,11 +68,6 @@ const Imprensa = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button asChild variant="forest" size="xl">
-                <a href="/docs/imprensa/tamoios-press-kit.zip" download>
-                  <Download /> Baixar press kit completo (.zip)
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="xl">
                 <a href="mailto:imprensa@tamoiostecnologia.com.br">
                   <Mail /> Falar com a assessoria
                 </a>
