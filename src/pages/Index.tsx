@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logoTamoios from "@/assets/tamoios-logo.png";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
@@ -13,6 +14,7 @@ import hidroponiaVasoImg from "@/assets/hidroponia-vaso.jpg";
 import calcosCompressorImg from "@/assets/calcos-compressor.jpg";
 import embalagemVinhoImg from "@/assets/embalagem-vinho.jpg";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { SEO } from "@/components/SEO";
 import { ContactForm } from "@/components/ContactForm";
 import {
@@ -32,6 +34,8 @@ import {
   Wine,
   Shield,
   Download,
+  Menu,
+  X,
 } from "lucide-react";
 
 const credenciais = [
@@ -117,6 +121,17 @@ const ecossistema = [
 ];
 
 const Index = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const homeNavItems = [
+    { href: "#solucoes", label: "Soluções" },
+    { href: "#agro", label: "Agro & Florestal" },
+    { href: "#impacto", label: "Impacto" },
+    { href: "/quem-somos", label: "Quem somos" },
+    { href: "/politicas-nacionais", label: "Políticas ESG" },
+    { href: "/blog", label: "Blog" },
+    { href: "#contato", label: "Contato" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -134,27 +149,64 @@ const Index = () => {
       />
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/90 border-b border-border/60">
-        <nav className="container flex h-20 items-center justify-between">
-          <a href="#top" className="flex items-center gap-3 group" aria-label="Tamoios Tecnologia — início">
+        <nav className="container flex h-20 items-center justify-between gap-4">
+          <a href="#top" className="flex shrink-0 items-center gap-3 group" aria-label="Tamoios Tecnologia — início">
             <img
               src={logoTamoios}
               alt="Tamoios Tecnologia"
               width={180}
               height={60}
-              className="h-14 w-auto transition-transform group-hover:scale-[1.03]"
+              className="h-12 w-auto transition-transform group-hover:scale-[1.03] md:h-14"
             />
           </a>
           <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-            <a href="#solucoes" className="hover:text-forest transition-colors">Soluções</a>
-            <a href="#agro" className="hover:text-forest transition-colors">Agro & Florestal</a>
-            <a href="#impacto" className="hover:text-forest transition-colors">Impacto</a>
-            <a href="/quem-somos" className="hover:text-forest transition-colors">Quem somos</a>
-            <a href="/blog" className="hover:text-forest transition-colors">Blog</a>
-            <a href="#contato" className="hover:text-forest transition-colors">Contato</a>
+            {homeNavItems.map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-forest transition-colors">
+                {item.label}
+              </a>
+            ))}
           </div>
-          <Button asChild variant="forest" size="sm">
-            <a href="#contato">Fale com a Tamoios</a>
-          </Button>
+          <div className="ml-auto hidden md:flex">
+            <Button asChild variant="forest" size="sm">
+              <a href="#contato">Fale com a Tamoios</a>
+            </Button>
+          </div>
+          <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="ml-auto shrink-0 md:hidden" aria-label="Abrir menu">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[360px] flex flex-col">
+              <SheetHeader className="border-b pb-4">
+                <div className="flex items-center justify-between">
+                  <SheetTitle className="text-left font-display text-xl text-forest-deep">Menu</SheetTitle>
+                  <SheetClose asChild>
+                    <Button variant="ghost" size="icon" aria-label="Fechar menu">
+                      <X className="h-5 w-5" />
+                    </Button>
+                  </SheetClose>
+                </div>
+              </SheetHeader>
+              <div className="flex flex-1 flex-col gap-1 overflow-y-auto py-6">
+                {homeNavItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted hover:text-forest"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <div className="mt-6 border-t pt-6">
+                  <Button asChild variant="forest" className="w-full">
+                    <a href="#contato" onClick={() => setMenuOpen(false)}>Fale com a Tamoios</a>
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </nav>
       </header>
 
