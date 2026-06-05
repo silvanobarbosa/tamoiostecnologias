@@ -28,6 +28,8 @@ import AdminSubscribers from "./pages/admin/AdminSubscribers.tsx";
 import AdminMessages from "./pages/admin/AdminMessages.tsx";
 import TeamAdmin from "./pages/admin/TeamAdmin.tsx";
 import Account from "./pages/admin/Account.tsx";
+import PagesAdmin from "./pages/admin/PagesAdmin.tsx";
+import PageEditor from "./pages/admin/PageEditor.tsx";
 
 const queryClient = new QueryClient();
 
