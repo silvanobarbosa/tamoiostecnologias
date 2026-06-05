@@ -120,17 +120,7 @@ const ecossistema = [
 ];
 
 const Index = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const homeNavItems = [
-    { href: "#solucoes", label: "Soluções" },
-    { href: "#agro", label: "Agro & Florestal" },
-    { href: "#impacto", label: "Impacto" },
-    { href: "/cases", label: "Cases" },
-    { href: "/quem-somos", label: "Quem somos" },
-    { href: "/politicas-nacionais", label: "Políticas ESG" },
-    { href: "/blog", label: "Blog" },
-    { href: "#contato", label: "Contato" },
-  ];
+
 
 
   return (
