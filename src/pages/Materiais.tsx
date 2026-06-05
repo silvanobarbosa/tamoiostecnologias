@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
-import { Download, FileText, Sparkles, Megaphone, Filter } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Download, FileText, Sparkles, Megaphone } from "lucide-react";
+
 
 type Material = {
   title: string;
@@ -15,77 +14,10 @@ type Material = {
   thumb?: string;
 };
 
-const portfolio: Material[] = [
-  // Institucional
-  { title: "Apresentação Institucional 2026", description: "Quem somos, propósito, linha do tempo e visão de futuro da Tamoios.", file: "/docs/portfolio/tamoios-apresentacao-institucional-2026.pdf", size: "334 KB", category: "Institucional", format: "PDF" },
-  { title: "Linha de Embalagens 2026", description: "Panorama completo da linha de embalagens em polpa de celulose.", file: "/docs/portfolio/tamoios-linha-de-embalagens-2026.pdf", size: "1,4 MB", category: "Institucional", format: "PDF" },
-  { title: "Linha de Trabalho 2026", description: "Estratégia, frentes e prioridades operacionais da Tamoios para 2026.", file: "/docs/portfolio/tamoios-linha-de-trabalho-2026.pdf", size: "2,9 MB", category: "Institucional", format: "PDF" },
-  // Produto
-  { title: "Bandejas Biodegradáveis FLV", description: "Substituição do isopor por polpa moldada para FLV no varejo.", file: "/docs/portfolio/tamoios-bandejas-biodegradaveis.pdf", size: "2,2 MB", category: "Bandejas FLV", format: "PDF" },
-  { title: "Calços Técnicos & Embalagens Industriais", description: "Proteção, calços e separadores em celulose moldada para indústria.", file: "/docs/portfolio/tamoios-calcos-tecnicos.pptx", size: "11 MB", category: "Calços Técnicos", format: "PPTX" },
-  { title: "Tubetes & Sementeiras Agroflorestais", description: "Tubetes biodegradáveis para mudas e recuperação florestal.", file: "/docs/portfolio/tamoios-tubetes-sementeiras.pdf", size: "2,9 MB", category: "Agro & Florestal", format: "PDF" },
-  { title: "Agroadubo", description: "Aplicação da polpa Tamoios em substrato e adubação na cadeia agrícola.", file: "/docs/portfolio/tamoios-agroadubo.pdf", size: "1,3 MB", category: "Agro & Florestal", format: "PDF" },
-  // Cases
-  { title: "Case Carrefour 2025", description: "Ensaios e implantação de bandejas FLV no varejo Carrefour.", file: "/docs/portfolio/tamoios-case-carrefour-2025.pdf", size: "619 KB", category: "Cases", format: "PDF" },
-  { title: "BNDES Garagem — Rodada 5M", description: "Pitch e materiais da rodada de inovação climática no BNDES.", file: "/docs/portfolio/tamoios-bndes-rodada-5m.pdf", size: "1,9 MB", category: "Cases", format: "PDF" },
-  { title: "Quintessa · Deep Climate", description: "Aceleração de impacto e jornada Deep Climate com a Quintessa.", file: "/docs/portfolio/tamoios-quintessa-deep-climate.pdf", size: "2,0 MB", category: "Cases", format: "PDF" },
-  { title: "Belterra — Parceria 2026", description: "Materiais técnicos da parceria com a Belterra Agroflorestas.", file: "/docs/portfolio/tamoios-belterra-2026.pdf", size: "3,4 MB", category: "Cases", format: "PDF" },
-  // ESG
-  { title: "Relatório de Sustentabilidade", description: "Indicadores ESG, ciclo da biomassa e impacto socioambiental.", file: "/docs/portfolio/tamoios-sustentabilidade.pdf", size: "445 KB", category: "ESG", format: "PDF" },
-];
+const portfolio: Material[] = [];
 
-const marketing: Material[] = [
-  {
-    title: "Deck Comercial 2026 · PDF",
-    description: "Apresentação comercial completa em 18 slides (16:9) — narrativa, diferenciais, cases (Carrefour, Belterra), impacto ESG e como começar. Pronto para enviar a cliente, investidor ou parceiro.",
-    file: "/docs/marketing/tamoios-deck-comercial-2026.pdf",
-    size: "152 KB",
-    category: "Comercial",
-    format: "PDF",
-  },
-  {
-    title: "Deck Comercial 2026 · PPTX editável",
-    description: "Mesmo deck em PowerPoint editável — adapte para cada cliente, adicione cases específicos ou troque a capa.",
-    file: "/docs/marketing/tamoios-deck-comercial-2026.pptx",
-    size: "337 KB",
-    category: "Editáveis",
-    format: "PPTX",
-  },
-  {
-    title: "Carrossel · Do isopor à polpa",
-    description: "8 cartões 1080×1080 prontos para postar no Instagram e LinkedIn — versão PDF de pré-visualização.",
-    file: "/docs/marketing/carrossel-isopor-polpa.pdf",
-    size: "84 KB",
-    category: "LinkedIn / Instagram",
-    format: "PDF",
-    thumb: "/docs/marketing/carrossel-isopor-polpa/slide-1.png",
-  },
-  {
-    title: "Carrossel · Pacote de imagens (PNG)",
-    description: "ZIP com os 8 slides em PNG (1080×1080) — só arrastar para o feed do Instagram ou LinkedIn.",
-    file: "/docs/marketing/carrossel-isopor-polpa-pngs.zip",
-    size: "530 KB",
-    category: "LinkedIn / Instagram",
-    format: "ZIP",
-    thumb: "/docs/marketing/carrossel-isopor-polpa/slide-3.png",
-  },
-  {
-    title: "Carrossel · Fonte editável (.pptx)",
-    description: "Arquivo PowerPoint editável do carrossel — para adaptar textos, adicionar slides ou trocar de cliente.",
-    file: "/docs/marketing/carrossel-isopor-polpa.pptx",
-    size: "143 KB",
-    category: "Editáveis",
-    format: "PPTX",
-  },
-  {
-    title: "One-Pager Institucional",
-    description: "Resumo de uma página da Tamoios — ideal para envio em email, WhatsApp ou anexo de proposta.",
-    file: "/docs/marketing/tamoios-one-pager.pdf",
-    size: "84 KB",
-    category: "Comercial",
-    format: "PDF",
-  },
-];
+const marketing: Material[] = [];
+
 
 function MaterialCard({ m }: { m: Material }) {
   return (
@@ -126,11 +58,8 @@ function MaterialCard({ m }: { m: Material }) {
   );
 }
 
-const PORTFOLIO_CATEGORIES = ["Todos", "Institucional", "Bandejas FLV", "Calços Técnicos", "Agro & Florestal", "Cases", "ESG"] as const;
-
 const Materiais = () => {
-  const [filter, setFilter] = useState<string>("Todos");
-  const filteredPortfolio = filter === "Todos" ? portfolio : portfolio.filter((p) => p.category === filter);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -172,29 +101,12 @@ const Materiais = () => {
               Portfólio & Produtos
             </h2>
           </div>
-          <div className="flex items-center gap-2 mb-10 flex-wrap">
-            <Filter className="h-4 w-4 text-muted-foreground" />
-            {PORTFOLIO_CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setFilter(cat)}
-                className={cn(
-                  "px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase border transition-colors",
-                  filter === cat
-                    ? "bg-forest text-primary-foreground border-forest"
-                    : "bg-background text-muted-foreground border-border hover:border-forest/40 hover:text-forest",
-                )}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="rounded-2xl border border-dashed border-border bg-pulp-light/30 p-10 text-center">
+            <p className="text-muted-foreground">
+              Estamos atualizando o portfólio. Em breve, novos materiais por aqui.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPortfolio.map((m) => (
-              <MaterialCard key={m.file} m={m} />
-            ))}
-          </div>
+
         </div>
       </section>
 
@@ -207,14 +119,14 @@ const Materiais = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-2xl mb-10">
-            Carrosséis para Instagram e LinkedIn, posts, one-pagers e arquivos editáveis — produzidos
-            com a narrativa Tamoios. Atualizados continuamente.
+            Carrosséis, posts e arquivos editáveis em produção. Voltam em breve, revisados.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {marketing.map((m) => (
-              <MaterialCard key={m.file} m={m} />
-            ))}
+          <div className="rounded-2xl border border-dashed border-border bg-background p-10 text-center">
+            <p className="text-muted-foreground">
+              Nenhum material disponível no momento.
+            </p>
           </div>
+
         </div>
       </section>
 
