@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import logoTamoios from "@/assets/tamoios-logo.png";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const fastFacts = [
   { label: "Inauguração", value: "2014" },
