@@ -1,5 +1,6 @@
 import { Leaf, Droplets, Recycle, Snowflake, ShoppingBasket, Apple } from "lucide-react";
 import { ProductPageLayout } from "@/components/ProductPageLayout";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import alfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import miniImg from "@/assets/bandeja-alface-mini.jpg";
@@ -7,6 +8,7 @@ import tomatesImg from "@/assets/bandeja-tomates.jpg";
 import gondolaImg from "@/assets/varejo-bandejas-gondola.jpg";
 
 const BandejasFLV = () => {
+  const { t } = useSiteContent("produto-bandejas-flv");
   return (
     <ProductPageLayout
       seoTitle="Bandejas FLV de polpa · Tamoios Tecnologia"
