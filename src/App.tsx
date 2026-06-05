@@ -17,6 +17,7 @@ import PoliticasNacionais from "./pages/PoliticasNacionais.tsx";
 import Materiais from "./pages/Materiais.tsx";
 import Imprensa from "./pages/Imprensa.tsx";
 import Cases from "./pages/Cases.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import Overview from "./pages/admin/Overview.tsx";
@@ -35,6 +36,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <AuthProvider>
           <Routes>
             <Route path="/" element={<Index />} />

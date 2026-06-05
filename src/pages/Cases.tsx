@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Quote, TrendingDown, Leaf, Package, Sprout, FlaskConical } from "lucide-react";
+import { ArrowRight, Quote, TrendingDown, Leaf, Package, Sprout } from "lucide-react";
 
 type CaseStudy = {
   id: string;
@@ -68,38 +68,14 @@ const CASES: CaseStudy[] = [
     },
     related: { label: "Ver Bandejas FLV", to: "/produtos/bandejas-flv" },
   },
-  {
-    id: "carrefour-hortmix-evp",
-    sector: "Validação de mercado",
-    client: "Carrefour × Hortmix",
-    title: "Carrefour × Hortmix: Ensaios de Vida de Prateleira na rede",
-    cover: "/cases/cover-evp.jpg",
-    icon: FlaskConical,
-    challenge:
-      "Antes de escalar para a rede inteira, era preciso comprovar — com protocolo, não com promessa — que a polpa moldada entrega prateleira equivalente ou superior ao isopor no FLV.",
-    solution:
-      "Conduzimos rodadas de Ensaio de Vida de Prateleira (EVP) em parceria com a rede Carrefour e a Hortmix, comparando SKUs reais em condições reais de loja. Dados, fotos e laudos compõem o dossiê técnico.",
-    metrics: [
-      { label: "Rodadas de EVP", value: "Múltiplas" },
-      { label: "Parceiros envolvidos", value: "3" },
-      { label: "Dossiê técnico", value: "Disponível" },
-    ],
-    quote: {
-      text:
-        "O EVP é o que separa marketing de embalagem real. A polpa Tamoios passou no teste — e segue passando.",
-      author: "Time técnico",
-      role: "Validação em rede",
-    },
-    related: { label: "Baixar materiais técnicos", to: "/materiais" },
-  },
 ];
 
 const Cases = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Cases Tamoios — morangos, cogumelos e EVP no Carrefour"
-        description="Resultados reais de quem trocou o isopor pela polpa moldada Tamoios: Morangos Vó Lucia, Cogumelos Hayashi e Ensaios de Vida de Prateleira com Carrefour e Hortmix."
+        title="Cases Tamoios — Morangos Vó Lucia e Cogumelos Hayashi"
+        description="Resultados reais de quem trocou o isopor pela polpa moldada Tamoios: Morangos Vó Lucia e Cogumelos Hayashi, com ganho de prateleira validado em campo."
       />
       <SiteHeader />
 
@@ -113,8 +89,8 @@ const Cases = () => {
             <em className="text-leaf font-normal">já trocou o isopor.</em>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Morangos da Vó Lucia, Cogumelos Hayashi e Ensaios de Vida de Prateleira na rede Carrefour com a Hortmix.
-            Histórias curtas, números honestos.
+            Morangos da Vó Lucia e Cogumelos Hayashi: histórias curtas, números honestos
+            e ganhos de prateleira medidos em operação real.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-2">
