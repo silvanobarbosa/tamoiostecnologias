@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
+import institucionalVideo from "/videos/tamoios-institucional.mp4.asset.json";
 import logoTamoios from "@/assets/tamoios-logo.png";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import varejoImg from "@/assets/varejo-bandejas-gondola.jpg";
