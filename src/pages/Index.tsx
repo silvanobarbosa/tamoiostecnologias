@@ -647,14 +647,13 @@ const Index = () => {
             <img src={logoTamoios} alt="Tamoios Tecnologia" width={140} height={48} className="h-14 w-auto" />
           </div>
           <span className="inline-block text-leaf font-semibold text-sm tracking-widest uppercase mb-6">
-            Vamos transformar
+            {t("contato", "eyebrow", "Vamos transformar")}
           </span>
           <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight text-balance mb-6">
-            Pronto para eliminar o isopor da sua operação?
+            {t("contato", "title", "Pronto para eliminar o isopor da sua operação?")}
           </h2>
           <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Receba uma proposta sob medida com simulação de ganho em vida de prateleira ou
-            performance logística. Resposta em até 24 horas.
+            {t("contato", "subtitle", "Receba uma proposta sob medida com simulação de ganho em vida de prateleira ou performance logística. Resposta em até 24 horas.")}
           </p>
           <div className="bg-background text-foreground rounded-3xl p-6 md:p-10 shadow-deep text-left max-w-3xl mx-auto">
             <ContactForm />
