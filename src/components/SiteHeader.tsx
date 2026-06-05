@@ -20,6 +20,7 @@ export function SiteHeader() {
     { to: "/quem-somos", label: t("nav.about") },
     { to: "/politicas-nacionais", label: "Políticas ESG" },
     { to: "/materiais", label: "Materiais" },
+    { to: "/imprensa", label: "Imprensa" },
     { to: "/blog", label: t("nav.blog") },
   ];
 
