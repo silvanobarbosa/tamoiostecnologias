@@ -105,29 +105,12 @@ const Materiais = () => {
               Portfólio & Produtos
             </h2>
           </div>
-          <div className="flex items-center gap-2 mb-10 flex-wrap">
-            <Filter className="h-4 w-4 text-muted-foreground" />
-            {PORTFOLIO_CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setFilter(cat)}
-                className={cn(
-                  "px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase border transition-colors",
-                  filter === cat
-                    ? "bg-forest text-primary-foreground border-forest"
-                    : "bg-background text-muted-foreground border-border hover:border-forest/40 hover:text-forest",
-                )}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="rounded-2xl border border-dashed border-border bg-pulp-light/30 p-10 text-center">
+            <p className="text-muted-foreground">
+              Estamos atualizando o portfólio. Em breve, novos materiais por aqui.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPortfolio.map((m) => (
-              <MaterialCard key={m.file} m={m} />
-            ))}
-          </div>
+
         </div>
       </section>
 
