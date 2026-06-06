@@ -191,9 +191,9 @@ const Index = () => {
                 <a href="#manifesto">{t("hero", "cta_secondary", "Ler o manifesto")}</a>
               </Button>
               <Button asChild variant="ghost" size="xl" className="text-forest hover:text-forest-deep">
-                <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
+                <Link to="/apresentacao">
                   <Download /> Baixar apresentação
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
@@ -405,9 +405,9 @@ const Index = () => {
                 </h3>
               </div>
               <Button asChild variant="outline">
-                <a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download>
-                  <Download /> Catálogo industrial (.pptx)
-                </a>
+                <Link to="/apresentacao-produtos">
+                  <Download /> Catálogo de produtos (PDF)
+                </Link>
               </Button>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -711,7 +711,7 @@ const Index = () => {
             <ul className="space-y-2 text-sm">
               <li><a href="#solucoes" className="hover:text-primary-foreground transition-colors">Soluções</a></li>
               <li><a href="#agro" className="hover:text-primary-foreground transition-colors">Agro & Florestal</a></li>
-              <li><a href="/docs/Tamoios-Apresentacao-Institucional.pptx" download className="hover:text-primary-foreground transition-colors">Apresentação (.pptx)</a></li>
+              <li><Link to="/apresentacao" className="hover:text-primary-foreground transition-colors">Apresentação (PDF)</Link></li>
               <li><a href="#impacto" className="hover:text-primary-foreground transition-colors">Impacto</a></li>
               <li><a href="#cases" className="hover:text-primary-foreground transition-colors">Cases</a></li>
               <li><a href="#manifesto" className="hover:text-primary-foreground transition-colors">Manifesto</a></li>

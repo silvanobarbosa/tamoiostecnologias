@@ -17,6 +17,8 @@ import PoliticasNacionais from "./pages/PoliticasNacionais.tsx";
 import Materiais from "./pages/Materiais.tsx";
 import Imprensa from "./pages/Imprensa.tsx";
 import Cases from "./pages/Cases.tsx";
+import ApresentacaoInstitucional from "./pages/ApresentacaoInstitucional.tsx";
+import ApresentacaoProdutos from "./pages/ApresentacaoProdutos.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import { FloatingContact } from "./components/FloatingContact.tsx";
 
@@ -51,6 +53,8 @@ const App = () => (
             <Route path="/materiais" element={<Materiais />} />
             <Route path="/imprensa" element={<Imprensa />} />
             <Route path="/cases" element={<Cases />} />
+            <Route path="/apresentacao" element={<ApresentacaoInstitucional />} />
+            <Route path="/apresentacao-produtos" element={<ApresentacaoProdutos />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/auth" element={<Auth />} />
