@@ -87,7 +87,7 @@ const BandejasFLV = () => {
       ctaTitle={t("cta", "title", "Quer testar a bandeja Tamoios na sua operação?")}
       ctaDesc={t("cta", "desc", "Enviamos amostras para EVP (Ensaio de Vida de Prateleira) na sua categoria. Resposta em 24h.")}
       downloadLabel="Catálogo FLV (.pptx)"
-      downloadHref="/docs/Tamoios-Apresentacao-Institucional.pptx"
+      downloadHref="/apresentacao-produtos"
     />
   );
 };

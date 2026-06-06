@@ -117,7 +117,7 @@ export function ProductPageLayout({
               </Button>
               {downloadHref && (
                 <Button asChild variant="outline" size="xl">
-                  <a href={downloadHref} download>
+                  <a href={downloadHref} {...(/\.[a-z0-9]+$/i.test(downloadHref) ? { download: true } : {})}>
                     <Download /> {downloadLabel ?? "Baixar catálogo"}
                   </a>
                 </Button>
