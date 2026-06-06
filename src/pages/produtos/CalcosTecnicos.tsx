@@ -87,7 +87,7 @@ const CalcosTecnicos = () => {
       ]}
       ctaTitle={t("cta", "title", "Tem um projeto específico de embalagem industrial?")}
       ctaDesc={t("cta", "desc", "Envie suas dimensões e nossa engenharia desenvolve o projeto de polpa moldada ideal para sua peça.")}
-      downloadLabel="Catálogo industrial (.pptx)"
+      downloadLabel="Catálogo de produtos (PDF)"
       downloadHref="/apresentacao-produtos"
     />
   );

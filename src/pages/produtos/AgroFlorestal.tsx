@@ -84,7 +84,7 @@ const AgroFlorestal = () => {
       ]}
       ctaTitle={t("cta", "title", "Viveirista, silvicultor ou produtor hidropônico?")}
       ctaDesc={t("cta", "desc", "Receba amostras para teste de campo. Trabalhamos com lotes de validação antes de qualquer pedido em escala.")}
-      downloadLabel="Catálogo Agro (.pptx)"
+      downloadLabel="Catálogo de produtos (PDF)"
       downloadHref="/apresentacao-produtos"
     >
       {/* Trust block */}
