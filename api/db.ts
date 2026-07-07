@@ -5,6 +5,11 @@
 import { neon } from "@neondatabase/serverless";
 
 const sql = neon(process.env.DATABASE_URL!);
+// http driver: sql.query(text, params) é o modo parametrizado (sem WebSocket).
+const run = async (text: string, params: unknown[] = []) => {
+  const r = await sql.query(text, params);
+  return (Array.isArray(r) ? r : (r as { rows?: unknown[] }).rows) ?? [];
+};
 
 // authz: o que é público ler / público escrever / só-admin
 const READ_PUBLIC = new Set(["posts", "site_content"]);
@@ -46,7 +51,7 @@ export default async function handler(req: any, res: any) {
       if (wh.length) q += " WHERE " + wh.join(" AND ");
       if (order && ident(order) && COLS[table].includes(order)) q += ` ORDER BY "${order}" ${ascending ? "ASC" : "DESC"}`;
       if (limit && Number.isInteger(limit)) q += ` LIMIT ${limit}`;
-      const rows = await sql(q, params);
+      const rows = await run(q, params);
       return void res.status(200).json({ data: single ? (rows[0] ?? null) : rows, error: null });
     }
 
@@ -60,7 +65,7 @@ export default async function handler(req: any, res: any) {
         if (!keys.length) continue;
         const ph = keys.map((_, i) => `$${i + 1}`);
         const q = `INSERT INTO "${table}" (${keys.map((k) => `"${k}"`).join(",")}) VALUES (${ph.join(",")}) RETURNING *`;
-        const r = await sql(q, keys.map((k) => row[k]));
+        const r = await run(q, keys.map((k) => row[k]));
         out.push(r[0]);
       }
       return void res.status(200).json({ data: out, error: null });
