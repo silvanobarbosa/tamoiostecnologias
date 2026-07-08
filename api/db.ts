@@ -3,6 +3,7 @@
 // operação (leitura pública de posts/site_content; escrita pública só contato/
 // newsletter; escrita/admin em posts/site_content exige token de admin).
 import { neon } from "@neondatabase/serverless";
+import { withImmune } from "./_immune";
 
 const sql = neon(process.env.DATABASE_URL!);
 // http driver: sql.query(text, params) é o modo parametrizado (sem WebSocket).
@@ -31,7 +32,7 @@ function isAdmin(req: { headers: Record<string, string | string[] | undefined> }
 }
 const ident = (c: string) => /^[a-z_]+$/.test(c); // nome de coluna seguro
 
-export default async function handler(req: any, res: any) {
+async function handler(req: any, res: any) {
   if (req.method !== "POST") { res.status(405).json({ error: "method" }); return; }
   const { table, action, columns, filters = [], order, ascending = true, limit, single, values } = req.body || {};
   if (!table || !COLS[table]) { res.status(400).json({ data: null, error: { message: "tabela não permitida" } }); return; }
@@ -81,3 +82,6 @@ export default async function handler(req: any, res: any) {
     res.status(500).json({ data: null, error: { message: String(e?.message || e).slice(0, 200) } });
   }
 }
+
+// defesa imune da frota embrulhando o endpoint de dados (camada de servidor deste SPA).
+export default withImmune(handler);
