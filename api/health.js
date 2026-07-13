@@ -1,4 +1,4 @@
-import { withImmune } from "./_immune";
+import { withImmune } from "./_immune.js";
 
 function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");

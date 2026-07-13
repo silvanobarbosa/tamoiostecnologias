@@ -3,7 +3,7 @@
 // operação (leitura pública de posts/site_content; escrita pública só contato/
 // newsletter; escrita/admin em posts/site_content exige token de admin).
 import { neon } from "@neondatabase/serverless";
-import { withImmune } from "./_immune";
+import { withImmune } from "./_immune.js";
 
 const sql = neon(process.env.DATABASE_URL!);
 // http driver: sql.query(text, params) é o modo parametrizado (sem WebSocket).
