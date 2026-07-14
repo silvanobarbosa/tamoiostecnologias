@@ -233,7 +233,7 @@ const Index = () => {
 
           <RevealGroup className="grid lg:grid-cols-2 gap-8">
             {/* Varejo */}
-            <RevealItem><article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep hover:-translate-y-1 transition-all duration-500">
+            <RevealItem className="min-w-0"><article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep hover:-translate-y-1 transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={varejoImg}
@@ -257,14 +257,14 @@ const Index = () => {
                   Ativas Compostáveis absorvem a umidade e geram o <em>"Efeito Escarola"</em>,
                   estendendo a vida de prateleira em <strong className="text-forest">até 50%</strong>.
                 </p>
-                <Button asChild variant="forest" size="lg">
+                <Button asChild variant="forest" size="lg" className="h-auto py-3 whitespace-normal text-center">
                   <Link to="/produtos/bandejas-flv">Conhecer Linha de Bandejas <ArrowRight /></Link>
                 </Button>
               </div>
             </article></RevealItem>
 
             {/* Indústria */}
-            <RevealItem><article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep hover:-translate-y-1 transition-all duration-500">
+            <RevealItem className="min-w-0"><article className="group rounded-3xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-deep hover:-translate-y-1 transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden bg-pulp-light">
                 <img
                   src={industriaImg}
@@ -287,7 +287,7 @@ const Index = () => {
                   a polpa Tamoios entrega o maior índice de proteção contra impactos para transporte.
                   Projetos perfeitos para autopeças, móveis, bebidas e e-commerce.
                 </p>
-                <Button asChild variant="forest" size="lg">
+                <Button asChild variant="forest" size="lg" className="h-auto py-3 whitespace-normal text-center">
                   <Link to="/produtos/calcos-tecnicos">Conhecer Soluções Industriais <ArrowRight /></Link>
                 </Button>
               </div>
@@ -390,7 +390,7 @@ const Index = () => {
           </div>
 
           <div className="mt-10">
-            <Button asChild variant="forest" size="lg">
+            <Button asChild variant="forest" size="lg" className="h-auto py-3 whitespace-normal text-center">
               <Link to="/produtos/agro-florestal">Conhecer Linha Agro & Florestal <ArrowRight /></Link>
             </Button>
           </div>
