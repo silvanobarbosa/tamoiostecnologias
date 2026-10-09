@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -29,6 +30,8 @@ const schema = z.object({
 
 const empty = { person_type: "juridica", name: "", document: "", company_name: "", email: "", phone: "", address: "", city: "", state: "", cep: "", region: "", model: "", message: "" };
 
+const CONSENT_VERSION = "2026-10-09";
+
 const models = [
   { icon: Handshake, t: "Representação comercial", d: "Atue como representante autônomo ou empresa, com comissão sobre vendas na sua região." },
   { icon: Truck, t: "Distribuição", d: "Compre, estoque e revenda nossas soluções com condições especiais para distribuidores." },
@@ -40,6 +43,7 @@ export default function SejaRepresentante() {
   const [form, setForm] = useState(empty);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [consent, setConsent] = useState(false);
   const up = (k: keyof typeof empty) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const pj = form.person_type === "juridica";
 
@@ -50,6 +54,10 @@ export default function SejaRepresentante() {
       toast({ title: "Verifique os campos", description: p.error.issues[0].message, variant: "destructive" });
       return;
     }
+    if (!consent) {
+      toast({ title: "Consentimento necessário", description: "Autorize o tratamento dos seus dados para enviar o cadastro.", variant: "destructive" });
+      return;
+    }
     setLoading(true);
     const d = p.data;
     const n = (v?: string) => (v ? v : null);
@@ -57,6 +65,7 @@ export default function SejaRepresentante() {
       person_type: d.person_type, name: d.name, document: d.document, company_name: pj ? n(d.company_name) : null,
       email: d.email, phone: d.phone, address: n(d.address), city: d.city, state: d.state, cep: n(d.cep),
       region: n(d.region), model: n(d.model), message: d.message,
+      consent_at: new Date().toISOString(), consent_version: CONSENT_VERSION,
     });
     setLoading(false);
     if (error) {
@@ -65,6 +74,7 @@ export default function SejaRepresentante() {
     }
     setDone(true);
     setForm(empty);
+    setConsent(false);
     toast({ title: "Recebemos seu cadastro!", description: "Nossa equipe comercial entrará em contato." });
   };
 
@@ -132,6 +142,22 @@ export default function SejaRepresentante() {
               </div>
             </div>
             <div><Label htmlFor="r-msg">Conte sobre você, sua experiência e como podemos ajudar *</Label><Textarea id="r-msg" rows={6} maxLength={4000} value={form.message} onChange={up("message")} /></div>
+            <label className="flex items-start gap-3 text-sm leading-relaxed cursor-pointer">
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                className="mt-1 h-4 w-4 shrink-0"
+                aria-required="true"
+              />
+              <span>
+                Declaro que li e concordo com a{" "}
+                <Link to="/politica-de-privacidade" target="_blank" className="underline underline-offset-2 font-medium">
+                  Política de Privacidade
+                </Link>{" "}
+                e autorizo a Tamoios Tecnologia a tratar meus dados pessoais para avaliar este cadastro e entrar em contato comercial, nos termos da LGPD (Lei nº 13.709/2018). Posso revogar esse consentimento a qualquer momento. *
+              </span>
+            </label>
             <Button type="submit" variant="forest" size="lg" disabled={loading}>{loading ? "Enviando..." : done ? "Enviado! Enviar outro" : "Enviar cadastro"}</Button>
           </form>
         </section>
