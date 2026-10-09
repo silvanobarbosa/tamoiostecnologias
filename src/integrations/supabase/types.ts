@@ -155,6 +155,8 @@ export type Database = {
           cep: string | null
           city: string
           company_name: string | null
+          consent_at: string | null
+          consent_version: string | null
           created_at: string
           document: string
           email: string
@@ -172,6 +174,8 @@ export type Database = {
           cep?: string | null
           city: string
           company_name?: string | null
+          consent_at?: string | null
+          consent_version?: string | null
           created_at?: string
           document: string
           email: string
@@ -189,6 +193,8 @@ export type Database = {
           cep?: string | null
           city?: string
           company_name?: string | null
+          consent_at?: string | null
+          consent_version?: string | null
           created_at?: string
           document?: string
           email?: string

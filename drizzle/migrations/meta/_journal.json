@@ -8,6 +8,13 @@
       "when": 1791551089521,
       "tag": "0000_representative_applications",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791552128456,
+      "tag": "0001_add_lgpd_consent_to_representative_applications",
+      "breakpoints": true
     }
   ]
 }
