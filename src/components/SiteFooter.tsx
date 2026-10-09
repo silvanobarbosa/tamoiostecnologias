@@ -75,6 +75,7 @@ export function SiteFooter() {
               <li><Link to="/quem-somos" className="hover:text-primary-foreground transition-colors">Quem Somos</Link></li>
               <li><Link to="/materiais" className="hover:text-primary-foreground transition-colors">Materiais & Portfólio</Link></li>
               <li><Link to="/cases" className="hover:text-primary-foreground transition-colors">Cases</Link></li>
+              <li><Link to="/seja-representante" className="hover:text-primary-foreground transition-colors">Seja representante</Link></li>
               <li><Link to="/imprensa" className="hover:text-primary-foreground transition-colors">Imprensa & Press Kit</Link></li>
               <li><Link to="/blog" className="hover:text-primary-foreground transition-colors">Blog</Link></li>
               <li><a href="/sitemap.xml" className="hover:text-primary-foreground transition-colors">Sitemap</a></li>

@@ -21,6 +21,7 @@ export function SiteHeader() {
     { to: "/politicas-nacionais", label: "Políticas ESG" },
     { to: "/materiais", label: "Materiais" },
     { to: "/cases", label: "Cases" },
+    { to: "/seja-representante", label: "Seja representante" },
     { to: "/imprensa", label: "Imprensa" },
     { to: "/blog", label: t("nav.blog") },
   ];
