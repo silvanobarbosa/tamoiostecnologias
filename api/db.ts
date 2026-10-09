@@ -14,7 +14,7 @@ const run = async (text: string, params: unknown[] = []) => {
 
 // authz: o que é público ler / público escrever / só-admin
 const READ_PUBLIC = new Set(["posts", "site_content"]);
-const INSERT_PUBLIC = new Set(["contact_messages", "newsletter_subscribers"]);
+const INSERT_PUBLIC = new Set(["contact_messages", "newsletter_subscribers", "representative_applications"]);
 const ADMIN_TABLES = new Set(["posts", "site_content", "profiles", "user_roles"]);
 
 // colunas aceitas por tabela (evita injeção via nome de coluna/insert arbitrário)
@@ -23,6 +23,7 @@ const COLS: Record<string, string[]> = {
   site_content: ["id", "page", "section", "key", "value_text", "value_json", "value_image_url", "updated_by", "created_at", "updated_at"],
   contact_messages: ["name", "email", "company", "phone", "segment", "message"],
   newsletter_subscribers: ["email", "name", "source"],
+  representative_applications: ["person_type", "name", "document", "company_name", "email", "phone", "address", "city", "state", "cep", "region", "model", "message", "consent_at", "consent_version"],
 };
 
 function isAdmin(req: { headers: Record<string, string | string[] | undefined> }): boolean {
@@ -59,6 +60,13 @@ async function handler(req: any, res: any) {
     if (action === "insert") {
       const isPublicWrite = INSERT_PUBLIC.has(table);
       if (!isPublicWrite && !admin) return void res.status(401).json({ data: null, error: { message: "não autorizado" } });
+      // LGPD: cadastro de representantes exige registro do consentimento
+      if (table === "representative_applications") {
+        const rows = Array.isArray(values) ? values : [values];
+        if (!rows.length || !rows.every((r: any) => r?.consent_at && r?.consent_version)) {
+          return void res.status(400).json({ data: null, error: { message: "consentimento obrigatório" } });
+        }
+      }
       const rowsIn = Array.isArray(values) ? values : [values];
       const out = [];
       for (const row of rowsIn) {
