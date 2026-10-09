@@ -149,6 +149,60 @@ export type Database = {
         }
         Relationships: []
       }
+      representative_applications: {
+        Row: {
+          address: string | null
+          cep: string | null
+          city: string
+          company_name: string | null
+          created_at: string
+          document: string
+          email: string
+          id: string
+          message: string
+          model: string | null
+          name: string
+          person_type: string
+          phone: string
+          region: string | null
+          state: string
+        }
+        Insert: {
+          address?: string | null
+          cep?: string | null
+          city: string
+          company_name?: string | null
+          created_at?: string
+          document: string
+          email: string
+          id?: string
+          message: string
+          model?: string | null
+          name: string
+          person_type: string
+          phone: string
+          region?: string | null
+          state: string
+        }
+        Update: {
+          address?: string | null
+          cep?: string | null
+          city?: string
+          company_name?: string | null
+          created_at?: string
+          document?: string
+          email?: string
+          id?: string
+          message?: string
+          model?: string | null
+          name?: string
+          person_type?: string
+          phone?: string
+          region?: string | null
+          state?: string
+        }
+        Relationships: []
+      }
       site_content: {
         Row: {
           created_at: string
