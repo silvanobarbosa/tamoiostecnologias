@@ -1,0 +1,2 @@
+export type SlideElement = { id: string; type: "text" | "image" | "rect"; x: number; y: number; w: number; h: number; text?: string; asset?: string; color?: string; fill?: string; size?: number; font?: "display" | "body"; bold?: boolean; fit?: "cover" | "contain" };
+export type BrandSlide = { id: string; title: string; category: string; background: string; elements: SlideElement[]; notes: string };
