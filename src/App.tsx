@@ -15,6 +15,7 @@ import BlogPost from "./pages/BlogPost.tsx";
 import QuemSomos from "./pages/QuemSomos.tsx";
 import PoliticasNacionais from "./pages/PoliticasNacionais.tsx";
 import Materiais from "./pages/Materiais.tsx";
+import IdentidadeVisual from "./pages/IdentidadeVisual.tsx";
 import Imprensa from "./pages/Imprensa.tsx";
 import Cases from "./pages/Cases.tsx";
 import ApresentacaoInstitucional from "./pages/ApresentacaoInstitucional.tsx";
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/politicas-nacionais" element={<PoliticasNacionais />} />
             <Route path="/materiais" element={<Materiais />} />
+            <Route path="/identidade-visual" element={<IdentidadeVisual />} />
             <Route path="/imprensa" element={<Imprensa />} />
             <Route path="/cases" element={<Cases />} />
             <Route path="/apresentacao" element={<ApresentacaoInstitucional />} />

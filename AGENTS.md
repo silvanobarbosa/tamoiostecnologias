@@ -5,3 +5,5 @@
 - Formulários que coletam dados pessoais exigem checkbox de consentimento LGPD com link para `/politica-de-privacidade`, e o insert precisa gravar `consent_at` + `consent_version` (validado no endpoint, testado em `src/test/api-representative-lgpd.test.ts`).
 - O preview local do Vite não serve `/api` (404): testes de endpoint rodam via vitest com o handler direto, não via HTTP no preview.
 - Imagens do site ficam como arquivos em src/assets (importadas pelo bundler), nunca como ponteiros .asset.json/CDN /__l5e: o deploy Vercel não serve essa CDN e a imagem quebra.
+- Keep identity-guide content in a shared data module consumed by the guide page and document generation; this prevents copy and specification drift between formats.
+- Serve downloadable identity documents as static public files; this keeps downloads independent of the data bridge and compatible with Vercel.
