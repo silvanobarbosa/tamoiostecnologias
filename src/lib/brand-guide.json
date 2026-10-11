@@ -1,29 +1,170 @@
 {
   "version": "11/10/2026",
   "principle": "Tecnologia brasileira em biomassa, com linguagem editorial, textura de polpa e presença de floresta. Fraunces traz personalidade; Inter mantém clareza técnica.",
-  "colors": [],
+  "colors": [
+    {
+      "name": "forest",
+      "role": "Marca e chamadas",
+      "hex": "#144330",
+      "hsl": "156 54% 17%"
+    },
+    {
+      "name": "forest-deep",
+      "role": "Fundos institucionais escuros",
+      "hex": "#0A291E",
+      "hsl": "158 60% 10%"
+    },
+    {
+      "name": "leaf",
+      "role": "Destaques editoriais",
+      "hex": "#639735",
+      "hsl": "92 48% 40%"
+    },
+    {
+      "name": "gold",
+      "role": "Pequenos acentos e chamadas",
+      "hex": "#F3A216",
+      "hsl": "38 90% 52%"
+    },
+    {
+      "name": "pulp",
+      "role": "Textura e apoio de produto",
+      "hex": "#DFCFB9",
+      "hsl": "34 38% 80%"
+    },
+    {
+      "name": "pulp-light",
+      "role": "Faixas e superfícies claras",
+      "hex": "#F5F0E5",
+      "hsl": "40 44% 93%"
+    },
+    {
+      "name": "earth",
+      "role": "Apoio pontual de matéria-prima",
+      "hex": "#794F2F",
+      "hsl": "26 44% 33%"
+    },
+    {
+      "name": "cream",
+      "role": "Base clara de peças",
+      "hex": "#FAF9F4",
+      "hsl": "44 40% 97%"
+    },
+    {
+      "name": "background",
+      "role": "Fundo do site",
+      "hex": "#FAF9F5",
+      "hsl": "44 34% 97%"
+    },
+    {
+      "name": "foreground",
+      "role": "Texto principal",
+      "hex": "#0C2219",
+      "hsl": "156 46% 9%"
+    },
+    {
+      "name": "muted-foreground",
+      "role": "Texto secundário",
+      "hex": "#486157",
+      "hsl": "156 15% 33%"
+    },
+    {
+      "name": "border",
+      "role": "Contornos discretos",
+      "hex": "#D3DFD9",
+      "hsl": "150 16% 85%"
+    }
+  ],
   "typography": [
-    {"name": "Fraunces", "role": "Títulos, chamadas e destaques editoriais", "weight": "400, 500, 600, 700 e 800", "site": "Títulos de 24 a 72 px; chamadas principais em 600–700", "social": "Título 64–96 px; destaque 100–160 px", "ppt": "Título 40–54 pt; destaque 72–96 pt", "rule": "Use itálico com moderação em uma palavra ou trecho. Não substituir pela fonte do logotipo."},
-    {"name": "Inter", "role": "Corpo, legendas, dados, navegação e botões", "weight": "300, 400, 500, 600 e 700", "site": "Corpo 14–20 px; legendas 12–14 px", "social": "Corpo 32–44 px; legenda 24–28 px", "ppt": "Corpo 20–24 pt; legenda 14–16 pt", "rule": "Use 400 no texto, 500–600 em comandos e 700 em ênfases. Não justificar parágrafos."}
+    {
+      "name": "Fraunces",
+      "role": "Títulos, chamadas e destaques editoriais",
+      "weight": "400, 500, 600, 700 e 800",
+      "site": "Títulos de 24 a 72 px; chamadas principais em 600–700",
+      "social": "Título 64–96 px; destaque 100–160 px",
+      "ppt": "Título 40–54 pt; destaque 72–96 pt",
+      "rule": "Use itálico com moderação em uma palavra ou trecho. Não substituir pela fonte do logotipo."
+    },
+    {
+      "name": "Inter",
+      "role": "Corpo, legendas, dados, navegação e botões",
+      "weight": "300, 400, 500, 600 e 700",
+      "site": "Corpo 14–20 px; legendas 12–14 px",
+      "social": "Corpo 32–44 px; legenda 24–28 px",
+      "ppt": "Corpo 20–24 pt; legenda 14–16 pt",
+      "rule": "Use 400 no texto, 500–600 em comandos e 700 em ênfases. Não justificar parágrafos."
+    }
   ],
   "rules": [
-    {"title": "Marca preservada", "body": "Use o logo oficial como imagem. Não redesenhar com IA, digitar o nome para imitar a marca, recolorir, distorcer ou aplicar efeitos. Em fundos escuros, usar uma área clara de apoio."},
-    {"title": "Área de proteção", "body": "Proposta para materiais novos: reserva ao redor equivalente a 25% da altura do logo. Largura mínima recomendada: 140 px no digital ou 30 mm no impresso. Validar legibilidade na exportação."},
-    {"title": "Formas e ritmo", "body": "O site adota curvas suaves: token base de 16 px, cartões frequentemente com 16–24 px e botões em cápsula. Nas peças, priorizar faixas amplas, retângulos limpos e fotos grandes; não colocar um cartão dentro de outro."},
-    {"title": "Hierarquia e letras", "body": "Uma chamada principal por peça; corpo alinhado à esquerda. Entrelinha recomendada: 1,1–1,2 nos títulos e 1,45–1,6 no corpo. Entreletras normal; pequenas etiquetas podem usar caixa alta. Não copiar o espaçamento negativo de alguns títulos do site para novos materiais."},
-    {"title": "Ícones e efeitos", "body": "Ícones lineares no estilo Lucide, traço uniforme e sem mistura com ícones 3D. Gradientes e sombras somente como apoio discreto; textura pontilhada muito sutil, sem competir com o produto."},
-    {"title": "Fotografia", "body": "Preferir fotos fornecidas dos produtos, com textura da polpa visível, luz natural e contexto real. Nunca cortar encaixes ou bordas essenciais. Imagens de IA são ilustrações, não prova de performance, equipe, fábrica ou clientes."}
+    {
+      "title": "Marca preservada",
+      "body": "Use o logo oficial como imagem. Não redesenhar com IA, digitar o nome para imitar a marca, recolorir, distorcer ou aplicar efeitos. Em fundos escuros, usar uma área clara de apoio."
+    },
+    {
+      "title": "Área de proteção",
+      "body": "Proposta para materiais novos: reserva ao redor equivalente a 25% da altura do logo. Largura mínima recomendada: 140 px no digital ou 30 mm no impresso. Validar legibilidade na exportação."
+    },
+    {
+      "title": "Formas e ritmo",
+      "body": "O site adota curvas suaves: token base de 16 px, cartões frequentemente com 16–24 px e botões em cápsula. Nas peças, priorizar faixas amplas, retângulos limpos e fotos grandes; não colocar um cartão dentro de outro."
+    },
+    {
+      "title": "Hierarquia e letras",
+      "body": "Uma chamada principal por peça; corpo alinhado à esquerda. Entrelinha recomendada: 1,1–1,2 nos títulos e 1,45–1,6 no corpo. Entreletras normal; pequenas etiquetas podem usar caixa alta. Não copiar o espaçamento negativo de alguns títulos do site para novos materiais."
+    },
+    {
+      "title": "Ícones e efeitos",
+      "body": "Ícones lineares no estilo Lucide, traço uniforme e sem mistura com ícones 3D. Gradientes e sombras somente como apoio discreto; textura pontilhada muito sutil, sem competir com o produto."
+    },
+    {
+      "title": "Fotografia",
+      "body": "Preferir fotos fornecidas dos produtos, com textura da polpa visível, luz natural e contexto real. Nunca cortar encaixes ou bordas essenciais. Imagens de IA são ilustrações, não prova de performance, equipe, fábrica ou clientes."
+    }
   ],
   "formats": [
-    {"name": "Post vertical", "size": "1080 × 1350 px · 4:5", "detail": "Formato recomendado para feed. Margem de segurança: 80 px; logo e chamada em áreas livres da foto."},
-    {"name": "Post quadrado", "size": "1080 × 1080 px · 1:1", "detail": "Carrosséis e peças compartilháveis. Margem: 72–80 px; manter posição do logo e paginação."},
-    {"name": "Stories", "size": "1080 × 1920 px · 9:16", "detail": "Reserva sugerida: 250 px no topo e rodapé para a interface; 80 px nas laterais. Conferir a prévia na plataforma."},
-    {"name": "Apresentação comercial", "size": "33,87 × 19,05 cm · 16:9", "detail": "Margens mínimas de 1,27 cm; 0,76–1,27 cm entre blocos. Instalar Fraunces e Inter antes de editar."}
+    {
+      "name": "Post vertical",
+      "size": "1080 × 1350 px · 4:5",
+      "detail": "Formato recomendado para feed. Margem de segurança: 80 px; logo e chamada em áreas livres da foto."
+    },
+    {
+      "name": "Post quadrado",
+      "size": "1080 × 1080 px · 1:1",
+      "detail": "Carrosséis e peças compartilháveis. Margem: 72–80 px; manter posição do logo e paginação."
+    },
+    {
+      "name": "Stories",
+      "size": "1080 × 1920 px · 9:16",
+      "detail": "Reserva sugerida: 250 px no topo e rodapé para a interface; 80 px nas laterais. Conferir a prévia na plataforma."
+    },
+    {
+      "name": "Apresentação comercial",
+      "size": "33,87 × 19,05 cm · 16:9",
+      "detail": "Margens mínimas de 1,27 cm; 0,76–1,27 cm entre blocos. Instalar Fraunces e Inter antes de editar."
+    }
   ],
   "prompts": [
-    {"title": "Prompt-base de imagem", "text": "Crie uma imagem editorial para Tamoios Tecnologia sobre [TEMA], em [FORMATO]. Use como referência a foto de produto anexada; preserve geometria, bordas, cavidades e textura da polpa moldada. Produto nítido, luz natural suave, composição limpa com espaço negativo em [POSIÇÃO] para inserir título depois. Paleta: verde floresta #14432F, verde profundo #0A291E, oliva #6BA135, creme #FAF8F4 e dourado #F3A216 apenas como pequeno acento. Não gerar textos nem logotipos; serão aplicados depois em Fraunces e Inter. Não inventar certificações, dados de impacto, clientes ou características técnicas. Sem plástico brilhante, ícones 3D, neon, excesso de efeitos ou aparência genérica de banco de imagens. Se não houver foto de referência, criar somente uma ilustração conceitual, sem apresentar produto fictício como produto real."},
-    {"title": "Post de produto", "text": "A partir da foto anexada de [BANDEJA / CALÇO / TUBETE], crie uma composição editorial 1080 × 1350 px, com o produto integralmente visível e fiel ao original. Fundo claro creme e detalhes naturais verdes, iluminação suave e textura de fibra visível. Reserve o terço superior para título e uma área clara inferior para o logo oficial. Não adicionar texto, logo, selos ou modificar a estrutura do produto. Aplicar posteriormente título Fraunces 72–88 px e texto Inter 32–40 px."},
-    {"title": "Capa de carrossel", "text": "Crie uma composição 1080 × 1080 px para um carrossel editorial sobre [TEMA]. Utilize a foto real anexada como protagonista, contraste de verde profundo com creme, pequeno acento dourado e espaço livre à esquerda para uma chamada curta. Não inserir palavras, números, marcas ou dados. Preserve os detalhes do produto. Aplique depois a chamada em Fraunces e a numeração em Inter, mantendo a mesma posição nas demais páginas."}
+    {
+      "title": "Prompt-base de imagem",
+      "text": "Crie uma imagem editorial para Tamoios Tecnologia sobre [TEMA], em [FORMATO]. Use como referência a foto de produto anexada; preserve geometria, bordas, cavidades e textura da polpa moldada. Produto nítido, luz natural suave, composição limpa com espaço negativo em [POSIÇÃO] para inserir título depois. Paleta: verde floresta #144330, verde profundo #0A291E, oliva #639735, creme #FAF9F4 e dourado #F3A216 apenas como pequeno acento. Não gerar textos nem logotipos; serão aplicados depois em Fraunces e Inter. Não inventar certificações, dados de impacto, clientes ou características técnicas. Sem plástico brilhante, ícones 3D, neon, excesso de efeitos ou aparência genérica de banco de imagens. Se não houver foto de referência, criar somente uma ilustração conceitual, sem apresentar produto fictício como produto real."
+    },
+    {
+      "title": "Post de produto",
+      "text": "A partir da foto anexada de [BANDEJA / CALÇO / TUBETE], crie uma composição editorial 1080 × 1350 px, com o produto integralmente visível e fiel ao original. Fundo claro creme e detalhes naturais verdes, iluminação suave e textura de fibra visível. Reserve o terço superior para título e uma área clara inferior para o logo oficial. Não adicionar texto, logo, selos ou modificar a estrutura do produto. Aplicar posteriormente título Fraunces 72–88 px e texto Inter 32–40 px."
+    },
+    {
+      "title": "Capa de carrossel",
+      "text": "Crie uma composição 1080 × 1080 px para um carrossel editorial sobre [TEMA]. Utilize a foto real anexada como protagonista, contraste de verde profundo com creme, pequeno acento dourado e espaço livre à esquerda para uma chamada curta. Não inserir palavras, números, marcas ou dados. Preserve os detalhes do produto. Aplique depois a chamada em Fraunces e a numeração em Inter, mantendo a mesma posição nas demais páginas."
+    }
   ],
-  "checklist": ["Logo oficial sem alterações e com respiro.", "Fraunces nos títulos e Inter nos textos.", "Paleta consistente, contraste legível e dourado sem excesso.", "Produto fiel à referência e imagens de IA tratadas como ilustração.", "Nenhum dado, depoimento, certificação ou cliente inventado.", "Sem cortes, textos sobre o produto ou sobreposição de elementos.", "Revisar no celular; exportar posts em PNG e apresentações em PDF.", "Substituir todos os campos entre colchetes do modelo comercial."]
+  "checklist": [
+    "Logo oficial sem alterações e com respiro.",
+    "Fraunces nos títulos e Inter nos textos.",
+    "Paleta consistente, contraste legível e dourado sem excesso.",
+    "Produto fiel à referência e imagens de IA tratadas como ilustração.",
+    "Nenhum dado, depoimento, certificação ou cliente inventado.",
+    "Sem cortes, textos sobre o produto ou sobreposição de elementos.",
+    "Revisar no celular; exportar posts em PNG e apresentações em PDF.",
+    "Substituir todos os campos entre colchetes do modelo comercial."
+  ]
 }
