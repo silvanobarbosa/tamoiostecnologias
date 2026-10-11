@@ -33,6 +33,9 @@ def generate(destination):
                 shape.fill.solid()
                 shape.fill.fore_color.rgb = RGBColor.from_string(colors[e["fill"]])
                 shape.line.fill.background()
+                style = shape._element.find("{http://schemas.openxmlformats.org/presentationml/2006/main}style")
+                if style is not None:
+                    shape._element.remove(style)
             elif e["type"] == "image":
                 path = ROOT / "src/assets" / e["asset"]
                 iw, ih = Image.open(path).size
