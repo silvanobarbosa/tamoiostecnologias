@@ -620,7 +620,7 @@
         "w": 1640,
         "h": 190,
         "text": "Uma matéria-prima. Muitas possibilidades.",
-        "size": 88,
+        "size": 76,
         "color": "forest",
         "font": "display",
         "bold": false
@@ -857,11 +857,11 @@
         "id": "layout-07-e5",
         "type": "text",
         "x": 100,
-        "y": 630,
+        "y": 605,
         "w": 770,
         "h": 300,
         "text": "[Descrição da aplicação e contexto de uso.]\n\n[Característica técnica]\n\n[Opções de personalização]",
-        "size": 38,
+        "size": 34,
         "color": "muted-foreground",
         "font": "body",
         "bold": false
@@ -963,11 +963,11 @@
         "id": "layout-08-e5",
         "type": "text",
         "x": 1040,
-        "y": 630,
+        "y": 605,
         "w": 770,
         "h": 300,
         "text": "[Descrição da aplicação e contexto de uso.]\n\n[Característica técnica]\n\n[Opções de personalização]",
-        "size": 38,
+        "size": 34,
         "color": "muted-foreground",
         "font": "body",
         "bold": false
@@ -1960,11 +1960,11 @@
         "id": "layout-15-e7",
         "type": "text",
         "x": 180,
-        "y": 460,
+        "y": 375,
         "w": 1000,
-        "h": 180,
+        "h": 70,
         "text": "[Insira a série validada neste espaço.]",
-        "size": 48,
+        "size": 30,
         "color": "forest",
         "font": "display",
         "bold": false
@@ -2033,6 +2033,90 @@
         "color": "muted-foreground",
         "font": "body",
         "bold": false
+      },
+      {
+        "id": "series-guide-0",
+        "type": "rect",
+        "x": 195,
+        "y": 505,
+        "w": 2,
+        "h": 235,
+        "fill": "border"
+      },
+      {
+        "id": "series-label-0",
+        "type": "text",
+        "x": 145,
+        "y": 600,
+        "w": 260,
+        "h": 60,
+        "text": "[Valor]",
+        "size": 38,
+        "font": "body",
+        "color": "leaf"
+      },
+      {
+        "id": "series-guide-1",
+        "type": "rect",
+        "x": 480,
+        "y": 505,
+        "w": 2,
+        "h": 235,
+        "fill": "border"
+      },
+      {
+        "id": "series-label-1",
+        "type": "text",
+        "x": 430,
+        "y": 600,
+        "w": 260,
+        "h": 60,
+        "text": "[Valor]",
+        "size": 38,
+        "font": "body",
+        "color": "leaf"
+      },
+      {
+        "id": "series-guide-2",
+        "type": "rect",
+        "x": 765,
+        "y": 505,
+        "w": 2,
+        "h": 235,
+        "fill": "border"
+      },
+      {
+        "id": "series-label-2",
+        "type": "text",
+        "x": 715,
+        "y": 600,
+        "w": 260,
+        "h": 60,
+        "text": "[Valor]",
+        "size": 38,
+        "font": "body",
+        "color": "leaf"
+      },
+      {
+        "id": "series-guide-3",
+        "type": "rect",
+        "x": 1050,
+        "y": 505,
+        "w": 2,
+        "h": 235,
+        "fill": "border"
+      },
+      {
+        "id": "series-label-3",
+        "type": "text",
+        "x": 1000,
+        "y": 600,
+        "w": 260,
+        "h": 60,
+        "text": "[Valor]",
+        "size": 38,
+        "font": "body",
+        "color": "leaf"
       }
     ],
     "notes": "Substitua os campos entre colchetes por conteúdo validado. Fotos reais da Tamoios; dados comerciais não preenchidos."
@@ -3446,7 +3530,7 @@
         "w": 1640,
         "h": 190,
         "text": "[Uma proposta feita para sua operação.]",
-        "size": 88,
+        "size": 76,
         "color": "forest",
         "font": "display",
         "bold": false
