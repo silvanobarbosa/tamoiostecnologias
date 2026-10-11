@@ -80,6 +80,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingContact />
+          <FloatingRepresentative />
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
