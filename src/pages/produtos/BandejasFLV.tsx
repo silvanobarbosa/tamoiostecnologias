@@ -4,7 +4,7 @@ import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImg from "@/assets/bandejas-mosaico.jpg";
 import alfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import miniImg from "@/assets/bandeja-alface-mini.jpg";
-import tomatesAsset from "@/assets/bandeja-tomates.jpg.asset.json";
+import tomatesAsset from "@/assets/bandeja-tomates.jpg";
 import gondolaImg from "@/assets/varejo-bandejas-gondola.jpg";
 
 const BandejasFLV = () => {
@@ -64,7 +64,7 @@ const BandejasFLV = () => {
         {
           title: "Bandeja Rasa — Tomates e Frutas",
           description: "Formato baixo, ótimo para tomates no cacho, morangos premium e cogumelos. Suporte mecânico sem comprimir.",
-          image: tomatesAsset.url,
+          image: tomatesAsset,
           imageAlt: "Bandeja rasa de polpa com tomates",
           bullets: ["Tomates, morangos, cogumelos", "Validada com Vó Lucia (~40%) e Hayashi (~50%)", "Visual sofisticado, premium"],
         },

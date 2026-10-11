@@ -8,7 +8,7 @@ import { Leaf, Factory, Sprout, Recycle, Award, MapPin, Quote, TrendingUp } from
 import jornadaMorango from "@/assets/jornada-morango.jpg";
 import jornadaMaos from "@/assets/jornada-maos.jpg";
 import distribuicaoBrasil from "@/assets/distribuicao-brasil.jpg";
-import donaAngelaAsset from "@/assets/dona-angela.jpg.asset.json";
+import donaAngelaAsset from "@/assets/dona-angela.jpg";
 import { useSiteContent } from "@/hooks/useSiteContent";
 
 const milestones = [
@@ -185,7 +185,7 @@ const QuemSomos = () => {
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="rounded-3xl overflow-hidden shadow-deep ring-1 ring-forest/10">
               <img
-                src={donaAngelaAsset.url}
+                src={donaAngelaAsset}
                 alt="Dona Angela na cozinha secando um tomate cereja com papel absorvente — a origem da Tamoios"
                 loading="lazy"
                 width={1920}

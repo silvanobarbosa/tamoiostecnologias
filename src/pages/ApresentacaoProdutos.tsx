@@ -6,7 +6,7 @@ import { A4Document, A4Page } from "@/components/A4Page";
 import { SEO } from "@/components/SEO";
 import logoTamoios from "@/assets/tamoios-logo.png";
 import bandejasHero from "@/assets/hero-bandejas.jpg";
-import bandejaTomatesAsset from "@/assets/bandeja-tomates.jpg.asset.json";
+import bandejaTomatesAsset from "@/assets/bandeja-tomates.jpg";
 import bandejaAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import bandejaMiniImg from "@/assets/bandeja-alface-mini.jpg";
 import calcosGarrafasImg from "@/assets/calcos-garrafas.jpg";
@@ -24,7 +24,7 @@ const linhas = [
       "Bandejas técnicas de polpa moldada para varejo e atacado. Mantêm a fruta firme, prolongam a vida de prateleira e elevam a apresentação no PDV.",
     hero: bandejasHero,
     aplicacoes: [
-      { nome: "Bandeja tomate cacho", img: bandejaTomatesAsset.url, info: "Berço protetor, ventilação otimizada" },
+      { nome: "Bandeja tomate cacho", img: bandejaTomatesAsset, info: "Berço protetor, ventilação otimizada" },
       { nome: "Alface iceberg", img: bandejaAlfaceImg, info: "Reduz amassamento, mantém crocância" },
       { nome: "Alface mini / hortaliças", img: bandejaMiniImg, info: "Tamanhos modulares por SKU" },
     ],
