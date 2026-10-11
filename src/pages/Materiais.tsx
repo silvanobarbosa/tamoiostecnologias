@@ -3,6 +3,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SEO } from "@/components/SEO";
 import { Download, FileText, Sparkles, Megaphone } from "lucide-react";
 import { useSiteContent } from "@/hooks/useSiteContent";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 
 type Material = {
@@ -125,12 +127,12 @@ const Materiais = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-2xl mb-10">
-            Carrosséis, posts e arquivos editáveis em produção. Voltam em breve, revisados.
+            Padrões de marca para apresentações e redes sociais.
           </p>
-          <div className="rounded-2xl border border-dashed border-border bg-background p-10 text-center">
-            <p className="text-muted-foreground">
-              Nenhum material disponível no momento.
-            </p>
+          <div className="border-t border-border pt-8">
+            <h3 className="text-2xl font-display text-forest-deep">Guia de identidade visual</h3>
+            <p className="mt-3 text-muted-foreground max-w-2xl">Fontes, cores, formas, fotografia e prompts de IA, com guia PDF e modelo comercial PowerPoint editável.</p>
+            <Button asChild className="mt-6"><Link to="/identidade-visual"><FileText className="h-4 w-4" /> Abrir guia</Link></Button>
           </div>
 
         </div>
