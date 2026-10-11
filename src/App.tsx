@@ -23,6 +23,7 @@ import SejaRepresentante from "./pages/SejaRepresentante.tsx";
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import { FloatingContact } from "./components/FloatingContact.tsx";
+import { FloatingRepresentative } from "./components/FloatingRepresentative.tsx";
 
 import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import Overview from "./pages/admin/Overview.tsx";
@@ -79,6 +80,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingContact />
+          <FloatingRepresentative />
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
