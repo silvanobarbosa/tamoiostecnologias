@@ -8,7 +8,7 @@ export function FloatingContact() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (location.pathname.startsWith("/admin") || location.pathname.startsWith("/auth")) {
+  if (location.pathname.startsWith("/admin") || location.pathname.startsWith("/auth") || location.pathname.startsWith("/modelo-slides")) {
     return null;
   }
 

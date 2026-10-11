@@ -7,3 +7,4 @@
 - Imagens do site ficam como arquivos em src/assets (importadas pelo bundler), nunca como ponteiros .asset.json/CDN /__l5e: o deploy Vercel não serve essa CDN e a imagem quebra.
 - Keep identity-guide content in a shared data module consumed by the guide page and document generation; this prevents copy and specification drift between formats.
 - Serve downloadable identity documents as static public files; this keeps downloads independent of the data bridge and compatible with Vercel.
+- Keep presentation layouts in a single fixed-resolution element registry shared by the native slides editor and PPTX generation; this keeps editable exports aligned with the browser presentation.
