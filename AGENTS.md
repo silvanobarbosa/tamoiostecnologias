@@ -4,3 +4,4 @@
 - Toda tabela nova precisa entrar em `COLS` e, se aceita do público, em `INSERT_PUBLIC`/`READ_PUBLIC` em `api/db.ts`; colunas fora da whitelist são descartadas silenciosamente no insert.
 - Formulários que coletam dados pessoais exigem checkbox de consentimento LGPD com link para `/politica-de-privacidade`, e o insert precisa gravar `consent_at` + `consent_version` (validado no endpoint, testado em `src/test/api-representative-lgpd.test.ts`).
 - O preview local do Vite não serve `/api` (404): testes de endpoint rodam via vitest com o handler direto, não via HTTP no preview.
+- Imagens do site ficam como arquivos em src/assets (importadas pelo bundler), nunca como ponteiros .asset.json/CDN /__l5e: o deploy Vercel não serve essa CDN e a imagem quebra.
