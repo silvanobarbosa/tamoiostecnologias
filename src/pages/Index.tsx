@@ -11,7 +11,7 @@ import industriaImg from "@/assets/calcos-garrafas.jpg";
 import socialImg from "@/assets/impacto-social.jpg";
 import produtoAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import produtoMiniImg from "@/assets/bandeja-alface-mini.jpg";
-import produtoTomatesAsset from "@/assets/bandeja-tomates.jpg.asset.json";
+import produtoTomatesAsset from "@/assets/bandeja-tomates.jpg";
 import tubetesMudasImg from "@/assets/tubetes-mudas.jpg";
 import tubetesBandejaImg from "@/assets/tubetes-bandeja.jpg";
 import hidroponiaMudasImg from "@/assets/hidroponia-mudas.jpg";
@@ -325,7 +325,7 @@ const Index = () => {
             {[
               { img: produtoAlfaceImg, title: "Alface Americana", sub: "Bandeja funda · contém umidade da folha" },
               { img: produtoMiniImg, title: "Mini Alface / Folhosos", sub: "Bandeja alta · proteção e respiração" },
-              { img: produtoTomatesAsset.url, title: "Tomates no Cacho", sub: "Bandeja rasa · suporte e exposição premium" },
+              { img: produtoTomatesAsset, title: "Tomates no Cacho", sub: "Bandeja rasa · suporte e exposição premium" },
             ].map((p) => (
               <article
                 key={p.title}
