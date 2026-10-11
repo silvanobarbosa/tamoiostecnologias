@@ -11,7 +11,7 @@ import industriaImg from "@/assets/calcos-garrafas.jpg";
 import socialImg from "@/assets/impacto-social.jpg";
 import produtoAlfaceImg from "@/assets/bandeja-alface-iceberg.jpg";
 import produtoMiniImg from "@/assets/bandeja-alface-mini.jpg";
-import produtoTomatesImg from "@/assets/bandeja-tomates.jpg";
+import produtoTomatesAsset from "@/assets/bandeja-tomates.jpg.asset.json";
 import tubetesMudasImg from "@/assets/tubetes-mudas.jpg";
 import tubetesBandejaImg from "@/assets/tubetes-bandeja.jpg";
 import hidroponiaMudasImg from "@/assets/hidroponia-mudas.jpg";
@@ -282,11 +282,25 @@ const Index = () => {
                 <h3 className="font-display text-2xl md:text-3xl font-semibold text-forest-deep mb-4 leading-snug">
                   Calços Técnicos: Proteção Absoluta Sob Medida.
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   Graças ao nosso processo de <strong className="text-foreground">alto vácuo</strong>,
                   a polpa Tamoios entrega o maior índice de proteção contra impactos para transporte.
                   Projetos perfeitos para autopeças, móveis, bebidas e e-commerce.
                 </p>
+                <ul className="space-y-2 mb-8">
+                  {[
+                    "Ferramentaria interna",
+                    "Uma das maiores mesas moldadoras do Brasil — 1200 × 400 mm",
+                    "Substituímos EVA, polipropileno e isopor",
+                    "Conformidade com a ISO 14000 · projetos de economia circular",
+                    "De acordo com o Decreto nº 12.688/2025",
+                  ].map((c) => (
+                    <li key={c} className="flex items-start gap-2.5 text-sm text-foreground/85">
+                      <CheckCircle2 className="h-4 w-4 text-leaf mt-0.5 shrink-0" />
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
                 <Button asChild variant="forest" size="lg" className="h-auto py-3 whitespace-normal text-center">
                   <Link to="/produtos/calcos-tecnicos">Conhecer Soluções Industriais <ArrowRight /></Link>
                 </Button>
@@ -311,7 +325,7 @@ const Index = () => {
             {[
               { img: produtoAlfaceImg, title: "Alface Americana", sub: "Bandeja funda · contém umidade da folha" },
               { img: produtoMiniImg, title: "Mini Alface / Folhosos", sub: "Bandeja alta · proteção e respiração" },
-              { img: produtoTomatesImg, title: "Tomates no Cacho", sub: "Bandeja rasa · suporte e exposição premium" },
+              { img: produtoTomatesAsset.url, title: "Tomates no Cacho", sub: "Bandeja rasa · suporte e exposição premium" },
             ].map((p) => (
               <article
                 key={p.title}
