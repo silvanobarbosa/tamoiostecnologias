@@ -133,6 +133,7 @@ const Materiais = () => {
             <h3 className="text-2xl font-display text-forest-deep">Guia de identidade visual</h3>
             <p className="mt-3 text-muted-foreground max-w-2xl">Fontes, cores, formas, fotografia e prompts de IA, com guia PDF e modelo comercial PowerPoint editável.</p>
             <Button asChild className="mt-6"><Link to="/identidade-visual"><FileText className="h-4 w-4" /> Abrir guia</Link></Button>
+            <Button asChild variant="outline" className="mt-6 ml-3"><Link to="/modelo-slides"><Sparkles className="h-4 w-4" /> Tamoios Slides · 24 modelos</Link></Button>
           </div>
 
         </div>

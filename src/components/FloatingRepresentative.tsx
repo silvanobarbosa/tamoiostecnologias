@@ -9,6 +9,7 @@ export function FloatingRepresentative() {
   if (
     path.startsWith("/admin") ||
     path.startsWith("/auth") ||
+    path.startsWith("/modelo-slides") ||
     path.startsWith("/seja-representante")
   ) {
     return null;
