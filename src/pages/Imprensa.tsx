@@ -216,15 +216,14 @@ const Imprensa = () => {
       <section className="py-20 md:py-28 bg-forest text-primary-foreground">
         <div className="container">
           <div className="max-w-2xl mb-12">
-            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Porta-vozes</span>
+            <span className="text-leaf font-semibold text-sm tracking-widest uppercase">Porta-voz</span>
             <h2 className="font-display text-3xl md:text-4xl font-semibold mt-3 leading-tight text-balance">
-              Disponíveis para entrevistas, painéis e podcasts.
+              Disponível para entrevistas, painéis e podcasts.
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { name: "Rafael Falci", role: "Co-fundador e CEO", topics: "Tecnologia de biomassa, regulação ENEC, escala industrial" },
-              { name: "Fernanda Cano", role: "Co-fundadora e CCO", topics: "ESG, impacto social, parcerias com varejo" },
+              { name: "Rafael Tanus", role: "CEO e Fundador", topics: "Tecnologia de biomassa, regulação ENEC, escala industrial, ESG e parcerias" },
             ].map((p) => (
               <article key={p.name} className="rounded-2xl bg-forest-deep/40 border border-primary-foreground/10 p-8">
                 <Quote className="h-6 w-6 text-leaf mb-4" />

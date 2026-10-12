@@ -7,7 +7,7 @@ const sections = [
     title: "1. Quem somos",
     body: [
       "Tamoios Tecnologia é uma indústria brasileira de tecnologia em biomassa, com unidade em Ana Dias, Itariri/SP, Brasil. Somos o controlador dos dados pessoais tratados por este site, nos termos da Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018).",
-      "Para qualquer assunto relacionado a dados pessoais, você pode falar conosco pelo e-mail fernanda@tamoiostecnologia.com.br ou pelo telefone +55 11 94006 6986.",
+      "Para qualquer assunto relacionado a dados pessoais, você pode falar conosco pelo e-mail comercial@tamoiostecnologia.com.br ou pelo telefone institucional 011 0 94006 – 6986.",
     ],
   },
   {
@@ -51,7 +51,7 @@ const sections = [
     title: "7. Seus direitos",
     body: [
       "Como titular, você pode solicitar a qualquer momento: confirmação de tratamento; acesso aos seus dados; correção de dados incompletos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários; portabilidade; informações sobre compartilhamentos; e revogação do consentimento.",
-      "Para exercer qualquer um desses direitos, escreva para fernanda@tamoiostecnologia.com.br. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).",
+      "Para exercer qualquer um desses direitos, escreva para comercial@tamoiostecnologia.com.br. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).",
     ],
   },
   {

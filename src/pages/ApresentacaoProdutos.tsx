@@ -25,7 +25,7 @@ const linhas = [
     hero: bandejasHero,
     aplicacoes: [
       { nome: "Bandeja tomate cacho", img: bandejaTomatesAsset, info: "Berço protetor, ventilação otimizada" },
-      { nome: "Alface iceberg", img: bandejaAlfaceImg, info: "Reduz amassamento, mantém crocância" },
+      { nome: "Alface Americana", img: bandejaAlfaceImg, info: "Bandeja funda · contém umidade da folha" },
       { nome: "Alface mini / hortaliças", img: bandejaMiniImg, info: "Tamanhos modulares por SKU" },
     ],
     diferenciais: [
@@ -44,7 +44,7 @@ const linhas = [
     aplicacoes: [
       { nome: "Calço para garrafas", img: calcosGarrafasImg, info: "Vinho, azeite, destilados premium" },
       { nome: "Calço industrial", img: calcosCompressorImg, info: "Eletrônicos, autopeças, brancos" },
-      { nome: "Kits e estojos", img: embalagemVinhoImg, info: "Apresentação refinada, totalmente fibrosa" },
+      { nome: "Embalagem para vinho", img: embalagemVinhoImg, info: "Berço moldado em polpa que substitui isopor e plástico bolha em garrafas. Alta proteção vertical, visual sofisticado e descarte 100% papel." },
     ],
     diferenciais: [
       "Proteção vertical equivalente ou superior ao EVA",
@@ -240,8 +240,8 @@ const ApresentacaoProdutos = () => {
                 <div className="text-[9pt] uppercase tracking-widest text-leaf font-semibold mb-2">
                   Comercial
                 </div>
-                <div>contato@tamoiostecnologias.com.br</div>
-                <div className="opacity-80 mt-1">+55 (13) 99999-0000</div>
+                <div>comercial@tamoiostecnologia.com.br</div>
+                <div className="opacity-80 mt-1">011 0 94006 – 6986</div>
               </div>
               <div>
                 <div className="text-[9pt] uppercase tracking-widest text-leaf font-semibold mb-2">
