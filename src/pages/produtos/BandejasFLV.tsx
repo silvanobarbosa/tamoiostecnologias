@@ -48,8 +48,8 @@ const BandejasFLV = () => {
       ]}
       lines={[
         {
-          title: "Bandeja Funda — Folhosos",
-          description: "Modelo alto, ideal para alface americana, alface crespa e folhosos em geral. Contém respingos e umidade da folha sem amassar o produto.",
+          title: "Alface Americana",
+          description: "Bandeja funda · contém umidade da folha",
           image: alfaceImg,
           imageAlt: "Bandeja funda de polpa com alface americana",
           bullets: ["Aplicação: alface, escarola, rúcula, almeirão", "Volume útil interno generoso", "Empilhável em gôndola refrigerada"],

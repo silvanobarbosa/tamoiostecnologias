@@ -253,13 +253,16 @@ const PoliticasNacionais = () => {
               endereçado no nosso processo.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
-              {["ENEC · MDIC", "Decreto 12.688/2025", "ISO 14000", "Logística reversa"].map((c) => (
+              {["ENEC · MDIC", "Decreto 12.688/2025", "Referência ISO 14001:2026", "Logística reversa"].map((c) => (
                 <div key={c} className="rounded-xl border border-leaf/30 bg-leaf/5 p-4 text-center">
                   <ShieldCheck className="h-5 w-5 text-leaf mx-auto" />
                   <p className="text-xs font-semibold text-forest-deep mt-2">{c}</p>
                 </div>
               ))}
             </div>
+            <Button asChild variant="link" className="mt-4 h-auto whitespace-normal text-left px-0">
+              <a href="https://www.iso.org/standard/14001" target="_blank" rel="noopener noreferrer">ISO 14001:2026 · referência oficial <ExternalLink className="h-4 w-4 shrink-0" /></a>
+            </Button>
           </div>
 
           <div className="lg:col-span-7">

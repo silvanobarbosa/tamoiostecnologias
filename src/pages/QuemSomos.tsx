@@ -39,7 +39,7 @@ const QuemSomos = () => {
           "@type": "Organization",
           name: "Tamoios Tecnologia",
           url: typeof window !== "undefined" ? window.location.origin : undefined,
-          email: "fernanda@tamoiostecnologia.com.br",
+          email: "comercial@tamoiostecnologia.com.br",
           telephone: "+55 11 94006 6986",
           address: { "@type": "PostalAddress", addressLocality: "Itariri", addressRegion: "SP", addressCountry: "BR" },
           sameAs: ["https://instagram.com/tamoios_tecnologia"],

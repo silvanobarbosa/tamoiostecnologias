@@ -51,7 +51,7 @@ const credenciais = [
   "Biodegradável",
   "Compostável",
   "Descarbonizado",
-  "ISO 14000 · Decreto 12.688/2025",
+  "Referência ISO 14001:2026 · Decreto 12.688/2025",
   "Operação em região vulnerável",
 ];
 
@@ -66,7 +66,7 @@ const agroLinhas = [
   },
   {
     icon: Sprout,
-    img: hidroponiaMudasImg,
+    img: tubetesBandejaImg,
     tag: "Hidroponia & Agricultura orgânica",
     title: "Mini Vasos para hidroponia",
     desc: "Substituto direto do cachepô plástico para crescimento de hortaliças. Reduz custos operacionais e elimina micro-plásticos do sistema produtivo.",
@@ -133,8 +133,8 @@ const Index = () => {
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Tamoios Tecnologia",
-          email: "rafael@tamoiostecnologia.com.br",
-          telephone: "+55 11 98271 2685",
+          email: "comercial@tamoiostecnologia.com.br",
+          telephone: "+55 11 94006 6986",
           address: { "@type": "PostalAddress", addressLocality: "Itariri", addressRegion: "SP", addressCountry: "BR" },
           sameAs: ["https://instagram.com/tamoios_tecnologia"],
         }}
@@ -292,7 +292,7 @@ const Index = () => {
                     "Ferramentaria interna",
                     "Uma das maiores mesas moldadoras do Brasil — 1200 × 400 mm",
                     "Substituímos EVA, polipropileno e isopor",
-                    "Conformidade com a ISO 14000 · projetos de economia circular",
+                    "Referência ISO 14001:2026 · projetos de economia circular",
                     "De acordo com o Decreto nº 12.688/2025",
                   ].map((c) => (
                     <li key={c} className="flex items-start gap-2.5 text-sm text-foreground/85">
@@ -698,14 +698,14 @@ const Index = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-leaf" />
-                <a href="mailto:fernanda@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors">
-                  fernanda@tamoiostecnologia.com.br
+                <a href="mailto:comercial@tamoiostecnologia.com.br" className="hover:text-primary-foreground transition-colors break-all">
+                  comercial@tamoiostecnologia.com.br
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-leaf" />
                 <a href="tel:+5511940066986" className="hover:text-primary-foreground transition-colors">
-                  +55 11 94006 6986 <span className="text-leaf text-xs">(também WhatsApp)</span>
+                  011 0 94006 – 6986
                 </a>
               </li>
               <li className="flex items-center gap-3">

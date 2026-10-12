@@ -202,7 +202,7 @@ const ApresentacaoInstitucional = () => {
               {
                 t: "Regulatório",
                 items: [
-                  "ISO 14000 em implementação",
+                  "Referência de gestão ambiental: ISO 14001:2026",
                   "Aderência à PNRS e Lei 14.260/2021",
                   "Alinhamento com pactos ESG globais",
                   "Rastreabilidade total da fibra",
@@ -295,8 +295,8 @@ const ApresentacaoInstitucional = () => {
                 <div className="text-[9pt] uppercase tracking-widest text-leaf font-semibold mb-2">
                   Comercial
                 </div>
-                <div>contato@tamoiostecnologias.com.br</div>
-                <div className="opacity-80 mt-1">+55 (13) 99999-0000</div>
+                <div>comercial@tamoiostecnologia.com.br</div>
+                <div className="opacity-80 mt-1">011 0 94006 – 6986</div>
               </div>
               <div>
                 <div className="text-[9pt] uppercase tracking-widest text-leaf font-semibold mb-2">
