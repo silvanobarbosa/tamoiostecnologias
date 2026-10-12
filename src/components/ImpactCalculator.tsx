@@ -25,7 +25,9 @@ interface ImpactCalculatorProps {
 export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" }: ImpactCalculatorProps) {
   const initial = PRODUCTS.find((p) => p.key === defaultProduct) ?? PRODUCTS[0];
   const [product, setProduct] = useState<ProductFactor>(initial);
-  const [units, setUnits] = useState<number>(50000);
+  const [units, setUnits] = useState<number>(initial.quickAmounts[1])
+  const [period, setPeriod] = useState<"mes" | "ano">("mes")
+  const k = period === "mes" ? 1 / 12 : 1;;
 
   const result = useMemo(() => calculateImpact(product, units), [product, units]);
 
@@ -63,14 +65,15 @@ export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" 
                   <button
                     key={p.key}
                     type="button"
-                    onClick={() => setProduct(p)}
+                    onClick={() => { setProduct(p); setUnits(p.quickAmounts[1]); }}
                     className={`text-left px-4 py-3 rounded-xl border text-sm transition-all ${
                       product.key === p.key
                         ? "border-forest bg-forest/5 text-forest-deep font-semibold shadow-soft"
                         : "border-border bg-background hover:border-forest/40"
                     }`}
                   >
-                    {p.label}
+                    <span className="block">{p.shortLabel}</span>
+                    <span className="block text-xs font-normal text-muted-foreground">substitui {p.replacedMaterial}</span>
                   </button>
                 ))}
               </div>
@@ -78,7 +81,7 @@ export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" 
 
             <div>
               <div className="flex items-baseline justify-between mb-3">
-                <Label className="text-sm font-semibold text-forest-deep">Volume mensal</Label>
+                <Label className="text-sm font-semibold text-forest-deep">Quantas unidades você usa por mês?</Label>
                 <span className="text-xs text-muted-foreground">{product.unitLabel}</span>
               </div>
               <Slider
@@ -96,25 +99,41 @@ export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" 
                 onChange={(e) => setUnits(Math.max(0, Number(e.target.value) || 0))}
                 className="text-lg font-semibold text-forest-deep"
               />
+              <div className="flex flex-wrap gap-2 mt-3">
+                {product.quickAmounts.map((q) => (
+                  <button key={q} type="button" onClick={() => setUnits(q)}
+                    className={`px-3 py-1.5 rounded-full border text-xs ${units === q ? "border-forest bg-forest/5 font-semibold" : "border-border hover:border-forest/40"}`}>
+                    {formatNumber(q)}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Results */}
         <div className={variant === "full" ? "lg:col-span-3 p-8 md:p-10" : ""}>
-          <div className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Resultado anual estimado</div>
+          <div className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Impacto estimado {period === "mes" ? "por mês" : "por ano"}</div>
+          <div className="inline-flex rounded-full border border-border p-1 mb-4 text-xs">
+            {(["mes", "ano"] as const).map((v) => (
+              <button key={v} type="button" onClick={() => setPeriod(v)}
+                className={`px-4 py-1.5 rounded-full ${period === v ? "bg-forest text-primary-foreground font-semibold" : "text-muted-foreground"}`}>
+                {v === "mes" ? "Mensal" : "Anual"}
+              </button>
+            ))}
+          </div>
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="rounded-2xl bg-forest text-primary-foreground p-5">
               <Leaf className="h-5 w-5 mb-3 opacity-80" />
               <div className="font-display text-3xl md:text-4xl font-semibold leading-none">
-                <AnimatedNumber value={result.plasticAvoidedKgYear} /> <span className="text-base font-normal opacity-80">kg</span>
+                <AnimatedNumber value={result.plasticAvoidedKgYear * k} /> <span className="text-base font-normal opacity-80">kg</span>
               </div>
               <div className="text-xs opacity-80 mt-2">de plástico/isopor evitado</div>
             </div>
             <div className="rounded-2xl bg-leaf text-primary-foreground p-5">
               <Sparkles className="h-5 w-5 mb-3 opacity-80" />
               <div className="font-display text-3xl md:text-4xl font-semibold leading-none">
-                <AnimatedNumber value={result.co2AvoidedKgYear} /> <span className="text-base font-normal opacity-80">kg</span>
+                <AnimatedNumber value={result.co2AvoidedKgYear * k} /> <span className="text-base font-normal opacity-80">kg</span>
               </div>
               <div className="text-xs opacity-80 mt-2">de CO₂e economizado</div>
             </div>
@@ -125,21 +144,21 @@ export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" 
             <div className="rounded-xl border border-border p-4 bg-background">
               <TreePine className="h-4 w-4 text-forest mb-2" />
               <div className="font-display text-xl font-semibold text-forest-deep leading-none">
-                <AnimatedNumber value={result.treesEquivalent} />
+                <AnimatedNumber value={result.treesEquivalent * k} />
               </div>
               <div className="text-[11px] text-muted-foreground mt-1.5 leading-tight">árvores absorvendo CO₂ por 1 ano</div>
             </div>
             <div className="rounded-xl border border-border p-4 bg-background">
               <Car className="h-4 w-4 text-forest mb-2" />
               <div className="font-display text-xl font-semibold text-forest-deep leading-none">
-                <AnimatedNumber value={result.kmCarEquivalent} />
+                <AnimatedNumber value={result.kmCarEquivalent * k} />
               </div>
               <div className="text-[11px] text-muted-foreground mt-1.5 leading-tight">km de carro a menos</div>
             </div>
             <div className="rounded-xl border border-border p-4 bg-background">
               <Home className="h-4 w-4 text-forest mb-2" />
               <div className="font-display text-xl font-semibold text-forest-deep leading-none">
-                <AnimatedNumber value={result.housesMonthEquivalent} digits={1} />
+                <AnimatedNumber value={result.housesMonthEquivalent * k} digits={1} />
               </div>
               <div className="text-[11px] text-muted-foreground mt-1.5 leading-tight">casas brasileiras por 1 mês</div>
             </div>
@@ -150,11 +169,11 @@ export function ImpactCalculator({ variant = "full", defaultProduct = "bandeja" 
               // pre-fill via hash, contact form will pick it up if integrated
               sessionStorage.setItem("impact-prefill", decodeURIComponent(contactMessage));
             }}>
-              Quero esse impacto no meu negócio <ArrowRight />
+              Conversar sobre esta simulação <ArrowRight />
             </a>
           </Button>
           <p className="text-[11px] text-muted-foreground mt-3 leading-relaxed">
-            Estimativa baseada em LCA pública (EPS ~3,0 kg CO₂e/kg; polpa moldada ~0,8 kg CO₂e/kg). Valores reais variam por SKU e cadeia logística.
+            Estimativa baseada em LCA pública ({product.replacedMaterial} ~{formatNumber(product.co2PerKgReplaced,1)} kg CO₂e/kg; polpa moldada ~0,8 kg CO₂e/kg). Valores reais variam por SKU e cadeia logística.
           </p>
         </div>
       </div>
