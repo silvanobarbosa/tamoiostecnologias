@@ -1,9 +1,9 @@
-# Guia de identidade visual
 # Ajustes do site — outubro 2026
-- [ ] Atualizar contatos públicos e porta-voz único.
-- [ ] Ajustar textos de produtos e diferenciar fotografias.
-- [ ] Atualizar referência oficial ISO e verificar páginas afetadas.
+- [x] Atualizar contatos públicos e porta-voz único.
+- [x] Ajustar textos de produtos e diferenciar fotografias.
+- [x] Atualizar referência oficial ISO e verificar páginas afetadas.
 
+# Guia de identidade visual
 - [x] Documentar padrões atuais e extensões para redes sociais e PowerPoint.
 - [x] Criar página do guia, acessível por Materiais.
 - [x] Gerar PDF do guia e template comercial PPTX editável.
